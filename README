@@ -1,0 +1,82 @@
+README, w1 Mark I - Watch Winder, Readme file
+
+1. Introduction
+
+2. Mechanics
+Sprocket small - Motor Pulley
+  20T
+Sprocket large - Watch support Pulley
+  60T
+Relação coroa/pinhão
+  3
+  
+3. Electronics
+
+Arduino Uno pin designation table
+╔════╦═════╦═══════════╦═══════════╦══════════════════════════════════════════╗
+║ id ║ pin ║   type    ║ direction ║               description                ║
+╠════╬═════╬═══════════╬═══════════╬══════════════════════════════════════════╣
+║  0 ║   0 ║ digital   ║ input     ║ Serial communication                     ║
+║  1 ║   1 ║ digital   ║ output    ║ Serial communication                     ║
+║  2 ║   0 ║ interrupt ║ input     ║ Watch winder speed sensor                ║
+║  3 ║   3 ║ digital   ║ output    ║ Stepper 1 (activation/speed control)     ║
+║  4 ║   4 ║ digital   ║ output    ║ Stepper drive                            ║
+║  5 ║   5 ║ digital   ║ output    ║ Stepper 2 (activation/speed control)     ║
+║  6 ║   6 ║ digital   ║ output    ║ Stepper 2 (activation/speed control)     ║
+║  7 ║   7 ║ digital   ║ output    ║ Stepper drive                            ║
+║  8 ║   8 ║ digital   ║ output    ║ Stepper drive                            ║
+║  9 ║   9 ║ PWM       ║ output    ║                                          ║
+║ 10 ║  10 ║ PWM       ║ output    ║                                          ║
+║ 11 ║  11 ║ digital   ║ output    ║ Stepper 1 (activation/speed control)     ║
+║ 12 ║  12 ║ digital   ║ output    ║ Stepper drive                            ║
+║ 13 ║  13 ║ digital   ║ output    ║ Status LED                               ║
+║ 14 ║   0 ║ analog    ║ input     ║                                          ║
+║ 15 ║   1 ║ digital   ║ output    ║                                          ║
+║ 16 ║   2 ║ digital   ║ output    ║                                          ║
+║ 17 ║   3 ║ digital   ║ input     ║                                          ║
+║ 18 ║   4 ║ digital   ║ output    ║                                          ║
+║ 19 ║   5 ║ digital   ║ input     ║                                          ║
+╚════╩═════╩═══════════╩═══════════╩══════════════════════════════════════════╝
+
+                                      +-----+
+         +----[PWR]-------------------| USB |--+
+         |                            +-----+  |
+         |         GND/RST2  [ ][ ]            |
+         |       MOSI2/SCK2  [ ][ ]  A5/SCL[ ] |   C5 
+         |          5V/MISO2 [ ][ ]  A4/SDA[ ] |   C4 
+         |                             AREF[ ] |
+         |                              GND[x] |
+         | [ ]N/C                    SCK/13[x] |   B5
+         | [ ]v.ref                 MISO/12[x] |   .
+         | [ ]RST                   MOSI/11[x]~|   .
+         | [ ]3V3    +---+               10[x]~|   .
+         | [x]5v     | A |                9[x]~|   .
+         | [x]GND   -| R |-               8[x] |   B0
+         | [x]GND   -| D |-                    |
+         | [x]Vin   -| U |-               7[x] |   D7
+         |          -| I |-               6[x]~|   .
+         | [x]A0    -| N |-               5[x]~|   .
+         | [x]A1    -| O |-               4[x] |   .
+         | [x]A2     +---+           INT1/3[x]~|   .
+         | [x]A3                     INT0/2[x] |   .
+         | [x]A4/SDA  RST SCK MISO     TX>1[x] |   .
+         | [x]A5/SCL  [ ] [ ] [ ]      RX<0[x] |   D0
+         |            [ ] [ ] [ ]              |
+         |  UNO_R3    GND MOSI 5V  ____________/
+          \_______________________/
+                                Source: http://busyducks.com/ascii-art-arduinos
+
+Motor technical specifications
+  Voltage: 12V DC
+  Speed: 100 RPM
+  Reversibility: yes
+  Speed: 5000r/min
+         Current: 800mA（no load）
+         Torque: 4kg/cm
+  Diameter: 37mm
+  Shaft length: 15mm
+  Shaft diameter: 6mm
+
+  A intenção consiste em fazer o motor girar a 60RPM de forma nominal, dessa forma o relógio girará a 10RPM pelo sistema de polias.
+
+4. Software
