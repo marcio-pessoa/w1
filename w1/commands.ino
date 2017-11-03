@@ -20,55 +20,122 @@
  *   void
  */
 void CommandM100(char letter = 0) {
-  if (letter == 'G' or letter == 0) {
-  }
   if (letter == 'M' or letter == 0) {
     echoln(F("M0\tCompulsory stop"));
-    // echoln(F("M15\tSystem info"));
-    // echoln(F("M17\tAttach motors"));
-    // echoln(F("M18\tDetach motors; same as M84"));
-    echoln(F("M80\tPower on"));
-    echoln(F("M81\tPower off"));
-    // echoln(F("M88\tDistance measure"));
-    // echoln(F("M89\tMemory information"));
-    // echoln(F("M92\tSystem information"));
-    // echoln(F("M99\tReset system"));
-    // echoln(F("M100\tThis help message"));
-    // echoln(F("M111\tDebug mode"));
-    // echoln(F("M124\tStop all axes"));
+    echoln(F("M1\tForward and speed"));
+    echoln(F("M2\tBackward and speed"));
+    echoln(F("M3\tShow motor speed"));
+    echoln(F("M15\tSystem info"));
+    echoln(F("M89\tMemory information"));
+    echoln(F("M92\tSystem information"));
+    echoln(F("M99\tReset system"));
+    echoln(F("M100\tThis help message"));
+    echoln(F("M111\tDebug mode"));
   }
 }
 
-/* 
+/* CommandM0
  * 
  * Description
- *   .
+ *   Compulsory stop.
  * 
- *   ()
+ *   CommandM0()
  * 
  * Parameters
  *   none
  * 
  * Returns
- *   void
+ *   bool
  */
-bool CommandM80() {
+bool CommandM0() {
+  // motor->run(RELEASE);
+  motor.run(RELEASE);
+  return false;
 }
 
-/* 
+/* CommandM1
  * 
  * Description
- *   .
+ *   Forward and speed.
  * 
- *   ()
+ *   CommandM1(100)
  * 
  * Parameters
- *   none
+ *   speed: axis speed.
  * 
  * Returns
- *   void
+ *   false: OK
+ *   true: Position limit has exceeded
  */
-bool CommandM81() {
+bool CommandM1(float speed) {
+  // motor_direction = FORWARD;
+  // motor->run(motor_direction);
+  // if ((speed != FLIMIT) and (speed >= 0 and speed <= 255)) {
+    // motor_speed = speed;
+    // motor->setSpeed(motor_speed);
+  // }
+  // return false;
+  motor_direction = FORWARD;
+  motor.run(motor_direction);
+  if ((speed != FLIMIT) and (speed >= 0 and speed <= 255)) {
+    motor_speed = speed;
+    motor.setSpeed(motor_speed);
+  }
+  return false;
+}
+
+/* CommandM2
+ * 
+ * Description
+ *   Backward and speed.
+ * 
+ *   CommandM2(100)
+ * 
+ * Parameters
+ *   speed: axis speed.
+ * 
+ * Returns
+ *   false: OK
+ *   true: Position limit has exceeded
+ */
+bool CommandM2(float speed) {
+  // motor_direction = BACKWARD;
+  // motor->run(motor_direction);
+  // if ((speed != FLIMIT) and (speed >= 0 and speed <= 255)) {
+    // motor_speed = speed;
+    // motor->setSpeed(motor_speed);
+  // }
+  // return false;
+  motor_direction = BACKWARD;
+  motor.run(motor_direction);
+  if ((speed != FLIMIT) and (speed >= 0 and speed <= 255)) {
+    motor_speed = speed;
+    motor.setSpeed(motor_speed);
+  }
+  return false;
+}
+
+/* CommandM2
+ * 
+ * Description
+ *   Backward and speed.
+ * 
+ *   CommandM2(100)
+ * 
+ * Parameters
+ *   speed: axis speed.
+ * 
+ * Returns
+ *   false: OK
+ *   true: Position limit has exceeded
+ */
+bool CommandM3() {
+  echo("Motor speed: " + String(motor_speed));
+  if (debug_mode) {
+    echo(" (" + String(int(motor_speed * 100 / 255)) + "%)");
+  }
+  echoln("");
+  return motor_speed;
 }
 
 /* 
@@ -141,6 +208,7 @@ bool CommandM89() {
 void CommandM15() {
   CommandM92();  // System information
   CommandM89();  // Memory information
+  CommandM3();  // Motor speed
 }
 
 /* 
@@ -165,24 +233,6 @@ void CommandM92() {
     echoln(w1.website());
     echoln(w1.contact());
   }
-}
-
-/* CommandM0
- * 
- * Description
- *   Compulsory stop.
- * 
- *   CommandM0()
- * 
- * Parameters
- *   none
- * 
- * Returns
- *   void
- */
-bool CommandM0() {
-  motor->run(RELEASE);
-  return false;
 }
 
 /* CommandM111
@@ -218,22 +268,4 @@ void CommandM111() {
  */
 void Command0() {
   echoln(F("Unknown command")); 
-}
-
-/* CommandM18
- * 
- * Description
- *   Detaches stepper motors.
- * 
- *   CommandM18()
- * 
- * Parameters
- *   none
- * 
- * Returns
- *   void
- */
-void CommandM18() {
-  CommandM0();  // Compulsory stop
-  motor->run(RELEASE);
 }

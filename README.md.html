@@ -1,0 +1,255 @@
+<meta charset="utf-8">
+<meta lang="en" charset="utf-8">
+<!README, w1 Mark I - Watch Winder, Readme file>
+
+                              **w1 - Mark I**
+                              **Watch Winder**
+                              Márcio Pessoa
+                                2017-09-20
+
+**w1m1** is an acronim to: Watch Winder with One slot - Mark I.
+
+A watch winder is a device used to keep automatic watch running when not worn. Automatic watches operate on the principle of winding themselves using a moving weight inside the watch. The weight swings or rotates while the watch is worn and turns the winding mechanism inside the watch. So, fairly obviously, if the watch is not worn, then it no longer receives power this way and will run down. While virtually all automatic watches can be manually wound, this is not always convenient. So the concept of an automatic watch winder was born.
+
+A winder cannot over wind an automatic watch, since all automatic watches have a special mainspring that will never come to the end of the spring. Most winders are on some sort of a timer, so they will operate for a few minutes, then “rest” for a bit, then start their motion again.  There is no need to keep the watch in motion 24 hours.
+
+# Mechanics
+![Figure [x3]: Mechanical design](Mechanics/w1.svg width="90%" border="0")
+
+## Pulleys relationship
+A intenção consiste em fazer o motor girar a 60RPM de forma nominal, dessa forma o relógio girará a 10RPM pelo sistema de polias.
+
+- Sprocket small (Motor Pulley): 20T
+- Sprocket large (Watch support Pulley): 60T
+
+$$ f = \frac{s . 100}{L} \% $$
+
+Where:
+- s: Speed Ratio
+- A: Large
+- B: Small
+
+$$ s = \frac{20}{60} \% $$
+
+So:
+
+$$ f = 0.33... \% $$
+
+Relação pinhão/coroa:
+:  0.33%
+
+## Wheelbase
+
+![Figure [x3]: Mechanical design](Documents/PULLEY_BELT.gif width="50%" border="0")
+Center Distance: 62mm
+
+Attribute	Value
+
+- Speed Ratio	0.33
+- Pitch Diameter - Large Pulley (A) (mm)	38.2
+- Pitch Diameter - Small Pulley (B) (mm)	12.7
+- Desired Belt Pitch Length (mm)	206.6
+- Next Available Belt Pitch Length (mm)	208
+- Next Available Number of Teeth - Belt	104
+- Center Distance Using Next Available Belt (mm)	62.7
+- Teeth in Mesh  	8
+
+
+![Figure [x3]: Mechanical design](Documents/right_triangle_main.png width="30%" border="0")
+Para saber a distância de a e b:
+
+c = 62 
+alpha = 45 degree
+
+Computing Lado usando a equação: a=sin(alpha)*c
+a = 43,840620433566
+
+Computing Lado usando a equação: b=cos(alpha)*c
+b = 43,840620433566
+
+Computing Beta usando a equação: beta=π/2-alpha
+beta = 45 graus (0,78539816339745 radiano)
+
+Computing Altura usando a equação: h=a*b/c
+h = 31
+
+Computing Perímetro usando a equação: P=a+b+c
+P = 149,68124086713
+
+Computing Área usando a equação: A=a*b/2
+A = 961
+
+## Belt
+![Figure [gt2belt]: GT2 belt](Documents/gt2tooth.jpg width="40%" border="0")
+Round GT2 Timing Belt width 6mm lenght 208mm 104T
+
+https://www.bbman.com/belt-length-calculator/
+
+https://www.fingertechrobotics.com/how-to_pulley_belt.php
+
+
+## Noise reduction
+
+# Electronics
+
+## Arduino
+[Arduino Uno R3][Arduino_Uno]
+### Diagram
+Be happy.
+********************************************************************
+*                                      .-----.                     *
+*         .----[PWR]-------------------| USB |--.                  *
+*         |                            '-----'  |                  *
+*         |         GND/RST2  [ ][ ]            |                  *
+*         |       MOSI2/SCK2  [ ][ ]  A5/SCL[ ] |   C5             *
+*         |          5V/MISO2 [ ][ ]  A4/SDA[ ] |   C4             *
+*         |                             AREF[ ] |                  *
+*         |                             AREF[ ] |                  *
+*         |                              GND[ ] |                  *
+*         | [ ]NC                     SCK/13[ ] |   B5             *
+*         | [ ]v.ref                 MISO/12[ ] |   .              *
+*         | [ ]RST                   MOSI/11[ ]~|   .              *
+*         | [ ]3V3    +---+               10[ ]~|   .              *
+*         | [ ]5v     | A |                9[ ]~|   .              *
+*         | [ ]GND   -| R |-               8[ ] |   B0             *
+*         | [ ]GND   -| D |-                    |                  *
+*         | [ ]Vin   -| U |-               7[ ] |   D7             *
+*         |          -| I |-               6[ ]~|   .              *
+*         | [ ]A0    -| N |-               5[ ]~|   .              *
+*         | [ ]A1    -| O |-               4[ ] |   .              *
+*         | [ ]A2     +---+           INT1/3[ ]~|   .              *
+*         | [ ]A3                     INT0/2[ ] |   .              *
+*         | [ ]A4/SDA  RST SCK MISO     TX>1[ ] |   .              *
+*         | [ ]A5/SCL  [ ] [ ] [ ]      RX<0[ ] |   D0             *
+*         |            [ ] [ ] [ ]              |                  *
+*         '--.                         .--------'                  *
+*             \_______________________/                            *
+*                                                                  *
+********************************************************************
+[Figure [pins]: Arduino Uno[^busyducks]]
+
+### Pin designation
+Table [pins] shows pin designation.
+ id | pin |   type    | direction |               description                
+----|-----|-----------|-----------|--------------------------------------------
+  0 |   0 | digital   | input     | Serial communication                     
+  1 |   1 | digital   | output    | Serial communication                     
+  2 |   0 | interrupt | input     | Watch winder speed sensor                
+  3 |   3 | digital   | output    | Stepper 1 (activation/speed control)     
+  4 |   4 | digital   | output    | Stepper drive                            
+  5 |   5 | digital   | output    | Stepper 2 (activation/speed control)     
+  6 |   6 | digital   | output    | Stepper 2 (activation/speed control)     
+  7 |   7 | digital   | output    | Stepper drive                            
+  8 |   8 | digital   | output    | Stepper drive                            
+  9 |   9 | PWM       | output    |                                          
+ 10 |  10 | PWM       | output    |                                          
+ 11 |  11 | digital   | output    | Stepper 1 (activation/speed control)     
+ 12 |  12 | digital   | output    | Stepper drive                            
+ 13 |  13 | digital   | output    | Status LED                               
+ 14 |   0 | analog    | input     |                                          
+ 15 |   1 | digital   | output    |                                          
+ 16 |   2 | digital   | output    |                                          
+ 17 |   3 | digital   | input     |                                          
+ 18 |   4 | digital   | output    |                                          
+ 19 |   5 | digital   | input     |                                          
+[Table [pins]: Arduino Uno pin designation.]
+
+## ??? chosen motor driver
+![Figure [L298]: L298 motor driver](Documents/pprjWeToHXRVuku3rawL.jpg width="50%" border="0")
+
+[L298](Documents/L298.pdf)
+
+
+## Engine
+![Figure [JK42HS34_techspecs]: Technical specifications](Documents/7535673A-56FE7EB81_526F672C_zps33a68bc7.jpg width="50%" border="0")
+Technical specifications:
+- Shaft speed: 100 RPM
+- Rotor Speed: 5000r/min
+- Reversibility: yes
+- Voltage: 12V DC
+- Current: 800mA（no load）
+- Torque: 4kg/cm
+- Diameter: 37mm
+- Shaft length: 15mm
+- Shaft diameter: 6mm
+
+## Speed
+As 
+
+## Electromagnetic interference reduction
+
+# Software
+
+## G-Code
+List of Supported G-Codes in [Grbl][Grbl] v0.9 Master:
+Non-Modal Commands:
+:  G4, G10L2, G10L20, G28, G30, G28.1, G30.1, G53, G92, G92.1
+Motion Modes:
+:  G0, G1, G2, G3, G38.2, G38.3, G38.4, G38.5, G80
+Feed Rate Modes: 
+:  G93, G94
+Unit Modes: 
+:  G20, G21
+Distance Modes: 
+:  G90, G91
+Arc IJK Distance Modes: 
+:  G91.1
+Plane Select Modes: 
+:  G17, G18, G19
+Tool Length Offset Modes: 
+:  G43.1, G49
+Cutter Compensation Modes: 
+:  G40
+Coordinate System Modes: 
+:  G54, G55, G56, G57, G58, G59
+Control Modes: 
+:  G61
+Program Flow: 
+:  M0, M1, M2, M30*
+Coolant Control: 
+:  M7*, M8, M9
+Spindle Control: 
+:  M3, M4, M5
+Valid Non-Command Words: 
+:  F, I, J, K, L, N, P, R, S, T, X, Y, Z
+
+## Settings
+Some initial ajusts are necessary to draw nicely. View firmware settings using a terminal software.
+Default serial baudrate is 115200 bps.
+
+Command:
+~~~~ gcode
+M100
+~~~~
+
+
+### Steps to milimeters
+Grbl default:
+```
+$100=250.000 (x, step/mm)
+$101=250.000 (y, step/mm)
+```
+
+Math:
+```
+Engines 200 steps
+Pulley: 20 tooths
+Belt: GT2 (2mm pitch)
+So:
+  ...
+x = 80
+```
+
+Command:
+~~~~ gcode
+$100=80
+$101=80
+~~~~
+
+---
+
+[^busyducks]: Diagram by: <http://busyducks.com/ascii-art-arduinos>
+
+[Arduino_Uno]: https://www.arduino.cc/en/Main/arduinoBoardUno/#techspecs
+
+<!-- Markdeep: --><style class="fallback">body{white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script><script src="http://casual-effects.com/markdeep/latest/markdeep.min.js"></script>

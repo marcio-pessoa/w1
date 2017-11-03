@@ -16,8 +16,9 @@
 #include <Alarm.h>                 // Sciemon - Manage alarms
 #include <IDMS.h>                  // Sciemon - Infrared distance measuring
 #include "config.h"                // Sciemon - Configuration
-#include <Adafruit_MotorShield.h>  // Adafruit - Motor Shield
-#include "utility/Adafruit_MS_PWMServoDriver.h"
+#include <AFMotor.h>               // Adafruit - Motor Shield v1
+// #include <Adafruit_MotorShield.h>  // Adafruit - Motor Shield v2
+// #include "utility/Adafruit_MS_PWMServoDriver.h"
 #include <MemoryFree.h>            // 
 
 // Project definitions
@@ -45,21 +46,20 @@ Timer sensors_status(sensors_timer * 1000);
 IDMS ir_sensor;
 
 // Axis
-Adafruit_MotorShield AFMS = Adafruit_MotorShield(); 
-Adafruit_DCMotor *motor = AFMS.getMotor(1);
+// Adafruit_MotorShield AFMS = Adafruit_MotorShield(); 
+// Adafruit_DCMotor *motor = AFMS.getMotor(1);
+AF_DCMotor motor(1, MOTOR12_64KHZ); // create motor #2, 64KHz pwm
 
 void setup() {
   // Serial interface
   Serial.begin(serial_speed);
   // Start up message
   CommandM92();  // System information
-  // pinMode(fan_sensor_pin, INPUT_PULLUP);
+  pinMode(speed_sensor_pin, INPUT_PULLUP);
   attachInterrupt(speed_sensor_pin, spinCounter, RISING);
-  //
-  AFMS.begin();
-  motor->setSpeed(150);  // From 0 to 255
-  motor->run(FORWARD);  // FORWARD or BACKWARD
-  motor->run(RELEASE);  // turn off motor
+  // Motor
+  // AFMS.begin();
+  CommandM1(motor_speed);  // Run motor clockwise at default speed
   // Infrared distance measuring sensor
   ir_sensor.attach(idms_pin);
   // Random number generator seed
@@ -72,7 +72,7 @@ void setup() {
 void loop() {
   SensorsHandler();
   HealthCheckHandler();
-  NotificationHandler();
+  // NotificationHandler();
   AxesHandler();
   DemonstrationHandler();
   PowerHandler();

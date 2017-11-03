@@ -10,7 +10,13 @@ const byte led_warning_pin = 17;
 const byte led_critical_pin = 16;
 
 // Motor
+#define FORWARD 1
+#define BACKWARD 2
+#define BRAKE 3
+#define RELEASE 4
 const byte speed_sensor_pin = 0;
+byte motor_speed = 240;  // Ideal é entre 600 e 800 rotações por dia
+byte motor_direction = FORWARD;
 
 // Infrared distance measuring sensor
 const byte idms_pin = 0;
