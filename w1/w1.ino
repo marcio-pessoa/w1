@@ -9,16 +9,13 @@
 
 #include <Arduino.h>               // Arduino - Main library
 #include <EEPROM.h>                // Arduino - EEPROM library
-#include <Wire.h>                  // Arduino - 
 #include <Project.h>               // Sciemon - Basic project definitions
 #include <Blinker.h>               // Sciemon - Blink leds nicely
 #include <Timer.h>                 // Sciemon - Timer with nice features
 #include <Alarm.h>                 // Sciemon - Manage alarms
+#include <L298.h>                  // Sciemon - L298 DC motor control
 #include <IDMS.h>                  // Sciemon - Infrared distance measuring
 #include "config.h"                // Sciemon - Configuration
-#include <AFMotor.h>               // Adafruit - Motor Shield v1
-// #include <Adafruit_MotorShield.h>  // Adafruit - Motor Shield v2
-// #include "utility/Adafruit_MS_PWMServoDriver.h"
 #include <MemoryFree.h>            // 
 
 // Project definitions
@@ -46,9 +43,7 @@ Timer sensors_status(sensors_timer * 1000);
 IDMS ir_sensor;
 
 // Axis
-// Adafruit_MotorShield AFMS = Adafruit_MotorShield(); 
-// Adafruit_DCMotor *motor = AFMS.getMotor(1);
-AF_DCMotor motor(1, MOTOR12_64KHZ); // create motor #2, 64KHz pwm
+L298 motor;
 
 void setup() {
   // Serial interface
@@ -58,7 +53,7 @@ void setup() {
   pinMode(speed_sensor_pin, INPUT_PULLUP);
   attachInterrupt(speed_sensor_pin, spinCounter, RISING);
   // Motor
-  // AFMS.begin();
+  motor.attach(in1_pin, in2_pin);
   CommandM1(motor_speed);  // Run motor clockwise at default speed
   // Infrared distance measuring sensor
   ir_sensor.attach(idms_pin);

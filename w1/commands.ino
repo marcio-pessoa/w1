@@ -48,8 +48,7 @@ void CommandM100(char letter = 0) {
  *   bool
  */
 bool CommandM0() {
-  // motor->run(RELEASE);
-  motor.run(RELEASE);
+  motor.stop();
   return false;
 }
 
@@ -68,19 +67,10 @@ bool CommandM0() {
  *   true: Position limit has exceeded
  */
 bool CommandM1(float speed) {
-  // motor_direction = FORWARD;
-  // motor->run(motor_direction);
-  // if ((speed != FLIMIT) and (speed >= 0 and speed <= 255)) {
-    // motor_speed = speed;
-    // motor->setSpeed(motor_speed);
-  // }
-  // return false;
-  motor_direction = FORWARD;
-  motor.run(motor_direction);
-  if ((speed != FLIMIT) and (speed >= 0 and speed <= 255)) {
+  if ((speed != FLIMIT) and (speed >= 0 and speed <= 100)) {
     motor_speed = speed;
-    motor.setSpeed(motor_speed);
   }
+  motor.direct(motor_speed);
   return false;
 }
 
@@ -99,23 +89,14 @@ bool CommandM1(float speed) {
  *   true: Position limit has exceeded
  */
 bool CommandM2(float speed) {
-  // motor_direction = BACKWARD;
-  // motor->run(motor_direction);
-  // if ((speed != FLIMIT) and (speed >= 0 and speed <= 255)) {
-    // motor_speed = speed;
-    // motor->setSpeed(motor_speed);
-  // }
-  // return false;
-  motor_direction = BACKWARD;
-  motor.run(motor_direction);
-  if ((speed != FLIMIT) and (speed >= 0 and speed <= 255)) {
+  if ((speed != FLIMIT) and (speed >= 0 and speed <= 100)) {
     motor_speed = speed;
-    motor.setSpeed(motor_speed);
   }
+  motor.reverse(motor_speed);
   return false;
 }
 
-/* CommandM2
+/* CommandM3
  * 
  * Description
  *   Backward and speed.
@@ -132,7 +113,7 @@ bool CommandM2(float speed) {
 bool CommandM3() {
   echo("Motor speed: " + String(motor_speed));
   if (debug_mode) {
-    echo(" (" + String(int(motor_speed * 100 / 255)) + "%)");
+    echo(" %");
   }
   echoln("");
   return motor_speed;
