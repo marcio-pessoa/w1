@@ -13,16 +13,7 @@ Label:
     - eBay item ID: 1938858810016
     - Delivery: 
   - Install
-- Motor Shield v2 for Arduino
-  - Technical specification
-    - URL: https://learn.adafruit.com/adafruit-motor-shield-v2-for-arduino/overview
-  - Buy
-    - Date: Wed, Jul 26, 2017 at 1:04 AM
-    - Cost: USD 6.133833 (GBP 4.71)
-    - eBay item ID: 291998024119
-    - Delivery: 2017-08-28
-  - Install
-+ L298N module
+- L298N module
   - Technical specification
     - URL: http://rover.ebay.com/rover/0/e11400.m1842.l5919/7?euid=8b99f28d6153424aaa3c84100ff68fb5&bu=44114865119&loc=http%3A%2F%2Fwww.ebay.com%2Fulk%2Fvod%3Ftransid%3D0%26itemid%3D192067670930%26qu%3D1&exe=15237&ext=39391&es=0&nqc=EEAAAAAEAABCAgAcCAAAAIARAAQAAIAACEAAAAgAAEAAAAABBQAAARAAAAAAACAACBAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAABECAYAAAAACEAAAzgIAEAACAAABAAAAIAQAAAQAACAAggAAAAAAAAEACAAIABAAAAAAAAAAAAAAAAAC&nqt=EEAAAAAEAABCAgAcCAAAAIARAAQAAIAACEAAAAgAAEAAAAABBQAAAZAAAAAAACAACBAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAABECAYAEAAACEAAAzgIAEAACAAABAAAAIAQAAAQAACAAggAAAAACAAkACAAIABAAAAAAAAAAAAAAAAAC&ec=1&sojTags=es=es,nqc=nqc,nqt=nqt,ec=ec,exe=exe,ext=ext,bu=bu
   - Buy
@@ -30,36 +21,36 @@ Label:
     - Cost: USD 1.6357004 (GBP 1.99)
     - eBay item ID: 192067670930
     - Delivery: 2017-mm-dd
-  + Install
-+ Reversible 100 RPM low noise gearbox motor
+  - Install
+- Reversible 100 RPM low noise gearbox motor
   - Technical specification
     - URL: http://www.ebay.com/itm/Reversible-37mm-12V-DC-100RPM-Gear-Box-Speed-control-Electric-Motor-Low-noise-/261642131158?hash=item3ceb1616d6:g:208AAOSw91NTumJj
-  + Buy
+  - Buy
     - Date: Wed, Jul 26, 2017 at 1:29 AM
     - Cost: USD 15.99
     - eBay item ID: 261642131158
-    + Delivery: 
-  + Install
-+ IR Analog Distance Sensor
+    - Delivery: 2017-11-01
+  - Install
+- IR Analog Distance Sensor
   - Technical specification
     - Model: Sharp GP2Y0A21YK0F
     - URL: http://www.ebay.com/itm/1PCS-Sharp-GP2Y0A21YK0F-GP2Y0A21-10-80cm-Infrared-Proximity-Distance-Sensor-M70-/301724765196?hash=item4640328c0c:g:UEMAAOSwIBBUY14h
-  + Buy
+  - Buy
     - Date: Wed, Aug 16, 2017 at 9:34 PM
     - Cost: USD 3.49
     - eBay item ID: 301724765196
     + Delivery: 
-  + Install
-+ GT2 20T Bore 6.35mm Timing Pulley
+  - Install
+- GT2 20T Bore 6.35mm Timing Pulley
   - Technical specification
     - URL: http://www.ebay.com/itm/2GT-GT2-16T-20-Tooth-Aluminum-Alloy-Timing-Pulley-for-3D-Printer-5-6-35-8mm-Bore-/332299393077?var=&hash=item4d5e965835:m:mw2nurShrWLYxeUs0EL3KNg
-  + Buy
+  - Buy
     - Date: Wed, Jul 26, 2017 at 1:11 AM
     - Cost: USD 1.75
     - eBay item ID: 332299393077
-    + Delivery: 
-  + Install
-+ GT2 60T Bore 5mm Timing Pulley
+    - Delivery: 2017-11-01
+  - Install
+- GT2 60T Bore 5mm Timing Pulley
   - Technical specification
     - URL: http://www.ebay.com/itm/1pcs-30-36-40-60T-5-8mm-Bore-GT2-CNC-Reprap-Timing-Pulley-for-6mm-Belt-3DPrinter-/322570479070?var=&hash=item4b1ab2e5de:m:mxVqoB3_zqfS9vPYmUPQblQ
   - Buy
@@ -67,26 +58,17 @@ Label:
     - Cost: USD 3.32
     - eBay item ID: 322570479070
     - Delivery: 2017-08-28
-  + Install
-+ Metal Hollow Round Rod Bar 5mm
-  - Technical specification
-    - URL: http://www.ebay.com/itm/D5mm-x-L118mm-Metal-Hollow-Round-Rod-Bar-for-DIY-RC-Model-Aircraft-/192209386720?hash=item2cc0927ce0:g:WlQAAOSwK6RZNqjh
-  - Buy
-    - Date: Thu, Jul 27, 2017 at 2:51 PM
-    - Cost: USD 3.3184592 (GBP 2.54)
-    - eBay item ID: 192209386720
-    - Delivery: 2017-09-13
-  + Install
-+ Aluminium Lazy Susan bearing 140mm
+  - Install
+- Aluminium Lazy Susan bearing 140mm
   - Technical specification
     - URL: http://www.ebay.com/itm/292120279850
-  + Buy
+  - Buy
     - Date: Mon, Jul 24, 2017 at 7:19 PM
     - Cost: USD 7.136604 (GBP 5.48)
     - eBay item ID: 292120279850
     - Delivery: 2017-08-31
-  + Install
-+ Optical Endstop
+  - Install
+- Optical Endstop
   - Technical specification
     - URL: http://www.ebay.com/itm/381842310412
   - Buy
@@ -94,8 +76,8 @@ Label:
     - Cost: USD 0.80231875 (AUD $6.15 / 6 = USD 4.8139125 / 6 = 0.80231875)
     - eBay item ID: 381842310412
     - Delivery: 2017-05-18
-  + Install
-+ Round GT2 Timing Belt width 6mm lenght 208mm 104T
+  - Install
+- Round GT2 Timing Belt width 6mm lenght 208mm 104T
   - Technical specification
     - URL: http://www.ebay.com/itm/Round-RepRap-GT2-Timing-Belt-6mm-wide-2mm-pitch-2GT-for-Pulley-3D-Printer-CNC-/162212717993?var=&epid=556338940&hash=item25c4a1a5a9:m:mFrmRhvnQzRbBF4_kmFPqhA
   - Buy
@@ -103,16 +85,16 @@ Label:
     - Cost: USD 2.08
     - eBay item ID: 162212717993
     - Delivery: 2017-09-19
-  + Install
-+ Aluminium cup
-  + Technical specification
-    + URL: 
+  - Install
+- Platic cup
+   Technical specification
+    - URL: 
   - Buy
     - Date: 
     - Cost: USD 1.0365376 (BRL 3.20)
     - eBay item ID: 
     - Delivery: 2017-09-xx
-  + Install
+  - Install
 + Wooden watch box
   + Technical specification
     + URL: 
@@ -185,23 +167,5 @@ Label:
     + eBay item ID: 
     + Delivery: 
   + Install
-- Dupont Connector (female)
-  - Technical specification
-    - URL: http://www.ebay.com/itm/310X-2-54mm-Male-Female-Dupont-Wire-Jumper-And-Header-Connector-Housing-Kit-Z1B5-/252940609483?hash=item3ae46f67cb:g:jwsAAOSwblZZGllA
-  - Buy
-    - Date: Mon, Jun 5, 2017 at 8:23 AM
-    - Cost: USD 0.03793548387096774192 (USD 3.92 / 310 * 3)
-    - eBay item ID: 252940609483
-    - Delivery: 2017-07-26
-  - Install
-- Dupont Connector (male)
-  - Technical specification
-    - URL: http://rover.ebay.com/rover/0/e11400.m1842.l5919/7?euid=84e734cd89374db59c2a7665dd062263&loc=http%3A%2F%2Fpayments.ebay.com%2Fws%2FeBayISAPI.dll%3FViewPaymentStatus%26transId%3D0%26itemId%3D221969611230%26qu%3D1&exe=13342&ext=33945&sojTags=exe=exe,ext=ext
-  - Buy
-    - Date: 
-    - Cost: USD 0.04829166666666666654 (USD (1.22 / (12 * 40)) * 19)
-    - eBay item ID: 
-    - Delivery: 
-  - Install
 
-Total cost: $52.61795620053763440846
+Total cost: $43.07943685

@@ -17,6 +17,8 @@ A winder cannot over wind an automatic watch, since all automatic watches have a
 ![Figure [x3]: Mechanical design](Mechanics/w1.svg width="90%" border="0")
 
 ## Pulleys relationship
+Ideal é entre 600 e 800 rotações por dia
+
 A intenção consiste em fazer o motor girar a 60RPM de forma nominal, dessa forma o relógio girará a 10RPM pelo sistema de polias.
 
 - Sprocket small (Motor Pulley): 20T
@@ -154,11 +156,20 @@ Table [pins] shows pin designation.
  19 |   5 | digital   | input     |                                          
 [Table [pins]: Arduino Uno pin designation.]
 
-## ??? chosen motor driver
+## Motor driver
 ![Figure [L298]: L298 motor driver](Documents/pprjWeToHXRVuku3rawL.jpg width="50%" border="0")
 
-[L298](Documents/L298.pdf)
-
+[L298](Documents/L298.pdf) Absolute maximum ratings:
+Symbol   | Parameter                              | Value      | Unit
+---------|----------------------------------------|------------|--------------
+Vs       | Power Supply                           | 50         | V
+Vss      | Logic Supply Voltage                   | 7          | V
+Vi,Ven   | Input and Enable Voltage               | -0.3 to 7  | V
+Io       | Peak Output Current (each Channel)</br>- Non Repetitive (t = 100µs)</br>- Repetitive (80% on –20% off; ton = 10ms)</br>- DC Operation</br> | </br>3</br>2.5</br>2 | </br>A</br>A</br>A
+Vsens    | Sensing Voltage                        | -1 to 2.3  | V
+Ptot     | Total Power Dissipation (Tcase = 75°C) | 25         | W
+Top      | Junction Operating Temperature         | -25 to 130 | °C
+Tstg, Tj | Storage and Junction Temperature       | -40 to 150 | °C
 
 ## Engine
 ![Figure [JK42HS34_techspecs]: Technical specifications](Documents/7535673A-56FE7EB81_526F672C_zps33a68bc7.jpg width="50%" border="0")
@@ -217,34 +228,6 @@ Valid Non-Command Words:
 Some initial ajusts are necessary to draw nicely. View firmware settings using a terminal software.
 Default serial baudrate is 115200 bps.
 
-Command:
-~~~~ gcode
-M100
-~~~~
-
-
-### Steps to milimeters
-Grbl default:
-```
-$100=250.000 (x, step/mm)
-$101=250.000 (y, step/mm)
-```
-
-Math:
-```
-Engines 200 steps
-Pulley: 20 tooths
-Belt: GT2 (2mm pitch)
-So:
-  ...
-x = 80
-```
-
-Command:
-~~~~ gcode
-$100=80
-$101=80
-~~~~
 
 ---
 
