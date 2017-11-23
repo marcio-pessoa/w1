@@ -202,6 +202,12 @@ void GCodeParse() {
         case 15:
           CommandM15();
           break;
+        case 92:
+          CommandM92();
+          break;
+        case 99:
+          CommandM99();
+          break;
         case 100:
           CommandM100();
           break;

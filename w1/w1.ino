@@ -1,29 +1,31 @@
 /* w1.ino, w1 Mark I - Watch Winder, Arduino main sketch file
  * 
- * This sketch was developed and tested on: Arduino Uno
+ * This sketch was developed and tested on: Arduino Leonardo
  * To work on other Arduino models, some adaptations may be necessary.
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
  * Contributors: none
  */
 
-#include <Arduino.h>               // Arduino - Main library
-#include <EEPROM.h>                // Arduino - EEPROM library
-#include <Project.h>               // Sciemon - Basic project definitions
-#include <Blinker.h>               // Sciemon - Blink leds nicely
-#include <Timer.h>                 // Sciemon - Timer with nice features
-#include <Alarm.h>                 // Sciemon - Manage alarms
-#include <L298.h>                  // Sciemon - L298 DC motor control
-#include <IDMS.h>                  // Sciemon - Infrared distance measuring
-#include "config.h"                // Sciemon - Configuration
-#include <MemoryFree.h>            // 
+#include <Arduino.h>         // Arduino - Main library
+#include <EEPROM.h>          // Arduino - EEPROM library
+#include <Project.h>         // Sciemon - Basic project definitions
+#include <Blinker.h>         // Sciemon - Blink leds nicely
+#include <Timer.h>           // Sciemon - Timer with nice features
+#include <RGB.h>             // Sciemon - RGB LED controller
+#include <SigGen.h>          // Sciemon - Signal Generator
+#include <Alarm.h>           // Sciemon - Manage alarms
+#include <L298.h>            // Sciemon - L298 DC motor control
+#include <IDMS.h>            // Sciemon - Infrared distance measuring
+#include "config.h"          // Sciemon - Configuration
+#include <MemoryFree.h>      // 
 
 // Project definitions
 Project w1("w1",  // Platform
            "I",  // Mark
            "Watch Winder",  // Name
            "0.0b",  // Version
-           "2017-07-21",  // Version date
+           "2017-11-13",  // Version date
            "7",  // Serial number
            "Copyright (c) 2017-2017 Marcio Pessoa",  // Owner
            "undefined. There is NO WARRANTY.",  // License

@@ -152,7 +152,7 @@ void CommandM99() {
  *   void
  */
 bool CommandM89() {
-  int total = 2 * 1024;
+  int total = 2.5 * 1024;
   int free = freeMemory();
   int used = total - free;
   int percent = (float)used * 100 / total;

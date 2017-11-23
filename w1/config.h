@@ -6,14 +6,16 @@
 
 // LED
 const byte led_ok_pin = 13;
-const byte led_warning_pin = 17;
-const byte led_critical_pin = 16;
+const byte led_R_pin = 9;
+const byte led_G_pin = 10;
+const byte led_B_pin = 11;
 
 // Motor
 const byte in1_pin = 5;
 const byte in2_pin = 6;
-const byte speed_sensor_pin = 0;
-float motor_speed = 100;  // percent
+float motor_speed = 53;  // percent
+const byte speed_sensor_pin = 0;  // pin: Digital 2
+const byte addr_turns = 0;  // EEPROM Address to store turns
 
 // Infrared distance measuring sensor
 const byte idms_pin = 0;
@@ -24,10 +26,6 @@ const byte random_Seed_pin = 1;
 // Timers
 const byte health_check_timer = 2;  // seconds
 const byte sensors_timer = 2;  // seconds
-const byte standby_timer = 1;  // minute
-
-// System status (initial state)
-byte general_status = UNKNOWN;
 
 // Debug mode
 bool debug_mode = false;
