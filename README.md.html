@@ -14,7 +14,7 @@ A watch winder is a device used to keep automatic watch running when not worn. A
 A winder cannot over wind an automatic watch, since all automatic watches have a special mainspring that will never come to the end of the spring. Most winders are on some sort of a timer, so they will operate for a few minutes, then “rest” for a bit, then start their motion again.  There is no need to keep the watch in motion 24 hours.
 
 # Mechanics
-![Figure [x3]: Mechanical design](Mechanics/w1.svg width="90%" border="0")
+![Figure [w1_svg]: Mechanical design](Mechanics/w1.svg width="90%" border="0")
 
 ## Pulleys relationship
 Ideal é entre 600 e 800 rotações por dia
@@ -95,31 +95,30 @@ https://www.fingertechrobotics.com/how-to_pulley_belt.php
 # Electronics
 
 ## Arduino
-[Arduino Uno R3][Arduino_Uno]
+[Arduino Leonardo][Arduino_Leonardo]
 ### Diagram
 Be happy.
 ********************************************************************
 *                                      .-----.                     *
 *         .----[PWR]-------------------| USB |--.                  *
 *         |                            '-----'  |                  *
-*         |         GND/RST2  [ ][ ]            |                  *
-*         |       MOSI2/SCK2  [ ][ ]  A5/SCL[ ] |   C5             *
-*         |          5V/MISO2 [ ][ ]  A4/SDA[ ] |   C4             *
-*         |                             AREF[ ] |                  *
+*         |                                     |                  *
+*         |                           A5/SCL[ ] |   C5             *
+*         |                           A4/SDA[ ] |   C4             *
 *         |                             AREF[ ] |                  *
 *         |                              GND[ ] |                  *
-*         | [ ]NC                     SCK/13[ ] |   B5             *
+*         | [ ]NC                     SCK/13[ ]~|   B5             *
 *         | [ ]v.ref                 MISO/12[ ] |   .              *
 *         | [ ]RST                   MOSI/11[ ]~|   .              *
-*         | [ ]3V3    +---+               10[ ]~|   .              *
-*         | [ ]5v     | A |                9[ ]~|   .              *
-*         | [ ]GND   -| R |-               8[ ] |   B0             *
-*         | [ ]GND   -| D |-                    |                  *
-*         | [ ]Vin   -| U |-               7[ ] |   D7             *
-*         |          -| I |-               6[ ]~|   .              *
-*         | [ ]A0    -| N |-               5[ ]~|   .              *
-*         | [ ]A1    -| O |-               4[ ] |   .              *
-*         | [ ]A2     +---+           INT1/3[ ]~|   .              *
+*         | [ ]3V3   +-----+              10[ ]~|   .              *
+*         | [ ]5v    |     |               9[ ]~|   .              *
+*         | [ ]GND   | MCU |               8[ ] |   B0             *
+*         | [ ]GND   |     |                    |                  *
+*         | [ ]Vin   +-----+               7[ ] |   D7             *
+*         |                                6[ ]~|   .              *
+*         | [ ]A0                          5[ ]~|   .              *
+*         | [ ]A1                          4[ ] |   .              *
+*         | [ ]A2                     INT1/3[ ]~|   .              *
 *         | [ ]A3                     INT0/2[ ] |   .              *
 *         | [ ]A4/SDA  RST SCK MISO     TX>1[ ] |   .              *
 *         | [ ]A5/SCL  [ ] [ ] [ ]      RX<0[ ] |   D0             *
@@ -128,7 +127,7 @@ Be happy.
 *             \_______________________/                            *
 *                                                                  *
 ********************************************************************
-[Figure [pins]: Arduino Uno[^busyducks]]
+[Figure [pins]: Arduino Leonardo[^busyducks]]
 
 ### Pin designation
 Table [pins] shows pin designation.
@@ -137,12 +136,12 @@ Table [pins] shows pin designation.
   0 |   0 | digital   | input     | Serial communication                     
   1 |   1 | digital   | output    | Serial communication                     
   2 |   0 | interrupt | input     | Watch winder speed sensor                
-  3 |   3 | digital   | output    | Stepper 1 (activation/speed control)     
-  4 |   4 | digital   | output    | Stepper drive                            
-  5 |   5 | digital   | output    | Stepper 2 (activation/speed control)     
-  6 |   6 | digital   | output    | Stepper 2 (activation/speed control)     
-  7 |   7 | digital   | output    | Stepper drive                            
-  8 |   8 | digital   | output    | Stepper drive                            
+  3 |   3 | digital   | output    |                                          
+  4 |   4 | digital   | output    |                                          
+  5 |   5 | digital   | output    |                                          
+  6 |   6 | digital   | output    |                                          
+  7 |   7 | digital   | output    |                                          
+  8 |   8 | digital   | output    |                                          
   9 |   9 | PWM       | output    |                                          
  10 |  10 | PWM       | output    |                                          
  11 |  11 | digital   | output    | Stepper 1 (activation/speed control)     
@@ -192,13 +191,11 @@ As
 # Software
 
 ## G-Code
-List of Supported G-Codes in [Grbl][Grbl] v0.9 Master:
-Non-Modal Commands:
-:  G4, G10L2, G10L20, G28, G30, G28.1, G30.1, G53, G92, G92.1
+List of Supported G-Codes:
 Motion Modes:
-:  G0, G1, G2, G3, G38.2, G38.3, G38.4, G38.5, G80
-Feed Rate Modes: 
-:  G93, G94
+:  M0, M1, M2
+Feed Rate Modes:
+:  S0
 Unit Modes: 
 :  G20, G21
 Distance Modes: 
@@ -228,11 +225,34 @@ Valid Non-Command Words:
 Some initial ajusts are necessary to draw nicely. View firmware settings using a terminal software.
 Default serial baudrate is 115200 bps.
 
+### Stop
+Command:
+~~~ gcode
+M0
+~~~
+
+### Turn right
+Command:
+~~~~ gcode
+M1 S100
+~~~~
+
+Where:
+- S100: Speed 100%
+
+### Turn left
+Command:
+~~~~ gcode
+M2 S100
+~~~~
+
+Where:
+- S100: Speed 100%
 
 ---
 
 [^busyducks]: Diagram by: <http://busyducks.com/ascii-art-arduinos>
 
-[Arduino_Uno]: https://www.arduino.cc/en/Main/arduinoBoardUno/#techspecs
+[Arduino_Leonardo]: https://www.arduino.cc/en/Main/arduinoBoardLeonardo/#techspecs
 
 <!-- Markdeep: --><style class="fallback">body{white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script><script src="http://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
