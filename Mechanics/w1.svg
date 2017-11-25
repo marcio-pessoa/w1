@@ -14,7 +14,7 @@
    viewBox="0 0 2979.9212 2104.7244"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
    sodipodi:docname="w1.svg">
   <defs
      id="defs4">
@@ -676,6 +676,36 @@
            sodipodi:nodetypes="cc" />
       </g>
     </marker>
+    <marker
+       id="Arrow2Sstart"
+       inkscape:isstock="true"
+       inkscape:stockid="Arrow2Sstart"
+       orient="auto"
+       refX="0"
+       refY="0"
+       style="overflow:visible">
+      <path
+         d="M 8.72,4.03 -2.21,0.02 8.72,-4 c -1.75,2.37 -1.74,5.62 0,8.03 z"
+         id="Arrow2SstartPath"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         transform="matrix(0.3,0,0,0.3,-0.69,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       id="Arrow2Send"
+       inkscape:isstock="true"
+       inkscape:stockid="Arrow2Send"
+       orient="auto"
+       refX="0"
+       refY="0"
+       style="overflow:visible">
+      <path
+         d="M 8.72,4.03 -2.21,0.02 8.72,-4 c -1.75,2.37 -1.74,5.62 0,8.03 z"
+         id="Arrow2SendPath"
+         style="fill:#000000;fill-opacity:1;stroke:none"
+         transform="matrix(-0.3,0,0,-0.3,0.69,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -684,9 +714,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.60202186"
-     inkscape:cx="1463.497"
-     inkscape:cy="1103.7522"
+     inkscape:zoom="1.2040437"
+     inkscape:cx="1664.2266"
+     inkscape:cy="1524.5077"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -703,14 +733,16 @@
      inkscape:snap-bbox-midpoints="true"
      inkscape:bbox-paths="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1056"
+     inkscape:window-height="1052"
      inkscape:window-x="1280"
-     inkscape:window-y="24"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:snap-global="true"
      showguides="true"
      inkscape:snap-page="true"
-     inkscape:snap-grids="false" />
+     inkscape:snap-grids="false"
+     inkscape:measure-start="1024.9,1466.39"
+     inkscape:measure-end="1455.39,1466.29" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -1893,21 +1925,20 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.5px;line-height:125%;font-family:UnDinaru;-inkscape-font-specification:UnDinaru;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:UnDinaru;-inkscape-font-specification:UnDinaru;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        x="2360.7861"
        y="959.59509"
-       id="text6884"
-       sodipodi:linespacing="125%"><tspan
+       id="text6884"><tspan
          sodipodi:role="line"
          x="2360.7861"
          y="959.59509"
          id="tspan6888"
-         style="font-size:35px">w1m1</tspan><tspan
+         style="font-size:35px;line-height:1.25">w1m1</tspan><tspan
          sodipodi:role="line"
          x="2360.7861"
          y="1003.3451"
          id="tspan6892"
-         style="font-size:35px">Watch Winder 1 - Mark I</tspan></text>
+         style="font-size:35px;line-height:1.25">Watch Winder 1 - Mark I</tspan></text>
     <g
        id="breadboardbreadboard-6"
        gorn="0.2"
@@ -2016,7 +2047,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.1.7.0.0.0.0.0.0.0"
                                    gorn="0.2.0.1.7.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">13</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">13</text>
                                 </g>
                                 </g>
                                 </g>
@@ -2089,7 +2120,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.1.8.0.0.0.0.0.0.0"
                                    gorn="0.2.0.1.8.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">12</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">12</text>
                                 </g>
                                 </g>
                                 </g>
@@ -2162,7 +2193,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.1.9.0.0.0.0.0.0.0"
                                    gorn="0.2.0.1.9.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">11</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">11</text>
                                 </g>
                                 </g>
                                 </g>
@@ -2235,7 +2266,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.1.10.0.0.0.0.0.0.0"
                                    gorn="0.2.0.1.10.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">10</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">10</text>
                                 </g>
                                 </g>
                                 </g>
@@ -2308,7 +2339,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.1.11.0.0.0.0.0.0.0"
                                    gorn="0.2.0.1.11.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">9</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">9</text>
                                 </g>
                                 </g>
                                 </g>
@@ -2374,7 +2405,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.1.12.0.0.0.0.0.0.0"
                                    gorn="0.2.0.1.12.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">8</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">8</text>
                                 </g>
                                 </g>
                                 </g>
@@ -2444,7 +2475,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.1.13.0.0.0.0.0.0.0"
                                    gorn="0.2.0.1.13.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">7</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">7</text>
                                 </g>
                                 </g>
                                 </g>
@@ -2510,7 +2541,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.1.14.0.0.0.0.0.0.0"
                                    gorn="0.2.0.1.14.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">6</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">6</text>
                                 </g>
                                 </g>
                                 </g>
@@ -2573,7 +2604,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.1.15.0.0.0.0.0.0.0"
                                    gorn="0.2.0.1.15.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">5</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">5</text>
                                 </g>
                                 </g>
                                 </g>
@@ -2643,7 +2674,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.1.16.0.0.0.0.0.0.0"
                                    gorn="0.2.0.1.16.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">4</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">4</text>
                                 </g>
                                 </g>
                                 </g>
@@ -2709,7 +2740,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.1.17.0.0.0.0.0.0.0"
                                    gorn="0.2.0.1.17.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">3</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">3</text>
                                 </g>
                                 </g>
                                 </g>
@@ -2779,7 +2810,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.1.18.0.0.0.0.0.0.0"
                                    gorn="0.2.0.1.18.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">2</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">2</text>
                                 </g>
                                 </g>
                                 </g>
@@ -3010,7 +3041,7 @@
                                font-size="4.6771"
                                id="_x30_.1.0.1.40.1.1.0"
                                gorn="0.2.0.1.34.1.1.0.0.0.0.0.0.0"
-                               style="font-size:4.67710018px;font-family:OCRA;fill:#ffffff">L</text>
+                               style="font-size:4.67710018px;line-height:0%;font-family:OCRA;fill:#ffffff">L</text>
                           </g>
                         </g>
                       </g>
@@ -3142,7 +3173,7 @@
                          font-size="3.3408"
                          id="_x30_.1.0.2.1.0.0.0"
                          gorn="0.2.0.2.1.0.0.0.0.0.0"
-                         style="font-size:3.34080005px;font-family:OCRA;fill:#ffffff">5V</text>
+                         style="font-size:3.34080005px;line-height:0%;font-family:OCRA;fill:#ffffff">5V</text>
                     </g>
                   </g>
                 </g>
@@ -3175,7 +3206,7 @@
                              font-size="3.3408"
                              id="_x30_.1.0.2.2.1.0"
                              gorn="0.2.0.2.2.1.0.0.0.0.0.0.0"
-                             style="font-size:3.34080005px;font-family:OCRA;fill:#ffffff">A0</text>
+                             style="font-size:3.34080005px;line-height:0%;font-family:OCRA;fill:#ffffff">A0</text>
                         </g>
                       </g>
                     </g>
@@ -3211,7 +3242,7 @@
                                font-size="3.6749"
                                id="_x30_.1.0.2.3.0.0.0"
                                gorn="0.2.0.2.3.0.0.0.0.0.0.0.0.0"
-                               style="font-size:3.67490005px;font-family:OCRA;fill:#ffffff">ANALOG IN</text>
+                               style="font-size:3.67490005px;line-height:0%;font-family:OCRA;fill:#ffffff">ANALOG IN</text>
                           </g>
                         </g>
                       </g>
@@ -3274,7 +3305,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.2.4.0.0.0.0.0.0.0"
                                    gorn="0.2.0.2.4.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">AREF</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">AREF</text>
                                 </g>
                                 </g>
                                 </g>
@@ -3320,7 +3351,7 @@
                              font-size="4.176"
                              id="_x30_.1.0.2.5.1.0"
                              gorn="0.2.0.2.5.1.0.0.0.0.0.0.0"
-                             style="font-size:4.17600012px;font-family:OCRA;fill:#ffffff">1</text>
+                             style="font-size:4.17600012px;line-height:0%;font-family:OCRA;fill:#ffffff">1</text>
                         </g>
                       </g>
                     </g>
@@ -3382,7 +3413,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.2.6.0.0.0.0.0.0.0"
                                    gorn="0.2.0.2.6.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">GND</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">GND</text>
                                 </g>
                                 </g>
                                 </g>
@@ -3446,7 +3477,7 @@
                              font-size="4.6771"
                              id="_x30_.1.0.2.10.1.0"
                              gorn="0.2.0.2.10.1.0.0.0.0.0.0.0"
-                             style="font-size:4.67710018px;font-family:OCRA;fill:#ffffff">TX</text>
+                             style="font-size:4.67710018px;line-height:0%;font-family:OCRA;fill:#ffffff">TX</text>
                         </g>
                       </g>
                     </g>
@@ -3481,7 +3512,7 @@
                              font-size="4.6771"
                              id="_x30_.1.0.2.11.1.0"
                              gorn="0.2.0.2.11.1.0.0.0.0.0.0.0"
-                             style="font-size:4.67710018px;font-family:OCRA;fill:#ffffff">RX</text>
+                             style="font-size:4.67710018px;line-height:0%;font-family:OCRA;fill:#ffffff">RX</text>
                         </g>
                       </g>
                     </g>
@@ -3548,7 +3579,7 @@
                                    font-size="3.3408"
                                    id="_x30_.1.0.2.14.0.0.0.0.0.0.0"
                                    gorn="0.2.0.2.14.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.34080005px;font-family:OCRA;fill:#ffffff">RESET</text>
+                                   style="font-size:3.34080005px;line-height:0%;font-family:OCRA;fill:#ffffff">RESET</text>
                                 </g>
                                 </g>
                                 </g>
@@ -3618,7 +3649,7 @@
                                    font-size="3.3408"
                                    id="_x30_.1.0.2.15.0.0.0.0.0.0.0"
                                    gorn="0.2.0.2.15.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.34080005px;font-family:OCRA;fill:#ffffff">3V3</text>
+                                   style="font-size:3.34080005px;line-height:0%;font-family:OCRA;fill:#ffffff">3V3</text>
                                 </g>
                                 </g>
                                 </g>
@@ -3657,7 +3688,7 @@
                        font-size="3.3408"
                        id="_x30_.1.0.2.16.1.0"
                        gorn="0.2.0.2.16.1.0.0.0.0"
-                       style="font-size:3.34080005px;font-family:OCRA;fill:#ffffff">A1</text>
+                       style="font-size:3.34080005px;line-height:0%;font-family:OCRA;fill:#ffffff">A1</text>
                   </g>
                 </g>
               </g>
@@ -3689,7 +3720,7 @@
                              font-size="3.3408"
                              id="_x30_.1.0.2.17.1.0"
                              gorn="0.2.0.2.17.1.0.0.0.0.0.0.0"
-                             style="font-size:3.34080005px;font-family:OCRA;fill:#ffffff">A2</text>
+                             style="font-size:3.34080005px;line-height:0%;font-family:OCRA;fill:#ffffff">A2</text>
                         </g>
                       </g>
                     </g>
@@ -3724,7 +3755,7 @@
                              font-size="3.3408"
                              id="_x30_.1.0.2.18.1.0"
                              gorn="0.2.0.2.18.1.0.0.0.0.0.0.0"
-                             style="font-size:3.34080005px;font-family:OCRA;fill:#ffffff">A3</text>
+                             style="font-size:3.34080005px;line-height:0%;font-family:OCRA;fill:#ffffff">A3</text>
                         </g>
                       </g>
                     </g>
@@ -3759,7 +3790,7 @@
                              font-size="3.3408"
                              id="_x30_.1.0.2.19.1.0"
                              gorn="0.2.0.2.19.1.0.0.0.0.0.0.0"
-                             style="font-size:3.34080005px;font-family:OCRA;fill:#ffffff">A4</text>
+                             style="font-size:3.34080005px;line-height:0%;font-family:OCRA;fill:#ffffff">A4</text>
                         </g>
                       </g>
                     </g>
@@ -3794,7 +3825,7 @@
                              font-size="3.3408"
                              id="_x30_.1.0.2.20.1.0"
                              gorn="0.2.0.2.20.1.0.0.0.0.0.0.0"
-                             style="font-size:3.34080005px;font-family:OCRA;fill:#ffffff">A5</text>
+                             style="font-size:3.34080005px;line-height:0%;font-family:OCRA;fill:#ffffff">A5</text>
                         </g>
                       </g>
                     </g>
@@ -3830,7 +3861,7 @@
                                font-size="3.3408"
                                id="_x30_.1.0.2.21.0.0.0"
                                gorn="0.2.0.2.21.0.0.0.0.0.0.0.0.0"
-                               style="font-size:3.34080005px;font-family:OCRA;fill:#ffffff">VIN</text>
+                               style="font-size:3.34080005px;line-height:0%;font-family:OCRA;fill:#ffffff">VIN</text>
                           </g>
                         </g>
                       </g>
@@ -3867,7 +3898,7 @@
                                font-size="3.3408"
                                id="_x30_.1.0.2.22.0.0.0"
                                gorn="0.2.0.2.22.0.0.0.0.0.0.0.0.0"
-                               style="font-size:3.34080005px;font-family:OCRA;fill:#ffffff">GND</text>
+                               style="font-size:3.34080005px;line-height:0%;font-family:OCRA;fill:#ffffff">GND</text>
                           </g>
                         </g>
                       </g>
@@ -3904,7 +3935,7 @@
                                font-size="3.3408"
                                id="_x30_.1.0.2.23.0.0.0"
                                gorn="0.2.0.2.23.0.0.0.0.0.0.0.0.0"
-                               style="font-size:3.34080005px;font-family:OCRA;fill:#ffffff">GND</text>
+                               style="font-size:3.34080005px;line-height:0%;font-family:OCRA;fill:#ffffff">GND</text>
                           </g>
                         </g>
                       </g>
@@ -3940,7 +3971,7 @@
                              font-size="3.6749"
                              id="_x30_.1.0.2.24.1.0"
                              gorn="0.2.0.2.24.1.0.0.0.0.0.0.0"
-                             style="font-size:3.67490005px;font-family:OCRA;fill:#ffffff">DIGITAL (PWM=</text>
+                             style="font-size:3.67490005px;line-height:0%;font-family:OCRA;fill:#ffffff">DIGITAL (PWM=</text>
                         </g>
                       </g>
                     </g>
@@ -3982,7 +4013,7 @@
                              font-size="3.6749"
                              id="_x30_.1.0.2.24.3.0"
                              gorn="0.2.0.2.24.3.0.0.0.0.0.0.0"
-                             style="font-size:3.67490005px;font-family:OCRA;fill:#ffffff">)</text>
+                             style="font-size:3.67490005px;line-height:0%;font-family:OCRA;fill:#ffffff">)</text>
                         </g>
                       </g>
                     </g>
@@ -4348,7 +4379,7 @@
                                font-size="6.1209"
                                id="_x30_.1.0.2.31.0.1.0"
                                gorn="0.2.0.2.31.0.1.0.0.0.0.0.0.0"
-                               style="font-size:6.12090015px;font-family:OCRA;fill:#ffffff">Arduino</text>
+                               style="font-size:6.12090015px;line-height:0%;font-family:OCRA;fill:#ffffff">Arduino</text>
                           </g>
                         </g>
                       </g>
@@ -4383,7 +4414,7 @@
                                font-size="2.2258"
                                id="_x30_.1.0.2.31.1.1.0"
                                gorn="0.2.0.2.31.1.1.0.0.0.0.0.0.0"
-                               style="font-size:2.22580004px;font-family:OCRA;fill:#ffffff">TM</text>
+                               style="font-size:2.22580004px;line-height:0%;font-family:OCRA;fill:#ffffff">TM</text>
                           </g>
                         </g>
                       </g>
@@ -4446,7 +4477,7 @@
                                    font-size="3.3408"
                                    id="_x30_.1.0.2.32.0.0.0.0.0.0.0"
                                    gorn="0.2.0.2.32.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.34080005px;font-family:OCRA;fill:#ffffff">IOREF</text>
+                                   style="font-size:3.34080005px;line-height:0%;font-family:OCRA;fill:#ffffff">IOREF</text>
                                 </g>
                                 </g>
                                 </g>
@@ -4763,7 +4794,7 @@
                                    font-size="4.176"
                                    id="_x30_.1.0.2.54.1.1.0.0.0.0.0"
                                    gorn="0.2.0.2.54.1.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:4.17600012px;font-family:OCRA;fill:#ffffff">ICSP</text>
+                                   style="font-size:4.17600012px;line-height:0%;font-family:OCRA;fill:#ffffff">ICSP</text>
                                 </g>
                                 </g>
                                 </g>
@@ -4846,7 +4877,7 @@
                                    font-size="4.176"
                                    id="_x30_.1.0.2.55.1.1.0.0.0.0.0"
                                    gorn="0.2.0.2.55.1.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:4.17600012px;font-family:OCRA;fill:#ffffff">ICSP2</text>
+                                   style="font-size:4.17600012px;line-height:0%;font-family:OCRA;fill:#ffffff">ICSP2</text>
                                 </g>
                                 </g>
                                 </g>
@@ -4968,7 +4999,7 @@
                          font-size="4.6771"
                          id="_x30_.1.0.2.62.1.1.0"
                          gorn="0.2.0.2.62.1.1.0.0.0.0"
-                         style="font-size:4.67710018px;font-family:OCRA;fill:#ffffff">ON</text>
+                         style="font-size:4.67710018px;line-height:0%;font-family:OCRA;fill:#ffffff">ON</text>
                     </g>
                   </g>
                 </g>
@@ -5829,7 +5860,7 @@
                              font-size="3.6749"
                              id="_x30_.1.0.87.0.0.0"
                              gorn="0.2.0.83.0.0.0.0.0.0.0.0.0"
-                             style="font-size:3.67490005px;font-family:OCRA;fill:#ffffff">POWER</text>
+                             style="font-size:3.67490005px;line-height:0%;font-family:OCRA;fill:#ffffff">POWER</text>
                         </g>
                       </g>
                     </g>
@@ -5900,7 +5931,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.89.0.0.0.0.0.0.0"
                                    gorn="0.2.0.85.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">0</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">0</text>
                                 </g>
                                 </g>
                                 </g>
@@ -5973,7 +6004,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.90.0.0.0.0.0.0.0"
                                    gorn="0.2.0.86.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">1</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">1</text>
                                 </g>
                                 </g>
                                 </g>
@@ -6046,7 +6077,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.91.0.0.0.0.0.0.0"
                                    gorn="0.2.0.87.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">TX0</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">TX0</text>
                                 </g>
                                 </g>
                                 </g>
@@ -6119,7 +6150,7 @@
                                    font-size="3.75"
                                    id="_x30_.1.0.92.0.0.0.0.0.0.0"
                                    gorn="0.2.0.88.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0"
-                                   style="font-size:3.75px;font-family:OCRA;fill:#ffffff">RX0</text>
+                                   style="font-size:3.75px;line-height:0%;font-family:OCRA;fill:#ffffff">RX0</text>
                                 </g>
                                 </g>
                                 </g>
@@ -10877,7 +10908,7 @@
                          font-size="4.176"
                          id="_x30_.1.16.1.0"
                          gorn="0.2.16.1.0.0.0.0.0.0.0"
-                         style="font-size:4.17600012px;font-family:OCRA;fill:#ffffff">RESET</text>
+                         style="font-size:4.17600012px;line-height:0%;font-family:OCRA;fill:#ffffff">RESET</text>
                     </g>
                   </g>
                 </g>
@@ -11606,5 +11637,90 @@
          id="path5936"
          inkscape:connector-curvature="0" />
     </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9375;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Sstart);marker-end:url(#Arrow2Send)"
+       d="m 1759.3213,-485.72694 -0.1722,327.06202"
+       id="path2581"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:37.5px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+       x="323.49435"
+       y="1786.8855"
+       id="text2585"
+       transform="rotate(-89.969828)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-weight:normal;font-size:31.24999809px;line-height:125%;text-align:center;letter-spacing:0;word-spacing:0;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+         id="tspan2583"
+         x="323.49435"
+         y="1786.8855">95 mm</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9375;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Sstart);marker-end:url(#Arrow2Send)"
+       d="m 1768.7021,-485.72782 238.4793,-0.17047"
+       id="path2587"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:37.5px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+       x="1888.3419"
+       y="-449.48853"
+       id="text2591"
+       transform="rotate(-0.04095)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-weight:normal;font-size:31.24999809px;line-height:125%;text-align:center;letter-spacing:0;word-spacing:0;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+         id="tspan2589"
+         x="1888.3419"
+         y="-449.48853">70 mm</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9375;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Sstart);marker-end:url(#Arrow2Send)"
+       d="m 2028.6131,-524.70286 -0.1731,405.01475"
+       id="path2593"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:37.5px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+       x="322.68124"
+       y="2016.9979"
+       id="text2597"
+       transform="rotate(-89.975504)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-weight:normal;font-size:31.24999809px;line-height:125%;text-align:center;letter-spacing:0;word-spacing:0;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+         id="tspan2595"
+         x="322.68124"
+         y="2016.9979">117 mm</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9375;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Sstart);marker-end:url(#Arrow2Send)"
+       d="M 1157.9494,-565.62536 V -78.938722"
+       id="path2599"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:37.5px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+       x="478.63455"
+       y="1145.6888"
+       id="text2603"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-weight:normal;font-size:31.24999809px;line-height:125%;text-align:center;letter-spacing:0;word-spacing:0;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+         id="tspan2601"
+         x="478.63455"
+         y="1145.6888">140 mm</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.9375;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Arrow2Sstart);marker-end:url(#Arrow2Send)"
+       d="m 965.53113,-317.69419 394.20757,0.0974"
+       id="path2605"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:37.5px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+       x="1052.1931"
+       y="-275.48892"
+       id="text2609"
+       transform="rotate(0.01416)"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-weight:normal;font-size:31.24999809px;line-height:125%;text-align:center;letter-spacing:0;word-spacing:0;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1"
+         id="tspan2607"
+         x="1052.1931"
+         y="-275.48892">114 mm</tspan></text>
   </g>
 </svg>
