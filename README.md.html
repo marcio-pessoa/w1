@@ -4,8 +4,8 @@
 
                               **w1 - Mark I**
                               **Watch Winder**
-                              Márcio Pessoa
-                                2017-09-20
+                               Márcio Pessoa
+                                 2017-09-20
 
 **w1m1** is an acronim to: Watch Winder with One slot - Mark I.
 
@@ -16,88 +16,84 @@ A winder cannot over wind an automatic watch, since all automatic watches have a
 # Mechanics
 ![Figure [w1_svg]: Mechanical design](Mechanics/w1.svg width="90%" border="0")
 
-## Pulleys relationship
-Ideal é entre 600 e 800 rotações por dia
+## Case
 
-A intenção consiste em fazer o motor girar a 60RPM de forma nominal, dessa forma o relógio girará a 10RPM pelo sistema de polias.
+## Base
 
-- Sprocket small (Motor Pulley): 20T
-- Sprocket large (Watch support Pulley): 60T
+- Noise reduction
 
-$$ f = \frac{s . 100}{L} \% $$
+## Engine
+
+### Pulleys
+Technical specification:
+
+Large pulley:
+- Model: [#GT2-60T]
+- Bore 5mm
+- Standard: GT2
+- Pinch: 2 mm
+- Teeth: 60 T
+
+Small pulley:
+- Model: [#GT2-16T]
+- Bore 6mm
+- Standard: GT2
+- Pinch: 2 mm
+- Teeth: 16T
+
+### Pulleys relationship
+Calculating pulleys relantionship:
+
+$$ s = \frac{B . 100}{A} \% $$
 
 Where:
-- s: Speed Ratio
-- A: Large
-- B: Small
+- A: Large pulley = 60T (Rotor Pulley)
+- B: Small pulley = 16T (Motor Pulley)
+- s: Speed Ratio = ?
 
-$$ s = \frac{20}{60} \% $$
+$$ s = \frac{16 . 100}{60} \% $$
 
 So:
+$$ s = 26.7 \% $$
 
-$$ f = 0.33... \% $$
+### Wheelbase
+![Figure [Wheelbase]: Center distance](Documents/PULLEY_BELT.gif width="50%" border="0")
+Use trigonometric functions to calculate distance between points A and B.
 
-Relação pinhão/coroa:
-:  0.33%
+Using the Pi constant and pulley sizes, it is possible to calculate the belt size and the number of teeth.
 
-## Wheelbase
+Wheelbase data [^bbman] :
+- Large pulley (A): 38.2 mm
+- Small pulley (B): 10.2 mm
+- Center distance: **64.5 mm**
+- Teeth in mesh: **6 T**
 
-![Figure [x3]: Mechanical design](Documents/PULLEY_BELT.gif width="50%" border="0")
-Center Distance: 62mm
+![Figure [Right_triangle]: Right triangle](Documents/right_triangle_main.png width="80%" border="0")
 
-Attribute	Value
-
-- Speed Ratio	0.33
-- Pitch Diameter - Large Pulley (A) (mm)	38.2
-- Pitch Diameter - Small Pulley (B) (mm)	12.7
-- Desired Belt Pitch Length (mm)	206.6
-- Next Available Belt Pitch Length (mm)	208
-- Next Available Number of Teeth - Belt	104
-- Center Distance Using Next Available Belt (mm)	62.7
-- Teeth in Mesh  	8
-
-
-![Figure [x3]: Mechanical design](Documents/right_triangle_main.png width="30%" border="0")
-Para saber a distância de a e b:
-
-c = 62 
-alpha = 45 degree
-
-Computing Lado usando a equação: a=sin(alpha)*c
-a = 43,840620433566
-
-Computing Lado usando a equação: b=cos(alpha)*c
-b = 43,840620433566
-
-Computing Beta usando a equação: beta=π/2-alpha
-beta = 45 graus (0,78539816339745 radiano)
-
-Computing Altura usando a equação: h=a*b/c
-h = 31
-
-Computing Perímetro usando a equação: P=a+b+c
-P = 149,68124086713
-
-Computing Área usando a equação: A=a*b/2
-A = 961
-
-## Belt
+### Belt
 ![Figure [gt2belt]: GT2 belt](Documents/gt2tooth.jpg width="40%" border="0")
-Round GT2 Timing Belt width 6mm lenght 208mm 104T
+[#Belt] Technical specifications:
+- Standard: GT2
+- Pinch: 2 mm
+- Wide: 6 mm
+- Internal lenght: 208 mm
+- Teeth: 104 T
 
-https://www.bbman.com/belt-length-calculator/
-
-https://www.fingertechrobotics.com/how-to_pulley_belt.php
-
-
-## Noise reduction
+### Lazy Susan
+[#Lazy_Susan] Technical specifications:
+Material: aluminium
+Move: bearing 
+External diameter: 140 mm
+Internal diameter: 90 mm
 
 # Electronics
 
 ## Arduino
+[#Arduino] technical specifications:
 [Arduino Leonardo][Arduino_Leonardo]
+
 ### Diagram
-Be happy.
+Figure [pins] shows Arduino diagram.
 ********************************************************************
 *                                      .-----.                     *
 *         .----[PWR]-------------------| USB |--.                  *
@@ -133,32 +129,49 @@ Be happy.
 Table [pins] shows pin designation.
  id | pin |   type    | direction |               description                
 ----|-----|-----------|-----------|--------------------------------------------
-  0 |   0 | digital   | input     | Serial communication                     
-  1 |   1 | digital   | output    | Serial communication                     
-  2 |   0 | interrupt | input     | Watch winder speed sensor                
-  3 |   3 | digital   | output    |                                          
-  4 |   4 | digital   | output    |                                          
-  5 |   5 | digital   | output    |                                          
-  6 |   6 | digital   | output    |                                          
-  7 |   7 | digital   | output    |                                          
-  8 |   8 | digital   | output    |                                          
-  9 |   9 | PWM       | output    |                                          
- 10 |  10 | PWM       | output    |                                          
- 11 |  11 | digital   | output    | Stepper 1 (activation/speed control)     
- 12 |  12 | digital   | output    | Stepper drive                            
- 13 |  13 | digital   | output    | Status LED                               
- 14 |   0 | analog    | input     |                                          
- 15 |   1 | digital   | output    |                                          
- 16 |   2 | digital   | output    |                                          
- 17 |   3 | digital   | input     |                                          
- 18 |   4 | digital   | output    |                                          
- 19 |   5 | digital   | input     |                                          
-[Table [pins]: Arduino Uno pin designation.]
+  0 |   0 | digital   | input     | Serial communication
+  1 |   1 | digital   | output    | Serial communication
+  2 |   0 | interrupt | input     | Speed sensor
+  3 |   1 | interrupt | input     | Door sensor
+  4 |   - | -         | -         | -
+  5 |   5 | PWM       | output    | Motor (speed control)
+  6 |   6 | PWM       | output    | Motor (speed control)
+  7 |   - | -         | -         | -
+  8 |   - | -         | -         | -
+  9 |   9 | PWM       | output    | LED R (red)
+ 10 |  10 | PWM       | output    | LED G (green)
+ 11 |  11 | PWM       | output    | LED B (blue)
+ 12 |   - | -         | -         | -
+ 13 |  13 | PWM       | output    | Status LED
+ 14 |   0 | analog    | input     | User distance sensor
+ 15 |   - | -         | -         | -
+ 16 |   - | -         | -         | -
+ 17 |   - | -         | -         | -
+ 18 |   - | -         | -         | -
+ 19 |   5 | analog    | input     | Random number generator Seed
+[Table [pins]: Arduino pin designation.]
 
-## Motor driver
+## Motor
+![Figure [JK42HS34_techspecs]: Technical specifications](Documents/7535673A-56FE7EB81_526F672C_zps33a68bc7.jpg width="50%" border="0")
+Gear motor technical specifications:
+- Model: [#ZGB37RG]
+- Shaft speed: 100 RPM
+- Rotor Speed: 5000r/min
+- Reversibility: yes
+- Voltage: 12V DC
+- Current: 800mA (no load)
+- Torque: 4kg/cm
+- Diameter: 37mm
+- Shaft length: 15mm
+- Shaft diameter: 6mm
+
+### Driver
 ![Figure [L298]: L298 motor driver](Documents/pprjWeToHXRVuku3rawL.jpg width="50%" border="0")
+> "The L298 is an integrated monolithic circuit in a 15-lead Multiwatt and Power SO20 packages. It is a high voltage, high current dual full-bridge driver designed to accept standard TTL logic levels and drive inductive loads such as relays, solenoids, DC and stepping motors. Two enable inputs are provided to enable or disable the device independently of the input signals. The emitters of the lower transistors of each bridge are connected together and the corresponding external terminal can be used for the connection of an external sensing resistor. Anadditional supply input is provided so that the logic works at a lower voltage."
+>
+>                                 -- From: [L298](Documents/L298.pdf) data book
 
-[L298](Documents/L298.pdf) Absolute maximum ratings:
+[#L298N] absolute maximum ratings:
 Symbol   | Parameter                              | Value      | Unit
 ---------|----------------------------------------|------------|--------------
 Vs       | Power Supply                           | 50         | V
@@ -170,88 +183,306 @@ Ptot     | Total Power Dissipation (Tcase = 75°C) | 25         | W
 Top      | Junction Operating Temperature         | -25 to 130 | °C
 Tstg, Tj | Storage and Junction Temperature       | -40 to 150 | °C
 
-## Engine
-![Figure [JK42HS34_techspecs]: Technical specifications](Documents/7535673A-56FE7EB81_526F672C_zps33a68bc7.jpg width="50%" border="0")
-Technical specifications:
-- Shaft speed: 100 RPM
-- Rotor Speed: 5000r/min
-- Reversibility: yes
-- Voltage: 12V DC
-- Current: 800mA（no load）
-- Torque: 4kg/cm
-- Diameter: 37mm
-- Shaft length: 15mm
-- Shaft diameter: 6mm
+### Speed control
+L298 can help to control motor speed with Arduino PWM outputs:
+- Minimum speed:  RPM
+- Maximum speed:  RPM
 
-## Speed
-As 
+### Speed sensor
+![Figure [TCST2103]: TCST2103 sensor](Documents/TCST2103.png width="50%" border="0")
+> "The [#TCST2103] is a transmissive sensor that include an infrared emitter and phototransistor, located face-to-face on the optical axes in a leaded package which blocks visible light."
+>
+>                         -- From: [TCST2103](Documents/TCST2103.pdf) data book
+
+## Charger system
+
+### Qi
+
+## User proximity sensor
+Sharp [#GP2Y0A21YK0F]
 
 ## Electromagnetic interference reduction
 
 # Software
 
 ## G-Code
-List of Supported G-Codes:
-Motion Modes:
-:  M0, M1, M2
-Feed Rate Modes:
-:  S0
-Unit Modes: 
-:  G20, G21
-Distance Modes: 
-:  G90, G91
-Arc IJK Distance Modes: 
-:  G91.1
-Plane Select Modes: 
-:  G17, G18, G19
-Tool Length Offset Modes: 
-:  G43.1, G49
-Cutter Compensation Modes: 
-:  G40
-Coordinate System Modes: 
-:  G54, G55, G56, G57, G58, G59
-Control Modes: 
-:  G61
-Program Flow: 
-:  M0, M1, M2, M30*
-Coolant Control: 
-:  M7*, M8, M9
-Spindle Control: 
-:  M3, M4, M5
-Valid Non-Command Words: 
-:  F, I, J, K, L, N, P, R, S, T, X, Y, Z
 
-## Settings
-Some initial ajusts are necessary to draw nicely. View firmware settings using a terminal software.
-Default serial baudrate is 115200 bps.
+<!---------------------------------------------------------------------------->
+### G28 - Auto Home
 
-### Stop
-Command:
+(####) Usage
+
+```
+G28
+```
+
+ Argument    | Description                                                      
+-------------|---------------------------------
+ none        | no arguments supported                                           
+
+(####) Notes
+
+Esse comando não para imediatamente, a máquina vai até a posicao zero
+
+(####) Example
+
+~~~ gcode
+G28
+~~~
+
+<!---------------------------------------------------------------------------->
+### M0 - Unconditional stop
+(####) Usage
+
+```
+M0
+```
+
+ Argument    | Description
+-------------|---------------------------------
+ none        | no arguments supported
+
+(####) Notes
+
+(####) Example
+
 ~~~ gcode
 M0
 ~~~
 
-### Turn right
-Command:
-~~~~ gcode
-M1 S100
-~~~~
+<!---------------------------------------------------------------------------->
+### M1 - Clockwise
+(####) Usage
 
-Where:
-- S100: Speed 100%
+```
+M1 [S<rate>]
+```
 
-### Turn left
-Command:
-~~~~ gcode
-M2 S100
-~~~~
+ Argument    | Description
+-------------|---------------------------------
+ `[S<rate>]` | Speed rate
 
-Where:
-- S100: Speed 100%
+(####) Notes
+
+(####) Examples
+
+Set direction to Clockwise:
+~~~ gcode
+M1
+~~~
+
+Set direction to Clockwise at 80% speed rate
+~~~ gcode
+M1 S80
+~~~
+
+<!---------------------------------------------------------------------------->
+### M2 - Counterclockwise
+(####) Usage
+
+```
+M2 [S<rate>]
+```
+
+ Argument    | Description
+-------------|---------------------------------
+ `[S<rate>]` | Speed rate
+
+(####) Notes
+
+(####) Examples
+
+Set direction to Counterclockwise:
+~~~ gcode
+M2
+~~~
+
+Set direction to Counterclockwise at 70% speed rate:
+~~~ gcode
+M2 S70
+~~~
+
+# Bill of material
+
+[#Arduino]: (electronic)
+: Detailed specifications in the Arduino section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: Mon, Aug 21, 2017 at 9:33 AM
+  - Delivered: 2017-10-dd
+  - ID: 282612975059
+  - Charge: **USD 6.50**
+
+[#L298N]: (electronic)
+: Detailed specifications in the Driver section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: Date: Sat, Jan 7, 2017 at 2:59 AM
+  - Delivered: 2017-mm-dd
+  - ID: 192067670930
+  - Charge: **USD 1.6357004** (GBP 1.99)
+
+[#GP2Y0A21YK0F]: (electronic)
+: Detailed specifications in the User proximity sensor section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: Wed, Aug 16, 2017 at 9:34 PM
+  - Delivered: 2017-10-dd
+  - ID: 301724765196
+  - Charge: **USD 3.49**
+
+[#GT2-16T]: (mechanical)
+: Detailed specifications in the Pulleys section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: Sat, Nov 4, 2017 at 7:52 PM
+  - Delivered: 
+  - ID: 332299393077
+  - Charge: **USD 1.99**
+
+[#GT2-60T]: (mechanical)
+: Detailed specifications in the Pulleys section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: Date: Thu, Jul 27, 2017 at 2:55 PM
+  - Delivered: 2017-08-28
+  - ID: 322570479070
+  - Charge: **USD 3.32**
+
+[#Lazy_Susan]: (mechanical)
+: Detailed specifications in the Lazy Susan section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: Mon, Jul 24, 2017 at 7:19 PM
+  - Delivered: 2017-08-31
+  - ID: 292120279850
+  - Charge: **USD 7.136604** (GBP 5.48)
+
+[#Feet]: (mechanical)
+: Detailed specifications in the Feet section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: Thu, Aug 17, 2017 at 1:39 AM
+  - Delivered: 
+  - ID: 282605353238
+  - Charge: **USD 0.125** (1.25 / 40 * 4)
+
+[#Belt]: (mechanical)
+: Detailed specifications in the Belt section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: Thu, Jul 27, 2017 at 10:02 PM
+  - Delivered: 2017-09-19
+  - ID: 162212717993
+  - Charge: **USD 2.08**
+
+[#TCST2103]: (electronic)
+: Detailed specifications in the Speed sensor section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: Thu, Dec 22, 2016 at 12:09 AM
+  - Delivered: 2017-05-18
+  - ID: 381842310412
+  - Charge: **USD 0.80231875** (AUD $6.15 / 6 = USD 4.8139125 / 6 = 0.80231875)
+
+[#ZGB37RG]: (electronic)
+: Detailed specifications in the Motor section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: Wed, Jul 26, 2017 at 1:29 AM
+  - Delivered: 2017-11-01
+  - ID: 261642131158
+  - Charge: **USD 15.99**
+
+[#Velvet feet pad for Wooden watch box]: (electronic)
+: Detailed specifications in the  section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: <span style="color:#F00">pending</span>
+  - Delivered: <span style="color:#F00">pending</span>
+  - ID: <span style="color:#F00">pending</span>
+  - Charge: **USD 0.00**
+
+[#Wooden base box]: (electronic)
+: Detailed specifications in the Case section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: <span style="color:#F00">pending</span>
+  - Delivered: <span style="color:#F00">pending</span>
+  - ID: <span style="color:#F00">pending</span>
+  - Charge: **USD 0.00**
+
+[#Wooden watch box]: (electronic)
+: Detailed specifications in the Base section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: <span style="color:#F00">pending</span>
+  - Delivered: <span style="color:#F00">pending</span>
+  - ID: <span style="color:#F00">pending</span>
+  - Charge: **USD 0.00**
+
+[#Platic cup]: (electronic)
+: Detailed specifications in the  section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: <span style="color:#F00">pending</span>
+  - Delivered: 2017-09-xx
+  - ID: <span style="color:#F00">pending</span>
+  - Charge: **USD 1.0365376** (BRL 3.20)
+
+[#Velvet lining for Wooden watch box]: (electronic)
+: Detailed specifications in the  section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: <span style="color:#F00">pending</span>
+  - Delivered: <span style="color:#F00">pending</span>
+  - ID: <span style="color:#F00">pending</span>
+  - Charge: **USD 0.00**
+
+[#Crystal display]: (electronic)
+: Detailed specifications in the  section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: <span style="color:#F00">pending</span>
+  - Delivered: <span style="color:#F00">pending</span>
+  - ID: <span style="color:#F00">pending</span>
+  - Charge: **USD 0.00**
+
+[#Fine sponge internal lining for noise cancellation in Wooden watch box]: (electronic)
+: Detailed specifications in the  section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: <span style="color:#F00">pending</span>
+  - Delivered: <span style="color:#F00">pending</span>
+  - ID: <span style="color:#F00">pending</span>
+  - Charge: **USD 0.00**
+
+[#Fine sponge lining for Velvet lining in Wooden watch box]: (electronic)
+: Detailed specifications in the  section, purchase information:
+  - Quantity: 1
+  - Unit: each
+  - Bought: <span style="color:#F00">pending</span>
+  - Delivered: <span style="color:#F00">pending</span>
+  - ID: <span style="color:#F00">pending</span>
+  - Charge: **USD 0.00**
+
+[#Time]: (intangible)
+: All work and no play makes me a dull boy:
+  - Quantity: 51
+  - Unit: hours
+  - ID: -
+  - Bought: -
+  - Delivered: -
+  - Charge: **USD 0.00**
+
+## Amount
+Total cost: $44.10
 
 ---
 
 [^busyducks]: Diagram by: <http://busyducks.com/ascii-art-arduinos>
+
+[^bbman]: Calculator by: https://www.bbman.com/belt-length-calculator/
 
 [Arduino_Leonardo]: https://www.arduino.cc/en/Main/arduinoBoardLeonardo/#techspecs
 

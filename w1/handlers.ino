@@ -14,7 +14,7 @@ void HealthCheckHandler() {
 }
 
 void NotificationHandler() {
-  ok_led.blink();
+  status_led.blink();
 }
 
 void PowerHandler() {
