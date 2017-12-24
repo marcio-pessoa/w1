@@ -33,7 +33,7 @@ Project w1("w1",  // Platform
            "Marcio Pessoa <marcio.pessoa@sciemon.com>");  // Contact
 
 // OK LED (Status LED)
-Blinker status_led(led_ok_pin);
+Blinker status_led(led_status_pin);
 
 // Check timer
 Timer health_check(health_check_timer * 1000);

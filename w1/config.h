@@ -18,7 +18,7 @@ const byte speed_sensor_pin = 0;  // pin: Digital 2
 const byte addr_turns = 0;  // EEPROM Address to store turns
 
 // Door
-const byte door_sensor_pin = 1  // pin: Digital 3
+const byte door_sensor_pin = 1;  // pin: Digital 3
 
 // Infrared distance measuring sensor
 const byte idms_pin = 0;
