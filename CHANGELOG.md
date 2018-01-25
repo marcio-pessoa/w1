@@ -1,5 +1,5 @@
 # CHANGELOG
-w1 Mark I - Watch Winder, Change log file
+w1 Mark I - Watch Winder, Change log
 
 ## [0.1b] - 2017-11-04
 ### Added

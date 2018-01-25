@@ -1,11 +1,9 @@
-<meta charset="utf-8">
-<meta lang="en" charset="utf-8">
-<!README, w1 Mark I - Watch Winder, Readme file>
+# w1 - Mark I
+Watch Winder
 
-                              **w1 - Mark I**
-                              **Watch Winder**
-                               Márcio Pessoa
-                                 2017-09-20
+Márcio Pessoa
+
+2017-09-20
 
 **w1m1** is an acronim to: Watch Winder with One slot - Mark I.
 
@@ -14,32 +12,49 @@ A watch winder is a device used to keep automatic watch running when not worn. A
 A winder cannot over wind an automatic watch, since all automatic watches have a special mainspring that will never come to the end of the spring. Most winders are on some sort of a timer, so they will operate for a few minutes, then “rest” for a bit, then start their motion again.  There is no need to keep the watch in motion 24 hours.
 
 # Mechanics
-![Figure [w1_svg]: Mechanical design](Mechanics/w1.svg width="90%" border="0")
+![Figure [w1]: [Mechanical design](Mechanics/w1.FCStd)](Documents/w1.png width="100%" border="0")
 
 ## Case
+![Figure [w1_case]: Case](Documents/Case.png width="50%" border="0")
+[#Case] technical specifications:
+- Material: Wood
+- Feature: Noise reduction with fine spounge
 
 ## Base
+![Figure [w1_base]: Base](Documents/Base.png width="50%" border="0")
+[#Base] technical specifications:
+- Material: Wood
 
-- Noise reduction
+### Feet
+![Figure [w1_base]: Foot](Documents/Foot.png width="50%" border="0")
+[#Feet] technical specifications:
+- Material: Silicone
+- Feature: Self adhesive
+- Color: Transparent
+- Diameter: 8 mm
+- Height: 2.5 mm
 
 ## Engine
 
 ### Pulleys
-Technical specification:
 
-Large pulley:
+![Figure [GT2_60T]: GT2 60T](Documents/GT2_60T.png width="50%" border="0")
+Large pulley technical specification:
 - Model: [#GT2-60T]
 - Bore 5mm
 - Standard: GT2
 - Pinch: 2 mm
 - Teeth: 60 T
+- Material: Aluminium
 
-Small pulley:
+![Figure [GT2_16T]: GT2 16T](Documents/GT2_16T.png width="50%" border="0")
+Small pulley technical specification:
 - Model: [#GT2-16T]
 - Bore 6mm
 - Standard: GT2
 - Pinch: 2 mm
 - Teeth: 16T
+- Material: Aluminium
 
 ### Pulleys relationship
 Calculating pulleys relantionship:
@@ -80,11 +95,12 @@ Wheelbase data [^bbman] :
 - Teeth: 104 T
 
 ### Lazy Susan
+![Figure [Lazy_Susan]: Lazy Susan](Documents/Lazy_Susan.png width="50%" border="0")
 [#Lazy_Susan] Technical specifications:
-Material: aluminium
-Move: bearing 
-External diameter: 140 mm
-Internal diameter: 90 mm
+- Material: aluminium
+- Move: bearing 
+- External diameter: 140 mm
+- Internal diameter: 90 mm
 
 # Electronics
 
@@ -198,10 +214,9 @@ L298 can help to control motor speed with Arduino PWM outputs:
 
 ### Qi
 
-## User proximity sensor
-Sharp [#GP2Y0A21YK0F]
-
-## Electromagnetic interference reduction
+## Door sensor
+[#44E_938] technical specifications:
+- Type: Magnetic
 
 # Software
 
@@ -302,188 +317,10 @@ Set direction to Counterclockwise at 70% speed rate:
 M2 S70
 ~~~
 
-# Bill of material
-
-[#Arduino]: (electronic)
-: Detailed specifications in the Arduino section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: Mon, Aug 21, 2017 at 9:33 AM
-  - Delivered: 2017-10-dd
-  - ID: 282612975059
-  - Charge: **USD 6.50**
-
-[#L298N]: (electronic)
-: Detailed specifications in the Driver section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: Date: Sat, Jan 7, 2017 at 2:59 AM
-  - Delivered: 2017-mm-dd
-  - ID: 192067670930
-  - Charge: **USD 1.6357004** (GBP 1.99)
-
-[#GP2Y0A21YK0F]: (electronic)
-: Detailed specifications in the User proximity sensor section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: Wed, Aug 16, 2017 at 9:34 PM
-  - Delivered: 2017-10-dd
-  - ID: 301724765196
-  - Charge: **USD 3.49**
-
-[#GT2-16T]: (mechanical)
-: Detailed specifications in the Pulleys section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: Sat, Nov 4, 2017 at 7:52 PM
-  - Delivered: 
-  - ID: 332299393077
-  - Charge: **USD 1.99**
-
-[#GT2-60T]: (mechanical)
-: Detailed specifications in the Pulleys section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: Date: Thu, Jul 27, 2017 at 2:55 PM
-  - Delivered: 2017-08-28
-  - ID: 322570479070
-  - Charge: **USD 3.32**
-
-[#Lazy_Susan]: (mechanical)
-: Detailed specifications in the Lazy Susan section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: Mon, Jul 24, 2017 at 7:19 PM
-  - Delivered: 2017-08-31
-  - ID: 292120279850
-  - Charge: **USD 7.136604** (GBP 5.48)
-
-[#Feet]: (mechanical)
-: Detailed specifications in the Feet section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: Thu, Aug 17, 2017 at 1:39 AM
-  - Delivered: 
-  - ID: 282605353238
-  - Charge: **USD 0.125** (1.25 / 40 * 4)
-
-[#Belt]: (mechanical)
-: Detailed specifications in the Belt section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: Thu, Jul 27, 2017 at 10:02 PM
-  - Delivered: 2017-09-19
-  - ID: 162212717993
-  - Charge: **USD 2.08**
-
-[#TCST2103]: (electronic)
-: Detailed specifications in the Speed sensor section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: Thu, Dec 22, 2016 at 12:09 AM
-  - Delivered: 2017-05-18
-  - ID: 381842310412
-  - Charge: **USD 0.80231875** (AUD $6.15 / 6 = USD 4.8139125 / 6 = 0.80231875)
-
-[#ZGB37RG]: (electronic)
-: Detailed specifications in the Motor section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: Wed, Jul 26, 2017 at 1:29 AM
-  - Delivered: 2017-11-01
-  - ID: 261642131158
-  - Charge: **USD 15.99**
-
-[#Velvet feet pad for Wooden watch box]: (electronic)
-: Detailed specifications in the  section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: <span style="color:#F00">pending</span>
-  - Delivered: <span style="color:#F00">pending</span>
-  - ID: <span style="color:#F00">pending</span>
-  - Charge: **USD 0.00**
-
-[#Wooden base box]: (electronic)
-: Detailed specifications in the Case section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: <span style="color:#F00">pending</span>
-  - Delivered: <span style="color:#F00">pending</span>
-  - ID: <span style="color:#F00">pending</span>
-  - Charge: **USD 0.00**
-
-[#Wooden watch box]: (electronic)
-: Detailed specifications in the Base section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: <span style="color:#F00">pending</span>
-  - Delivered: <span style="color:#F00">pending</span>
-  - ID: <span style="color:#F00">pending</span>
-  - Charge: **USD 0.00**
-
-[#Platic cup]: (electronic)
-: Detailed specifications in the  section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: <span style="color:#F00">pending</span>
-  - Delivered: 2017-09-xx
-  - ID: <span style="color:#F00">pending</span>
-  - Charge: **USD 1.0365376** (BRL 3.20)
-
-[#Velvet lining for Wooden watch box]: (electronic)
-: Detailed specifications in the  section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: <span style="color:#F00">pending</span>
-  - Delivered: <span style="color:#F00">pending</span>
-  - ID: <span style="color:#F00">pending</span>
-  - Charge: **USD 0.00**
-
-[#Crystal display]: (electronic)
-: Detailed specifications in the  section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: <span style="color:#F00">pending</span>
-  - Delivered: <span style="color:#F00">pending</span>
-  - ID: <span style="color:#F00">pending</span>
-  - Charge: **USD 0.00**
-
-[#Fine sponge internal lining for noise cancellation in Wooden watch box]: (electronic)
-: Detailed specifications in the  section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: <span style="color:#F00">pending</span>
-  - Delivered: <span style="color:#F00">pending</span>
-  - ID: <span style="color:#F00">pending</span>
-  - Charge: **USD 0.00**
-
-[#Fine sponge lining for Velvet lining in Wooden watch box]: (electronic)
-: Detailed specifications in the  section, purchase information:
-  - Quantity: 1
-  - Unit: each
-  - Bought: <span style="color:#F00">pending</span>
-  - Delivered: <span style="color:#F00">pending</span>
-  - ID: <span style="color:#F00">pending</span>
-  - Charge: **USD 0.00**
-
-[#Time]: (intangible)
-: All work and no play makes me a dull boy:
-  - Quantity: 51
-  - Unit: hours
-  - ID: -
-  - Bought: -
-  - Delivered: -
-  - Charge: **USD 0.00**
-
-## Amount
-Total cost: $44.10
-
 ---
-
-[^busyducks]: Diagram by: <http://busyducks.com/ascii-art-arduinos>
 
 [^bbman]: Calculator by: https://www.bbman.com/belt-length-calculator/
 
+[^busyducks]: Diagram by: <http://busyducks.com/ascii-art-arduinos>
+ 
 [Arduino_Leonardo]: https://www.arduino.cc/en/Main/arduinoBoardLeonardo/#techspecs
-
-<!-- Markdeep: --><style class="fallback">body{white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script><script src="http://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
