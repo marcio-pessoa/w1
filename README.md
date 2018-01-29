@@ -1,18 +1,25 @@
-# w1 - Mark I
-Watch Winder
+# w1 Mark I - Watch Winder
 
 Márcio Pessoa
 
 2017-09-20
 
-**w1m1** is an acronim to: Watch Winder with One slot - Mark I.
+**w1m1** is an acronim to Watch Winder with One slot - Mark I.
 
 A watch winder is a device used to keep automatic watch running when not worn. Automatic watches operate on the principle of winding themselves using a moving weight inside the watch. The weight swings or rotates while the watch is worn and turns the winding mechanism inside the watch. So, fairly obviously, if the watch is not worn, then it no longer receives power this way and will run down. While virtually all automatic watches can be manually wound, this is not always convenient. So the concept of an automatic watch winder was born.
 
 A winder cannot over wind an automatic watch, since all automatic watches have a special mainspring that will never come to the end of the spring. Most winders are on some sort of a timer, so they will operate for a few minutes, then “rest” for a bit, then start their motion again.  There is no need to keep the watch in motion 24 hours.
 
+
+[Change log](CHANGELOG.md)
+
+[Bill of materials](BOM.md)
+
+[Kanban](KANBAN.md)
+
+
 # Mechanics
-![Figure [w1]: [Mechanical design](Mechanics/w1.FCStd)](Documents/w1.png width="100%" border="0")
+![Mechanical design](Documents/w1.png)
 
 ## Case
 ![Figure [w1_case]: Case](Documents/Case.png width="50%" border="0")
@@ -142,7 +149,7 @@ Figure [pins] shows Arduino diagram.
 [Figure [pins]: Arduino Leonardo[^busyducks]]
 
 ### Pin designation
-Table [pins] shows pin designation.
+
  id | pin |   type    | direction |               description                
 ----|-----|-----------|-----------|--------------------------------------------
   0 |   0 | digital   | input     | Serial communication
@@ -165,10 +172,10 @@ Table [pins] shows pin designation.
  17 |   - | -         | -         | -
  18 |   - | -         | -         | -
  19 |   5 | analog    | input     | Random number generator Seed
-[Table [pins]: Arduino pin designation.]
-
+ 
 ## Motor
 ![Figure [JK42HS34_techspecs]: Technical specifications](Documents/7535673A-56FE7EB81_526F672C_zps33a68bc7.jpg width="50%" border="0")
+
 Gear motor technical specifications:
 - Model: [#ZGB37RG]
 - Shaft speed: 100 RPM
@@ -185,9 +192,10 @@ Gear motor technical specifications:
 ![Figure [L298]: L298 motor driver](Documents/pprjWeToHXRVuku3rawL.jpg width="50%" border="0")
 > "The L298 is an integrated monolithic circuit in a 15-lead Multiwatt and Power SO20 packages. It is a high voltage, high current dual full-bridge driver designed to accept standard TTL logic levels and drive inductive loads such as relays, solenoids, DC and stepping motors. Two enable inputs are provided to enable or disable the device independently of the input signals. The emitters of the lower transistors of each bridge are connected together and the corresponding external terminal can be used for the connection of an external sensing resistor. Anadditional supply input is provided so that the logic works at a lower voltage."
 >
->                                 -- From: [L298](Documents/L298.pdf) data book
+> -- From: [L298](Documents/L298.pdf) data book
 
 [#L298N] absolute maximum ratings:
+
 Symbol   | Parameter                              | Value      | Unit
 ---------|----------------------------------------|------------|--------------
 Vs       | Power Supply                           | 50         | V

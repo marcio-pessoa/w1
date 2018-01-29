@@ -6,7 +6,6 @@ w1 Mark I - Watch Winder, Bill of materials
 |     1 | Arduino_Leonardo   |   282612975059 | 2017-08-21 | 2017-10-dd | each |   6.50 |  0.41 |   6.91 |
 
 
-
 [#L298N]: (electronic)
 : Detailed specifications in the Driver section, purchase information:
   - Quantity: 1
@@ -128,10 +127,10 @@ w1 Mark I - Watch Winder, Bill of materials
 : Detailed specifications in the  section, purchase information:
   - Quantity: 1
   - Unit: each
-  - Bought: <span style="color:#F00">pending</span>
-  - Delivered: 2017-09-xx
-  - ID: <span style="color:#F00">pending</span>
-  - Charge: **USD 1.0365376** = USD (BRL 3.20) (price) + USD 0 (6.38% IOF)
+  - Bought: 2018-01-26
+  - Delivered: 2018-01-26
+  - ID: -
+  - Charge: **USD 2.82 ** = BRL 8.90
 
 [#Velvet lining for Wooden watch box]: (electronic)
 : Detailed specifications in the  section, purchase information:
@@ -179,4 +178,3 @@ w1 Mark I - Watch Winder, Bill of materials
   - Charge: **USD 0.00**
 
 Total cost: $44.79
-
