@@ -46,7 +46,7 @@ Feet technical specifications:
 ![GT2 60T](Documents/GT2_60T.png)
 
 Large pulley technical specification:
-- Model: [#GT2-60T]
+- Model: GT2-60T
 - Bore 5mm
 - Standard: GT2
 - Pinch: 2 mm
@@ -56,7 +56,7 @@ Large pulley technical specification:
 ![GT2 16T](Documents/GT2_16T.png)
 
 Small pulley technical specification:
-- Model: [#GT2-16T]
+- Model: GT2-16T
 - Bore 6mm
 - Standard: GT2
 - Pinch: 2 mm
@@ -85,7 +85,7 @@ Use trigonometric functions to calculate distance between points A and B.
 
 Using the Pi constant and pulley sizes, it is possible to calculate the belt size and the number of teeth.
 
-Wheelbase data [^bbman] :
+Wheelbase data:
 - Large pulley (A): 38.2 mm
 - Small pulley (B): 10.2 mm
 - Center distance: **64.5 mm**
@@ -108,7 +108,7 @@ Belt Technical specifications:
 ### Lazy Susan
 ![Lazy Susan](Documents/Lazy_Susan.png)
 
-Lazy_Susan Technical specifications:
+Lazy Susan Technical specifications:
 - Material: aluminium
 - Move: bearing 
 - External diameter: 140 mm
@@ -224,7 +224,7 @@ Tstg, Tj | Storage and Junction Temperature       | -40 to 150 | °C
 ### Qi
 
 ## Door sensor
-44E_938 technical specifications:
+Sensor 44E_938 technical specifications:
 - Type: Magnetic
 
 # Software
