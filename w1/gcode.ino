@@ -185,6 +185,16 @@ void GCodeParse() {
   char letter = buffer[0];
   byte number = GCodeNumber(letter, -1);
   switch (letter) {
+    case 'G':
+      switch(number) {
+        case 28:
+          retval = CommandG28();
+          break;
+        default:
+          Command0();
+          break;
+      }
+      break;
     case 'M':
       switch(number) {
         case 0:

@@ -24,14 +24,32 @@ void CommandM100(char letter = 0) {
     echoln(F("M0\tCompulsory stop"));
     echoln(F("M1\tForward and speed"));
     echoln(F("M2\tBackward and speed"));
-    echoln(F("M3\tShow motor speed"));
-    echoln(F("M15\tSystem info"));
+    echoln(F("M3\tShow motor direction and speed"));
+    echoln(F("M15\tSystem information"));
     echoln(F("M89\tMemory information"));
-    echoln(F("M92\tSystem information"));
+    echoln(F("M92\tSystem version"));
     echoln(F("M99\tReset system"));
     echoln(F("M100\tThis help message"));
     echoln(F("M111\tDebug mode"));
   }
+}
+
+/* CommandG28
+ * 
+ * Description
+ *   Gracefully stop.
+ * 
+ *   CommandG28()
+ * 
+ * Parameters
+ *   none
+ * 
+ * Returns
+ *   bool
+ */
+bool CommandG28() {
+  CommandM0();
+  return false;
 }
 
 /* CommandM0
@@ -99,7 +117,7 @@ bool CommandM2(float speed) {
 /* CommandM3
  * 
  * Description
- *   Backward and speed.
+ *   Show motor direction and speed.
  * 
  *   CommandM2(100)
  * 
@@ -111,6 +129,7 @@ bool CommandM2(float speed) {
  *   true: Position limit has exceeded
  */
 bool CommandM3() {
+  echo("Motor direction: ");
   echo("Motor speed: " + String(motor_speed));
   if (debug_mode) {
     echo(" %");

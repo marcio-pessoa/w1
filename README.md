@@ -1,9 +1,5 @@
 # w1 Mark I - Watch Winder
 
-Márcio Pessoa
-
-2017-09-20
-
 **w1m1** is an acronim to Watch Winder with One slot - Mark I.
 
 A watch winder is a device used to keep automatic watch running when not worn. Automatic watches operate on the principle of winding themselves using a moving weight inside the watch. The weight swings or rotates while the watch is worn and turns the winding mechanism inside the watch. So, fairly obviously, if the watch is not worn, then it no longer receives power this way and will run down. While virtually all automatic watches can be manually wound, this is not always convenient. So the concept of an automatic watch winder was born.
@@ -22,19 +18,22 @@ A winder cannot over wind an automatic watch, since all automatic watches have a
 ![Mechanical design](Documents/w1.png)
 
 ## Case
-![Figure [w1_case]: Case](Documents/Case.png width="50%" border="0")
-[#Case] technical specifications:
+![Case](Documents/Case.png)
+
+Case technical specifications:
 - Material: Wood
-- Feature: Noise reduction with fine spounge
+- Feature: Noise reduction with internal fine spounge
 
 ## Base
-![Figure [w1_base]: Base](Documents/Base.png width="50%" border="0")
-[#Base] technical specifications:
+![Base](Documents/Base.png)
+
+Base technical specifications:
 - Material: Wood
 
 ### Feet
-![Figure [w1_base]: Foot](Documents/Foot.png width="50%" border="0")
-[#Feet] technical specifications:
+![Foot](Documents/Foot.png)
+
+Feet technical specifications:
 - Material: Silicone
 - Feature: Self adhesive
 - Color: Transparent
@@ -44,8 +43,8 @@ A winder cannot over wind an automatic watch, since all automatic watches have a
 ## Engine
 
 ### Pulleys
+![GT2 60T](Documents/GT2_60T.png)
 
-![Figure [GT2_60T]: GT2 60T](Documents/GT2_60T.png width="50%" border="0")
 Large pulley technical specification:
 - Model: [#GT2-60T]
 - Bore 5mm
@@ -54,7 +53,8 @@ Large pulley technical specification:
 - Teeth: 60 T
 - Material: Aluminium
 
-![Figure [GT2_16T]: GT2 16T](Documents/GT2_16T.png width="50%" border="0")
+![GT2 16T](Documents/GT2_16T.png)
+
 Small pulley technical specification:
 - Model: [#GT2-16T]
 - Bore 6mm
@@ -79,7 +79,8 @@ So:
 $$ s = 26.7 \% $$
 
 ### Wheelbase
-![Figure [Wheelbase]: Center distance](Documents/PULLEY_BELT.gif width="50%" border="0")
+![Center distance](Documents/PULLEY_BELT.gif)
+
 Use trigonometric functions to calculate distance between points A and B.
 
 Using the Pi constant and pulley sizes, it is possible to calculate the belt size and the number of teeth.
@@ -90,11 +91,14 @@ Wheelbase data [^bbman] :
 - Center distance: **64.5 mm**
 - Teeth in mesh: **6 T**
 
-![Figure [Right_triangle]: Right triangle](Documents/right_triangle_main.png width="80%" border="0")
+![Right triangle](Documents/right_triangle_main.png)
+
+Reference: https://www.bbman.com/belt-length-calculator/
 
 ### Belt
-![Figure [gt2belt]: GT2 belt](Documents/gt2tooth.jpg width="40%" border="0")
-[#Belt] Technical specifications:
+![GT2 belt](Documents/gt2tooth.jpg)
+
+Belt Technical specifications:
 - Standard: GT2
 - Pinch: 2 mm
 - Wide: 6 mm
@@ -102,8 +106,9 @@ Wheelbase data [^bbman] :
 - Teeth: 104 T
 
 ### Lazy Susan
-![Figure [Lazy_Susan]: Lazy Susan](Documents/Lazy_Susan.png width="50%" border="0")
-[#Lazy_Susan] Technical specifications:
+![Lazy Susan](Documents/Lazy_Susan.png)
+
+Lazy_Susan Technical specifications:
 - Material: aluminium
 - Move: bearing 
 - External diameter: 140 mm
@@ -112,41 +117,40 @@ Wheelbase data [^bbman] :
 # Electronics
 
 ## Arduino
-[#Arduino] technical specifications:
+Arduino technical specifications:
 [Arduino Leonardo][Arduino_Leonardo]
 
 ### Diagram
-Figure [pins] shows Arduino diagram.
-********************************************************************
-*                                      .-----.                     *
-*         .----[PWR]-------------------| USB |--.                  *
-*         |                            '-----'  |                  *
-*         |                                     |                  *
-*         |                           A5/SCL[ ] |   C5             *
-*         |                           A4/SDA[ ] |   C4             *
-*         |                             AREF[ ] |                  *
-*         |                              GND[ ] |                  *
-*         | [ ]NC                     SCK/13[ ]~|   B5             *
-*         | [ ]v.ref                 MISO/12[ ] |   .              *
-*         | [ ]RST                   MOSI/11[ ]~|   .              *
-*         | [ ]3V3   +-----+              10[ ]~|   .              *
-*         | [ ]5v    |     |               9[ ]~|   .              *
-*         | [ ]GND   | MCU |               8[ ] |   B0             *
-*         | [ ]GND   |     |                    |                  *
-*         | [ ]Vin   +-----+               7[ ] |   D7             *
-*         |                                6[ ]~|   .              *
-*         | [ ]A0                          5[ ]~|   .              *
-*         | [ ]A1                          4[ ] |   .              *
-*         | [ ]A2                     INT1/3[ ]~|   .              *
-*         | [ ]A3                     INT0/2[ ] |   .              *
-*         | [ ]A4/SDA  RST SCK MISO     TX>1[ ] |   .              *
-*         | [ ]A5/SCL  [ ] [ ] [ ]      RX<0[ ] |   D0             *
-*         |            [ ] [ ] [ ]              |                  *
-*         '--.                         .--------'                  *
-*             \_______________________/                            *
-*                                                                  *
-********************************************************************
-[Figure [pins]: Arduino Leonardo[^busyducks]]
+    ********************************************************************
+    *                                      .-----.                     *
+    *         .----[PWR]-------------------| USB |--.                  *
+    *         |                            '-----'  |                  *
+    *         |                                     |                  *
+    *         |                           A5/SCL[ ] |   C5             *
+    *         |                           A4/SDA[ ] |   C4             *
+    *         |                             AREF[ ] |                  *
+    *         |                              GND[ ] |                  *
+    *         | [ ]NC                     SCK/13[ ]~|   B5             *
+    *         | [ ]v.ref                 MISO/12[ ] |   .              *
+    *         | [ ]RST                   MOSI/11[ ]~|   .              *
+    *         | [ ]3V3   +-----+              10[ ]~|   .              *
+    *         | [ ]5v    |     |               9[ ]~|   .              *
+    *         | [ ]GND   | MCU |               8[ ] |   B0             *
+    *         | [ ]GND   |     |                    |                  *
+    *         | [ ]Vin   +-----+               7[ ] |   D7             *
+    *         |                                6[ ]~|   .              *
+    *         | [ ]A0                          5[ ]~|   .              *
+    *         | [ ]A1                          4[ ] |   .              *
+    *         | [ ]A2                     INT1/3[ ]~|   .              *
+    *         | [ ]A3                     INT0/2[ ] |   .              *
+    *         | [ ]A4/SDA  RST SCK MISO     TX>1[ ] |   .              *
+    *         | [ ]A5/SCL  [ ] [ ] [ ]      RX<0[ ] |   D0             *
+    *         |            [ ] [ ] [ ]              |                  *
+    *         '--.                         .--------'                  *
+    *             \_______________________/                            *
+    *                                                                  *
+    ********************************************************************
+Arduino Leonardo diagram by http://busyducks.com/ascii-art-arduinos
 
 ### Pin designation
 
@@ -174,10 +178,10 @@ Figure [pins] shows Arduino diagram.
  19 |   5 | analog    | input     | Random number generator Seed
  
 ## Motor
-![Figure [JK42HS34_techspecs]: Technical specifications](Documents/7535673A-56FE7EB81_526F672C_zps33a68bc7.jpg width="50%" border="0")
+![Gear motor](Documents/7535673A-56FE7EB81_526F672C_zps33a68bc7.jpg)
 
 Gear motor technical specifications:
-- Model: [#ZGB37RG]
+- Model: ZGB37RG
 - Shaft speed: 100 RPM
 - Rotor Speed: 5000r/min
 - Reversibility: yes
@@ -189,12 +193,13 @@ Gear motor technical specifications:
 - Shaft diameter: 6mm
 
 ### Driver
-![Figure [L298]: L298 motor driver](Documents/pprjWeToHXRVuku3rawL.jpg width="50%" border="0")
+![L298 motor driver](Documents/pprjWeToHXRVuku3rawL.jpg)
+
 > "The L298 is an integrated monolithic circuit in a 15-lead Multiwatt and Power SO20 packages. It is a high voltage, high current dual full-bridge driver designed to accept standard TTL logic levels and drive inductive loads such as relays, solenoids, DC and stepping motors. Two enable inputs are provided to enable or disable the device independently of the input signals. The emitters of the lower transistors of each bridge are connected together and the corresponding external terminal can be used for the connection of an external sensing resistor. Anadditional supply input is provided so that the logic works at a lower voltage."
 >
 > -- From: [L298](Documents/L298.pdf) data book
 
-[#L298N] absolute maximum ratings:
+L298N absolute maximum ratings:
 
 Symbol   | Parameter                              | Value      | Unit
 ---------|----------------------------------------|------------|--------------
@@ -207,23 +212,19 @@ Ptot     | Total Power Dissipation (Tcase = 75°C) | 25         | W
 Top      | Junction Operating Temperature         | -25 to 130 | °C
 Tstg, Tj | Storage and Junction Temperature       | -40 to 150 | °C
 
-### Speed control
-L298 can help to control motor speed with Arduino PWM outputs:
-- Minimum speed:  RPM
-- Maximum speed:  RPM
-
 ### Speed sensor
-![Figure [TCST2103]: TCST2103 sensor](Documents/TCST2103.png width="50%" border="0")
-> "The [#TCST2103] is a transmissive sensor that include an infrared emitter and phototransistor, located face-to-face on the optical axes in a leaded package which blocks visible light."
+![TCST2103 sensor](Documents/TCST2103.png)
+
+> "The TCST2103 is a transmissive sensor that include an infrared emitter and phototransistor, located face-to-face on the optical axes in a leaded package which blocks visible light."
 >
->                         -- From: [TCST2103](Documents/TCST2103.pdf) data book
+> -- From: [TCST2103](Documents/TCST2103.pdf) data book
 
 ## Charger system
 
 ### Qi
 
 ## Door sensor
-[#44E_938] technical specifications:
+44E_938 technical specifications:
 - Type: Magnetic
 
 # Software
@@ -231,9 +232,10 @@ L298 can help to control motor speed with Arduino PWM outputs:
 ## G-Code
 
 <!---------------------------------------------------------------------------->
-### G28 - Auto Home
 
-(####) Usage
+### G28 - Gracefully stop
+
+#### Usage
 
 ```
 G28
@@ -243,19 +245,21 @@ G28
 -------------|---------------------------------
  none        | no arguments supported                                           
 
-(####) Notes
+#### Notes
 
-Esse comando não para imediatamente, a máquina vai até a posicao zero
+Go to home position and gracefully stop.
 
-(####) Example
+#### Example
 
 ~~~ gcode
 G28
 ~~~
 
 <!---------------------------------------------------------------------------->
+
 ### M0 - Unconditional stop
-(####) Usage
+
+#### Usage
 
 ```
 M0
@@ -265,57 +269,74 @@ M0
 -------------|---------------------------------
  none        | no arguments supported
 
-(####) Notes
+#### Notes
 
-(####) Example
+#### Example
 
 ~~~ gcode
 M0
 ~~~
 
 <!---------------------------------------------------------------------------->
+
 ### M1 - Clockwise
-(####) Usage
+
+#### Usage
 
 ```
 M1 [S<rate>]
 ```
 
- Argument    | Description
--------------|---------------------------------
- `[S<rate>]` | Speed rate
+ Argument     | Description
+--------------|---------------------------------
+ `[S<rate>]`  | Speed rate [0,100]
+ `[A<value>]` | Absolute speed (RPD - Revolutions Per Day) [X,XXX]
 
-(####) Notes
+#### Notes
+Speed limits:
+- Minimum speed:  RPM
+- Maximum speed:  RPM
 
-(####) Examples
+#### Examples
 
 Set direction to Clockwise:
 ~~~ gcode
 M1
 ~~~
 
-Set direction to Clockwise at 80% speed rate
+Set direction to Clockwise at 80% speed rate:
 ~~~ gcode
 M1 S80
 ~~~
 
+Set direction to Clockwise at 600 RPD:
+~~~ gcode
+M1 A600
+~~~
+
 <!---------------------------------------------------------------------------->
+
 ### M2 - Counterclockwise
-(####) Usage
+
+#### Usage
 
 ```
 M2 [S<rate>]
 ```
 
- Argument    | Description
--------------|---------------------------------
- `[S<rate>]` | Speed rate
+ Argument     | Description
+--------------|---------------------------------
+ `[S<rate>]`  | Speed rate [0,100]
+ `[A<value>]` | Absolute speed (RPD - Revolutions Per Day) [X,XXX]
 
-(####) Notes
+#### Notes
+Speed limits:
+- Minimum speed:  RPM
+- Maximum speed:  RPM
 
-(####) Examples
+#### Examples
 
-Set direction to Counterclockwise:
+Set direction to Counterclockwise, using current speed:
 ~~~ gcode
 M2
 ~~~
@@ -325,10 +346,172 @@ Set direction to Counterclockwise at 70% speed rate:
 M2 S70
 ~~~
 
+<!---------------------------------------------------------------------------->
+
+### M3 - Show motor direction and speed
+
+#### Usage
+
+```
+M3
+```
+
+ Argument     | Description
+--------------|---------------------------------
+ none         | no arguments supported
+
+#### Notes
+
+#### Examples
+
+Get direction and current speed:
+~~~ gcode
+M3
+~~~
+
+<!---------------------------------------------------------------------------->
+
+### M15 - System information
+
+#### Usage
+
+```
+M15
+```
+
+ Argument     | Description
+--------------|---------------------------------
+ none         | no arguments supported
+
+#### Notes
+
+#### Examples
+
+Get system information:
+~~~ gcode
+M15
+~~~
+
+<!---------------------------------------------------------------------------->
+
+### M89 - Memory information
+
+#### Usage
+
+```
+M89
+```
+
+ Argument     | Description
+--------------|---------------------------------
+ none         | no arguments supported
+
+#### Notes
+
+#### Examples
+
+Get memory information:
+~~~ gcode
+M89
+~~~
+
+<!---------------------------------------------------------------------------->
+
+### M92 - System version
+
+#### Usage
+
+```
+M92
+```
+
+ Argument     | Description
+--------------|---------------------------------
+ none         | no arguments supported
+
+#### Notes
+
+#### Examples
+
+Get system version:
+~~~ gcode
+M92
+~~~
+
+<!---------------------------------------------------------------------------->
+
+### M99 - Reset
+
+#### Usage
+
+```
+M99
+```
+
+ Argument     | Description
+--------------|---------------------------------
+ none         | no arguments supported
+
+#### Notes
+
+#### Examples
+
+Reset device:
+~~~ gcode
+M99
+~~~
+
+<!---------------------------------------------------------------------------->
+
+### M100 - Help message
+
+#### Usage
+
+```
+M100
+```
+
+ Argument     | Description
+--------------|---------------------------------
+ none         | no arguments supported
+
+#### Notes
+
+#### Examples
+
+Show help message:
+~~~ gcode
+M100
+~~~
+
+<!---------------------------------------------------------------------------->
+
+### M111 - Debug mode
+
+#### Usage
+
+```
+M111
+```
+
+ Argument     | Description
+--------------|---------------------------------
+ none         | no arguments supported
+
+#### Notes
+
+#### Examples
+
+Enable Debug mode:
+~~~ gcode
+M111
+~~~
+
+Disable Debug mode:
+~~~ gcode
+M111
+~~~
+
 ---
 
-[^bbman]: Calculator by: https://www.bbman.com/belt-length-calculator/
-
-[^busyducks]: Diagram by: <http://busyducks.com/ascii-art-arduinos>
- 
 [Arduino_Leonardo]: https://www.arduino.cc/en/Main/arduinoBoardLeonardo/#techspecs

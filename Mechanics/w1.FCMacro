@@ -1,0 +1,35 @@
+import FreeCAD as App, FreeCADGui as Gui, Part, time, sys, math, Draft, DraftGeomUtils
+from PySide import QtGui,QtCore
+
+class Animation(object):
+    def __init__(self):
+        App.Console.PrintMessage('init')
+
+        App.ActiveDocument.recompute()
+
+        self.timer = QtCore.QTimer()
+        QtCore.QObject.connect(self.timer, QtCore.SIGNAL("timeout()"), self.my_update)
+        self.start()
+        self.an = 0.1
+
+    def my_update(self):
+        string = '{0}'.format(self.an)
+        self.an = self.an + 0.01 if self.an < (2 * math.pi) else 0.0
+
+        angle = math.degrees(self.an)
+        App.ActiveDocument.Sketch.setDatum(5,App.Units.Quantity(str(angle)+' deg'))
+        App.ActiveDocument.recompute()
+        p1 = App.ActiveDocument.Sketch.Shape.Vertexes[0].Point
+        p2 = App.ActiveDocument.Sketch.Shape.Vertexes[1].Point
+        conrodangle = math.degrees(Draft.DraftVecUtils.angle(App.Vector(1,0,0),(p1-p2))) - 90
+        App.ActiveDocument.getObject("Cylinder").Placement = App.Placement(p1,App.Rotation(App.Vector(1,0,0),-90))
+        App.ActiveDocument.getObject("Sketch001").Placement = App.Placement(p1,App.Rotation(App.Vector(0,0,1),conrodangle))
+
+    def start(self):
+        self.timer.start(50)
+
+    def stop(self):
+        self.timer.stop()
+
+
+animation = Animation() 
