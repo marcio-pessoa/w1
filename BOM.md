@@ -14,6 +14,7 @@ w1 Mark I - Watch Winder, Bill of materials
 |     1 | Platic_cup         |              - | 2018-01-26 | 2018-01-26 | each |   2.82 |  0.00 |   2.82 |
 |     4 | Silicone_Feet      |   182933353181 | 2017-12-27 | pending    | each |   0.04 |  0.01 |   0.05 |
 |     1 | 44E_938            |   181262049602 | 2018-01-01 | pending    | each |   0.93 |  0.06 |   0.99 |
+|     1 | Magnet             |              - | 2015-mm-dd | 2015-mm-dd | each |   0.00 |  0.00 |   0.00 |
 |     1 | Case               | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Base               | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Door_glass         | Pending        | Pending    | pending    | each |        |       |        |
