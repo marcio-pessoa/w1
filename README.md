@@ -200,12 +200,12 @@ L298N absolute maximum ratings:
 
 Symbol   | Parameter                              | Value      | Unit
 ---------|----------------------------------------|------------|--------------
-Vs       | Power Supply                           | 50         | V
-Vss      | Logic Supply Voltage                   | 7          | V
-Vi,Ven   | Input and Enable Voltage               | -0.3 to 7  | V
-Io       | Peak Output Current (each Channel)</br>- Non Repetitive (t = 100µs)</br>- Repetitive (80% on –20% off; ton = 10ms)</br>- DC Operation</br> | </br>3</br>2.5</br>2 | </br>A</br>A</br>A
-Vsens    | Sensing Voltage                        | -1 to 2.3  | V
-Ptot     | Total Power Dissipation (Tcase = 75°C) | 25         | W
+Vs       | Power Supply                           |         50 | V
+Vss      | Logic Supply Voltage                   |          7 | V
+Vi,Ven   | Input and Enable Voltage               |  -0.3 to 7 | V
+Io       | Peak Output Current (each Channel)     |          2 | A
+Vsens    | Sensing Voltage                        |  -1 to 2.3 | V
+Ptot     | Total Power Dissipation (Tcase = 75°C) |         25 | W
 Top      | Junction Operating Temperature         | -25 to 130 | °C
 Tstg, Tj | Storage and Junction Temperature       | -40 to 150 | °C
 
