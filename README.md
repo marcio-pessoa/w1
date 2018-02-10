@@ -6,13 +6,11 @@ A watch winder is a device used to keep automatic watch running when not worn. A
 
 A winder cannot over wind an automatic watch, since all automatic watches have a special mainspring that will never come to the end of the spring. Most winders are on some sort of a timer, so they will operate for a few minutes, then “rest” for a bit, then start their motion again.  There is no need to keep the watch in motion 24 hours.
 
-
 [Change log](CHANGELOG.md)
 
 [Bill of materials](BOM.md)
 
 [Kanban](KANBAN.md)
-
 
 # Mechanics
 ![Mechanical design](Documents/w1.png)
@@ -108,7 +106,7 @@ Belt Technical specifications:
 ### Lazy Susan
 ![Lazy Susan](Documents/Lazy_Susan.png)
 
-Lazy Susan Technical specifications:
+Lazy Susan technical specifications:
 - Material: aluminium
 - Move: bearing 
 - External diameter: 140 mm
@@ -117,8 +115,8 @@ Lazy Susan Technical specifications:
 # Electronics
 
 ## Arduino
-Arduino technical specifications:
-[Arduino Leonardo][Arduino_Leonardo]
+[Arduino Leonardo] technical specifications:
+
 
 ### Diagram
     ********************************************************************
@@ -153,7 +151,6 @@ Arduino technical specifications:
 Arduino Leonardo diagram by http://busyducks.com/ascii-art-arduinos
 
 ### Pin designation
-
  id | pin |   type    | direction |               description                
 ----|-----|-----------|-----------|--------------------------------------------
   0 |   0 | digital   | input     | Serial communication
@@ -514,4 +511,4 @@ M111
 
 ---
 
-[Arduino_Leonardo]: https://www.arduino.cc/en/Main/arduinoBoardLeonardo/#techspecs
+[Arduino Leonardo]: https://www.arduino.cc/en/Main/arduinoBoardLeonardo/#techspecs
