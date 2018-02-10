@@ -18,20 +18,20 @@ A winder cannot over wind an automatic watch, since all automatic watches have a
 ## Case
 ![Case](Documents/Case.png)
 
-Case technical specifications:
+Technical specifications:
 - Material: Wood
 - Feature: Noise reduction with internal fine spounge
 
 ## Base
 ![Base](Documents/Base.png)
 
-Base technical specifications:
+Technical specifications:
 - Material: Wood
 
 ### Feet
 ![Foot](Documents/Foot.png)
 
-Feet technical specifications:
+Technical specifications:
 - Material: Silicone
 - Feature: Self adhesive
 - Color: Transparent
@@ -41,9 +41,11 @@ Feet technical specifications:
 ## Engine
 
 ### Pulleys
+
+#### Large
 ![GT2 60T](Documents/GT2_60T.png)
 
-Large pulley technical specification:
+Technical specifications:
 - Model: GT2-60T
 - Bore 5mm
 - Standard: GT2
@@ -51,9 +53,10 @@ Large pulley technical specification:
 - Teeth: 60 T
 - Material: Aluminium
 
+#### Small
 ![GT2 16T](Documents/GT2_16T.png)
 
-Small pulley technical specification:
+Technical specifications:
 - Model: GT2-16T
 - Bore 6mm
 - Standard: GT2
@@ -96,7 +99,7 @@ Reference: https://www.bbman.com/belt-length-calculator/
 ### Belt
 ![GT2 belt](Documents/gt2tooth.jpg)
 
-Belt Technical specifications:
+Technical specifications:
 - Standard: GT2
 - Pinch: 2 mm
 - Wide: 6 mm
@@ -106,7 +109,7 @@ Belt Technical specifications:
 ### Lazy Susan
 ![Lazy Susan](Documents/Lazy_Susan.png)
 
-Lazy Susan technical specifications:
+Technical specifications:
 - Material: aluminium
 - Move: bearing 
 - External diameter: 140 mm
@@ -115,8 +118,8 @@ Lazy Susan technical specifications:
 # Electronics
 
 ## Arduino
-[Arduino Leonardo] technical specifications:
-
+Technical specifications:
+[Arduino Leonardo] 
 
 ### Diagram
     ********************************************************************
@@ -177,7 +180,7 @@ Arduino Leonardo diagram by http://busyducks.com/ascii-art-arduinos
 ## Motor
 ![Gear motor](Documents/7535673A-56FE7EB81_526F672C_zps33a68bc7.jpg)
 
-Gear motor technical specifications:
+Technical specifications:
 - Model: ZGB37RG
 - Shaft speed: 100 RPM
 - Rotor Speed: 5000r/min
@@ -221,7 +224,8 @@ Tstg, Tj | Storage and Junction Temperature       | -40 to 150 | °C
 ### Qi
 
 ## Door sensor
-Sensor 44E_938 technical specifications:
+Technical specifications:
+- Model: Sensor 44E_938
 - Type: Magnetic
 
 # Software
