@@ -47,6 +47,12 @@ IDMS ir_sensor;
 // Axis
 L298 motor;
 
+byte turn_count = 0;
+byte turn_count_1 = 0;
+byte turn_count_2 = 0;
+byte turn_count_3 = 0;
+byte turn_count_4 = 0;
+
 void setup() {
   // Serial interface
   Serial.begin(serial_speed);
@@ -62,6 +68,16 @@ void setup() {
   // Random number generator seed
   pinMode(random_Seed_pin, INPUT);
   randomSeed(analogRead(random_Seed_pin));
+  // Get data from EEPROM addresses
+  turn_count = EEPROM.read(addr_turn_count);
+  turn_count_1 = EEPROM.read(addr_turn_count_1);
+  turn_count_2 = EEPROM.read(addr_turn_count_2);
+  turn_count_3 = EEPROM.read(addr_turn_count_3);
+  turn_count_4 = EEPROM.read(addr_turn_count_4);
+  // Calculate total number of turns
+  float total_turn_count = turn_count + 255 *
+                           turn_count_1 * turn_count_2 *
+                           turn_count_3 * turn_count_4;
   // G-code ready to receive commands
   GcodeReady();
 }

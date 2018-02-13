@@ -30,6 +30,13 @@ const byte random_Seed_pin = 5;
 const byte health_check_timer = 2;  // seconds
 const byte sensors_timer = 0.5;  // seconds
 
+// EEPROM addresses
+const byte addr_turn_count = 0;  // turn units
+const byte addr_turn_count_1 = 1;  // turn units * 256
+const byte addr_turn_count_2 = 2;  // turn units * 256 * 256
+const byte addr_turn_count_3 = 3;  // turn units * 256 * 256 * 256
+const byte addr_turn_count_4 = 4;  // turn units * 256 * 256 * 256 * 256
+
 // Debug mode
 bool debug_mode = false;
 
