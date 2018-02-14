@@ -10,13 +10,11 @@
 #include <Arduino.h>         // Arduino - Main library
 #include <EEPROM.h>          // Arduino - EEPROM library
 #include <Project.h>         // Sciemon - Basic project definitions
-#include <Blinker.h>         // Sciemon - Blink leds nicely
 #include <Timer.h>           // Sciemon - Timer with nice features
 #include <RGB.h>             // Sciemon - RGB LED controller
 #include <SigGen.h>          // Sciemon - Signal Generator
 #include <Alarm.h>           // Sciemon - Manage alarms
 #include <L298.h>            // Sciemon - L298 DC motor control
-#include <IDMS.h>            // Sciemon - Infrared distance measuring
 #include "config.h"          // Sciemon - Configuration
 #include <MemoryFree.h>      // 
 
@@ -32,8 +30,8 @@ Project w1("w1",  // Platform
            "http://pessoa.eti.br/",  // Website
            "Marcio Pessoa <marcio.pessoa@sciemon.com>");  // Contact
 
-// OK LED (Status LED)
-Blinker status_led(led_status_pin);
+// LEDs
+SigGen wave;
 
 // Check timer
 Timer health_check(health_check_timer * 1000);
@@ -41,12 +39,10 @@ Timer health_check(health_check_timer * 1000);
 // Sensors timer
 Timer sensors_status(sensors_timer * 1000);
 
-// Infrared distance measuring sensor
-IDMS ir_sensor;
-
 // Axis
 L298 motor;
 
+// Turn counters
 byte turn_count = 0;
 byte turn_count_1 = 0;
 byte turn_count_2 = 0;
@@ -58,13 +54,18 @@ void setup() {
   Serial.begin(serial_speed);
   // Start up message
   CommandM92();  // System information
+  // Status LED
+  pinMode(led_status_pin, OUTPUT);
+  analogWrite(led_status_pin, LOW);
+  // Rotor speed sensor
   pinMode(speed_sensor_pin, INPUT_PULLUP);
   attachInterrupt(speed_sensor_pin, spinCounter, RISING);
+  // Door magnetic sensor
+  pinMode(door_sensor_pin, INPUT_PULLUP);
+  attachInterrupt(door_sensor_pin, parkRotor, RISING);
   // Motor
   motor.attach(in1_pin, in2_pin);
   CommandM1(motor_speed);  // Run motor clockwise at default speed
-  // Infrared distance measuring sensor
-  ir_sensor.attach(idms_pin);
   // Random number generator seed
   pinMode(random_Seed_pin, INPUT);
   randomSeed(analogRead(random_Seed_pin));
@@ -75,9 +76,7 @@ void setup() {
   turn_count_3 = EEPROM.read(addr_turn_count_3);
   turn_count_4 = EEPROM.read(addr_turn_count_4);
   // Calculate total number of turns
-  float total_turn_count = turn_count + 255 *
-                           turn_count_1 * turn_count_2 *
-                           turn_count_3 * turn_count_4;
+  float total_turn_count = totalTurnCount();
   // G-code ready to receive commands
   GcodeReady();
 }

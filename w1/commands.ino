@@ -19,12 +19,14 @@
  * Returns
  *   void
  */
-void CommandM100(char letter = 0) {
+bool CommandM100(char letter = 0) {
   if (letter == 'M' or letter == 0) {
+    echoln(F("G28\t"));
     echoln(F("M0\tCompulsory stop"));
     echoln(F("M1\tForward and speed"));
     echoln(F("M2\tBackward and speed"));
-    echoln(F("M3\tShow motor direction and speed"));
+    echoln(F("M3\tShow rotor direction and speed"));
+    echoln(F("M4\tShow total rotor turns"));
     echoln(F("M15\tSystem information"));
     echoln(F("M89\tMemory information"));
     echoln(F("M92\tSystem version"));
@@ -32,6 +34,7 @@ void CommandM100(char letter = 0) {
     echoln(F("M100\tThis help message"));
     echoln(F("M111\tDebug mode"));
   }
+  return false;
 }
 
 /* CommandG28
@@ -119,23 +122,41 @@ bool CommandM2(float speed) {
  * Description
  *   Show motor direction and speed.
  * 
- *   CommandM2(100)
+ *   CommandM3()
  * 
  * Parameters
- *   speed: axis speed.
+ *   none
  * 
  * Returns
  *   false: OK
  *   true: Position limit has exceeded
  */
 bool CommandM3() {
-  echo("Motor direction: ");
-  echo("Motor speed: " + String(motor_speed));
+  echo("Rotor direction: ");
+  echo("Rotor speed: " + String(motor_speed));
   if (debug_mode) {
     echo(" %");
   }
   echoln("");
   return motor_speed;
+}
+
+/* CommandM4
+ * 
+ * Description
+ *   Show total rotor turns.
+ * 
+ *   CommandM4()
+ * 
+ * Parameters
+ *   none
+ * 
+ * Returns
+ *   void
+ */
+bool CommandM4() {
+  echo("Total rotor turns: " + String(totalTurnCount()));
+  return false;
 }
 
 /* 
@@ -151,10 +172,11 @@ bool CommandM3() {
  * Returns
  *   void
  */
-void CommandM99() {
+bool CommandM99() {
   echoln("Reseting...\n");
   CommandM0();
   w1.reset();
+  return false;
 }
 
 /* CommandM89
@@ -205,10 +227,12 @@ bool CommandM89() {
  * Returns
  *   void
  */
-void CommandM15() {
+bool CommandM15() {
   CommandM92();  // System information
   CommandM89();  // Memory information
-  CommandM3();  // Motor speed
+  CommandM4();  // Total rotor turns
+  CommandM3();  // Rotor speed
+  return false;
 }
 
 /* 
@@ -224,7 +248,7 @@ void CommandM15() {
  * Returns
  *   void
  */
-void CommandM92() {
+bool CommandM92() {
   echoln(w1.version());
   if (debug or (millis() < 100)) {
     echoln(w1.owner());
@@ -233,6 +257,7 @@ void CommandM92() {
     echoln(w1.website());
     echoln(w1.contact());
   }
+  return false;
 }
 
 /* CommandM111
@@ -248,9 +273,10 @@ void CommandM92() {
  * Returns
  *   void
  */
-void CommandM111() {
+bool CommandM111() {
   debug_mode = !debug_mode;
   echoln("DEBUG: " + String(debug_mode ? F("on") : F("off")));
+  return false;
 }
 
 /* 
@@ -266,6 +292,7 @@ void CommandM111() {
  * Returns
  *   void
  */
-void Command0() {
-  echoln(F("Unknown command")); 
+bool Command0() {
+  echoln(F("Unknown command"));
+  return true;
 }

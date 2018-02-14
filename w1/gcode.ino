@@ -207,25 +207,28 @@ void GCodeParse() {
           retval = CommandM2(GCodeNumber('S', FLIMIT));
           break;
         case 3:
-          CommandM3();
+          retval = CommandM3();
+          break;
+        case 4:
+          retval = CommandM4();
           break;
         case 15:
-          CommandM15();
+          retval = CommandM15();
           break;
         case 92:
-          CommandM92();
+          retval = CommandM92();
           break;
         case 99:
-          CommandM99();
+          retval = CommandM99();
           break;
         case 100:
-          CommandM100();
+          retval = CommandM100();
           break;
         case 111:
-          CommandM111();
+          retval = CommandM111();
           break;
         default:
-          Command0();
+          retval = Command0();
           break;
       }
       break;

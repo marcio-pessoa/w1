@@ -9,7 +9,7 @@ int rph = 0;  // RPH (Rotations Per Hour)
 int rpd = 0;  // RPD (Rotations Per Day)
 int delta_t = 0;
 int resolution = 10;
-int counter_turn = 0;
+byte counter_turn = 0;
 unsigned long timer = millis();
 
 /* spinCounter
@@ -36,9 +36,25 @@ void spinCounter() {
     timer = millis();
     counter_turn = 0;
   }
-  // Store turn in EEPROM
-  int turns = EEPROM.read(addr_turns);
-  EEPROM.write(addr_turns, turns++);
+  // Store turns in EEPROM
+  recordData();
+}
+
+/* parkRotor
+ * 
+ * Description
+ *   Park rotor.
+ * 
+ *   parkRotor()
+ * 
+ * Parameters
+ *   none
+ * 
+ * Returns
+ *   void
+ */
+void parkRotor() {
+  CommandG28();  // Gracefully stop
 }
 
 /* recordData
@@ -54,7 +70,7 @@ void spinCounter() {
  * Returns
  *   void
  */
-void recordData(){
+void recordData() {
   byte new_turn_count = counter_turn;
   byte new_turn_count_1 = 0;
   byte new_turn_count_2 = 0;
@@ -98,4 +114,22 @@ void recordData(){
     turn_count_4 = new_turn_count_4;
     EEPROM.write(addr_turn_count_4, turn_count_4);
   }
+}
+
+/* totalTurnCount
+ * 
+ * Description
+ *   Return total rotor turns.
+ * 
+ *   totalTurnCount()
+ * 
+ * Parameters
+ *   none
+ * 
+ * Returns
+ *   float
+ */
+float totalTurnCount() {
+  return turn_count + 255 *
+         turn_count_1 * turn_count_2 * turn_count_3 * turn_count_4;
 }
