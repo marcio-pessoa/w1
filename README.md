@@ -115,6 +115,20 @@ Technical specifications:
 - External diameter: 140 mm
 - Internal diameter: 90 mm
 
+### Cup
+![Cup](Documents/Corpo_Caixa_Seca.png)
+
+![Cup](Documents/Corpo_Caixa_Seca_sizes.png)
+
+Technical specifications:
+- Material: PVC
+- A: 100 mm
+- C: 60.6 mm
+- D: 101.6 mm
+- DE: 94 mm
+- F: 24.8 mm
+- de: 37.5 mm
+
 # Electronics
 
 ## Arduino
