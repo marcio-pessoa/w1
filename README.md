@@ -117,7 +117,6 @@ Technical specifications:
 
 ### Cup
 ![Cup](Documents/Corpo_Caixa_Seca.png)
-
 ![Cup](Documents/Corpo_Caixa_Seca_sizes.png)
 
 Technical specifications:
@@ -136,33 +135,33 @@ Technical specifications:
 [Arduino Leonardo] 
 
 ### Diagram
-                                          .-----.                     
-             .----[PWR]-------------------| USB |--.                  
-             |                            '-----'  |                  
-             |                                     |                  
-             |                           A5/SCL[ ] |   C5             
-             |                           A4/SDA[ ] |   C4             
-             |                             AREF[ ] |                  
-             |                              GND[ ] |                  
-             | [ ]NC                     SCK/13[ ]~|   B5             
-             | [ ]v.ref                 MISO/12[ ] |   .              
-             | [ ]RST                   MOSI/11[ ]~|   .              
-             | [ ]3V3   +-----+              10[ ]~|   .              
-             | [ ]5v    |     |               9[ ]~|   .              
-             | [ ]GND   | MCU |               8[ ] |   B0             
-             | [ ]GND   |     |                    |                  
-             | [ ]Vin   +-----+               7[ ] |   D7             
-             |                                6[ ]~|   .              
-             | [ ]A0                          5[ ]~|   .              
-             | [ ]A1                          4[ ] |   .              
-             | [ ]A2                     INT1/3[ ]~|   .              
-             | [ ]A3                     INT0/2[ ] |   .              
-             | [ ]A4/SDA  RST SCK MISO     TX>1[ ] |   .              
-             | [ ]A5/SCL  [ ] [ ] [ ]      RX<0[ ] |   D0             
-             |            [ ] [ ] [ ]              |                  
-             '--.                         .--------'                  
-                 \_______________________/                            
-                                                                      
+                                 .-----.                     
+    .----[PWR]-------------------| USB |--.                  
+    |                            '-----'  |                  
+    |                                     |                  
+    |                           A5/SCL[ ] |   C5             
+    |                           A4/SDA[ ] |   C4             
+    |                             AREF[ ] |                  
+    |                              GND[ ] |                  
+    | [ ]NC                     SCK/13[ ]~|   B5             
+    | [ ]v.ref                 MISO/12[ ] |   .              
+    | [ ]RST                   MOSI/11[ ]~|   .              
+    | [ ]3V3   +-----+              10[ ]~|   .              
+    | [ ]5v    |     |               9[ ]~|   .              
+    | [ ]GND   | MCU |               8[ ] |   B0             
+    | [ ]GND   |     |                    |                  
+    | [ ]Vin   +-----+               7[ ] |   D7             
+    |                                6[ ]~|   .              
+    | [ ]A0                          5[ ]~|   .              
+    | [ ]A1                          4[ ] |   .              
+    | [ ]A2                     INT1/3[ ]~|   .              
+    | [ ]A3                     INT0/2[ ] |   .              
+    | [ ]A4/SDA  RST SCK MISO     TX>1[ ] |   .              
+    | [ ]A5/SCL  [ ] [ ] [ ]      RX<0[ ] |   D0             
+    |            [ ] [ ] [ ]              |                  
+    '--.                         .--------'                  
+       \_______________________/                            
+
 Arduino Leonardo diagram by http://busyducks.com/ascii-art-arduinos
 
 ### Pin designation
@@ -213,16 +212,16 @@ Technical specifications:
 
 L298N absolute maximum ratings:
 
-Symbol   | Parameter                              | Value      | Unit
----------|----------------------------------------|------------|--------------
-Vs       | Power Supply                           |         50 | V
-Vss      | Logic Supply Voltage                   |          7 | V
-Vi,Ven   | Input and Enable Voltage               |  -0.3 to 7 | V
-Io       | Peak Output Current (each Channel)     |          2 | A
-Vsens    | Sensing Voltage                        |  -1 to 2.3 | V
-Ptot     | Total Power Dissipation (Tcase = 75°C) |         25 | W
-Top      | Junction Operating Temperature         | -25 to 130 | °C
-Tstg, Tj | Storage and Junction Temperature       | -40 to 150 | °C
+ Symbol   | Parameter                              | Value      | Unit
+----------|----------------------------------------|------------|--------------
+ Vs       | Power Supply                           |         50 | V
+ Vss      | Logic Supply Voltage                   |          7 | V
+ Vi,Ven   | Input and Enable Voltage               |  -0.3 to 7 | V
+ Io       | Peak Output Current (each Channel)     |          2 | A
+ Vsens    | Sensing Voltage                        |  -1 to 2.3 | V
+ Ptot     | Total Power Dissipation (Tcase = 75°C) |         25 | W
+ Top      | Junction Operating Temperature         | -25 to 130 | °C
+ Tstg, Tj | Storage and Junction Temperature       | -40 to 150 | °C
 
 ### Speed sensor
 ![TCST2103 sensor](Documents/TCST2103.png)
