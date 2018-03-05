@@ -1,0 +1,43 @@
+- 'BACKLOG':
+  - (Mechanics) Case - Receive
+  - (Mechanics) Arduino - Install
+  - (Mechanics) L298 module - Install
+  - (Mechanics) Battery module - Install
+  - (Mechanics) Qi receptor - Install
+  - (Mechanics) Motor - Install
+  - (Mechanics) Rotor - Install GT2 60T
+  - (Mechanics) Rotor - Install
+  - (Mechanics) Belt - Install
+  - (Mechanics) Belt - Stress
+  - (Electronics) Arduino - Wiring
+  - (Electronics) L298 module - Wiring
+  - (Electronics) Battery module - Wiring
+  - (Electronics) Qi receptor - Wiring
+  - (Software) Door sensor - Run CommandG28 when door opens
+  - (Software) CommandG28 (Gracefully stop) - Define park position
+  - (Software) CommandG28 (Gracefully stop) - Find park position
+  - (Software) CommandG28 (Gracefully stop) - Stop on park position
+  - (Software) Stadby - De tempos em tempos o dispositivo podera parar o movimento, isso eh util para que o motor e o modulo de potencia possam sofrer menos aquecimento.
+  - (Software) Speed sensor - Check minimum revolutions per day
+  - (Software) Speed sensor - Check maximum revolutions per day
+  - (Video) Demonstration
+
+- 'TO DO':
+  - (Mechanics) Case - Order
+
+- 'DOING':
+  - (Mechanics) Case - Design
+  - (Mechanics) Case - Define how to insert Magnet discreetly inside door
+  - (Software) Spin counter - Contador de numero total de voltas armazenado em EEPROM
+
+- 'TESTING':
+  - (Mechanics) Plastic cup on Lazy Suzan - Install
+  - (Mechanics) Plastic cup - Drill
+  - (Mechanics) Plastic cup - Finish
+  - (Mechanics) Plastic cup - Cut
+  - (Electronics) Motor - Wiring
+
+- 'DONE':
+  - (Electronics) Motor driver - Update Documents folder with chosen option
+  - (Electronics) Motor driver - Update BOM with chosen option
+  - (Electronics) Motor driver - Choose motor driver
