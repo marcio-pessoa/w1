@@ -25,4 +25,9 @@ w1 Mark I - Watch Winder, Bill of materials
 |     1 | Sponge_adhesive    | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Velvet_feet        | Pending        | Pending    | pending    | each |        |       |        |
 
+Currency: USD
+
+International IOF: 6.38%
+Domestic IOF: 0.38%
+
 Total cost: $53.62
