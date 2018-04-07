@@ -15,9 +15,9 @@ w1 Mark I - Watch Winder, Bill of materials
 |     1 | Magnet             |              - | 2015-mm-dd | 2015-mm-dd | each |   0.00 |  0.00 |   0.00 |
 |     1 | Battery            |   261530668000 | 2015-05-05 | 2015-mm-dd | each |   1.11 |  0.06 |   1.17 |
 |     1 | Battery_case       |   263210608095 | 2017-12-03 | 2018-03-29 | each |   0.78 |  0.05 |   0.83 |
+|     1 | Qi_receiver        |   312013493657 | 2017-12-04 | 2018-04-07 | each |   1.90 |  0.11 |   2.01 |
 |     4 | Silicone_Feet      |   182933353181 | 2017-12-27 | pending    | each |   0.04 |  0.01 |   0.05 |
 |     1 | 44E_938            |   181262049602 | 2018-01-01 | pending    | each |   0.93 |  0.06 |   0.99 |
-|     1 | Qi_receiver        |   312013493657 | 2017-12-04 | pending    | each |   1.90 |  0.11 |   2.01 |
 |     1 | Qi_charger         |   122959306322 | 2018-02-13 | pending    | each |   2.83 |  0.17 |   3.00 |
 |     1 | Case               | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Base               | Pending        | Pending    | pending    | each |        |       |        |
@@ -30,4 +30,4 @@ Currency: USD
 International IOF: 6.38%
 Domestic IOF: 0.38%
 
-Total cost: $53.62
+Total cost: $52.79
