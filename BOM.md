@@ -24,10 +24,12 @@ w1 Mark I - Watch Winder, Bill of materials
 |     1 | Door_glass         | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Sponge_adhesive    | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Velvet_feet        | Pending        | Pending    | pending    | each |        |       |        |
+|     1 | Screw_M5x25mm      |   222714655541 | 2017-12-23 | 2018-04-28 | each |   0.20 |  0.02 |   0.22 |
+|     5 | Nut_M5_nylon       |   222111255325 | 2017-04-25 | 2017-07-dd | each |   0.50 |  0.05 |   0.55 |
 
 Currency: USD
 
 International IOF: 6.38%
 Domestic IOF: 0.38%
 
-Total cost: $52.79
+Total cost: $53.56

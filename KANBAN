@@ -1,15 +1,4 @@
 - 'BACKLOG':
-  - (Mechanics) Case - Receive
-  - (Mechanics) Arduino - Install
-  - (Mechanics) L298 module - Install
-  - (Mechanics) Battery charger - Install
-  - (Mechanics) Battery - Install
-  - (Mechanics) Qi receptor - Install
-  - (Mechanics) Motor - Install
-  - (Mechanics) Rotor - Install GT2 60T
-  - (Mechanics) Rotor - Install
-  - (Mechanics) Belt - Install
-  - (Mechanics) Belt - Stress
   - (Electronics) Arduino - Wiring
   - (Electronics) L298 module - Wiring
   - (Electronics) Battery module - Wiring
@@ -24,7 +13,16 @@
   - (Video) Demonstration
 
 - 'TO DO':
-  - (Mechanics) Case - Order
+  - (Mechanics) Case - Laser cut
+  - (Mechanics) Arduino - Install
+  - (Mechanics) L298 module - Install
+  - (Mechanics) Battery charger - Install
+  - (Mechanics) Battery - Install
+  - (Mechanics) Qi receptor - Install
+  - (Mechanics) Motor - Install
+  - (Mechanics) Rotor - Install
+  - (Mechanics) Belt - Install
+  - (Mechanics) Belt - Stress
 
 - 'DOING':
   - (Mechanics) Case - Design
@@ -32,13 +30,16 @@
   - (Software) Spin counter - Contador de numero total de voltas armazenado em EEPROM
 
 - 'TESTING':
+  - (Mechanics) Rotor - Install GT2 60T
+  - (Mechanics) Case - Receive
+  - (Mechanics) Case - Order
+  - (Electronics) Motor - Wiring
+
+- 'DONE':
   - (Mechanics) Plastic cup on Lazy Suzan - Install
   - (Mechanics) Plastic cup - Drill
   - (Mechanics) Plastic cup - Finish
   - (Mechanics) Plastic cup - Cut
-  - (Electronics) Motor - Wiring
-
-- 'DONE':
   - (Electronics) Motor driver - Update Documents folder with chosen option
   - (Electronics) Motor driver - Update BOM with chosen option
   - (Electronics) Motor driver - Choose motor driver
