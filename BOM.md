@@ -19,7 +19,7 @@ w1 Mark I - Watch Winder, Bill of materials
 |     1 | 44E_938            |   181262049602 | 2018-01-01 | 2018-04-18 | each |   0.93 |  0.06 |   0.99 |
 |     4 | Silicone_Feet      |   182933353181 | 2017-12-27 | pending    | each |   0.04 |  0.01 |   0.05 |
 |     1 | Qi_charger         |   122959306322 | 2018-02-13 | 2018-04-24 | each |   2.83 |  0.17 |   3.00 |
-|     1 | Case               | Pending        | Pending    | pending    | each |        |       |        |
+|     1 | Case               | -              | 2018-04-30 | 2018-04-30 | each |   1.00 |  0.00 |   1.00 |
 |     1 | Base               | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Door_glass         | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Sponge_adhesive    | Pending        | Pending    | pending    | each |        |       |        |

@@ -84,7 +84,7 @@ void setup() {
 void loop() {
   SensorsHandler();
   HealthCheckHandler();
-  // NotificationHandler();
+  NotificationHandler();
   AxesHandler();
   DemonstrationHandler();
   PowerHandler();

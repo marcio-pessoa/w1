@@ -14,7 +14,7 @@ void HealthCheckHandler() {
 }
 
 void NotificationHandler() {
-  analogWrite(led_status_pin, wave.sine());
+  analogWrite(led_status_pin, wave.sine() * 255);
 }
 
 void PowerHandler() {
