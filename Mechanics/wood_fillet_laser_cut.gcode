@@ -16,19 +16,32 @@ $$  ; View Grbl settings
 G90  ; Set absolute distance mode
 G21  ; Set all units in millimeters
 
-G00 Z5
-G00 X50 Y100
+M03 S255   ; Turn laser on
 
-G01 Z-0.125 F5000  ; Turn laser on
+G01 X160 F500
+G01 X0
+G01 X160
+G01 X0
+G01 X160
+G01 X0
+G01 X160
+G01 X0
+G01 X160
+G01 X0
+G01 X160
+G01 X0
+G01 X160
+G01 X0
+G01 X160
+G01 X0
+G01 X160
+G01 X0
+G01 X160
+G01 X0
+G01 X160
+G01 X0
 
-G01 X168
-G01 X50
-G01 X168
-G01 X50
-G01 X168
-G01 X50
-
-G00 Z5  ; Turn laser off
+M03 S0  ; Turn laser off
 
 ; Footer
 G28  ; Go to home position
