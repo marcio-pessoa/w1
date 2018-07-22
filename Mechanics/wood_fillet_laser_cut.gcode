@@ -3,6 +3,9 @@
 ; Project: w1 Mark I - Watch Winder
 ; Description: This program is used to laser cut w1 Mark I wood fillets.
 ; 
+; Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+; Contributors: none
+; 
 ; Change log:
 ; 2018-05-26
 ;        * First version

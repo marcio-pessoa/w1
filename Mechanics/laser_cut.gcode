@@ -3,10 +3,13 @@
 ; Project: w1 Mark I - Watch Winder
 ; Description: This program is used to laser cut w1 Mark I main case.
 ;
+; Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+; Contributors: none
+; 
 ; Change log:
 ; 2018-04-30
 ;        * First version
-;
+; 
 ; Header
 $I  ; View build info
 $G  ; View G-code parser state
