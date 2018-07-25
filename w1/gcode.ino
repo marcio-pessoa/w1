@@ -189,6 +189,7 @@ void GCodeParse() {
       switch(number) {
         case 28:
           retval = CommandG28();
+          skip_status = true;
           break;
         default:
           Command0();

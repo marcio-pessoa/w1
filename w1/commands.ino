@@ -52,7 +52,6 @@ bool CommandM100(char letter = 0) {
  */
 bool CommandG28() {
   CommandM0();
-  return false;
 }
 
 /* CommandM0

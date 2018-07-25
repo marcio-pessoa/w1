@@ -1,9 +1,10 @@
+---
 - 'BACKLOG':
   - (Electronics) Arduino - Wiring
   - (Electronics) L298 module - Wiring
   - (Electronics) Battery module - Wiring
   - (Electronics) Qi receptor - Wiring
-  - (Software) Door sensor - Run CommandG28 when door opens
+  - (Software) Spin counter - Odometro de voltas armazenado em EEPROM
   - (Software) CommandG28 (Gracefully stop) - Define park position
   - (Software) CommandG28 (Gracefully stop) - Find park position
   - (Software) CommandG28 (Gracefully stop) - Stop on park position
@@ -11,9 +12,11 @@
   - (Software) Speed sensor - Check minimum revolutions per day
   - (Software) Speed sensor - Check maximum revolutions per day
   - (Video) Demonstration
+  - (Software) Door sensor - Run CommandG28 when door opens
+  - (Mechanics) Case - Define how to insert Magnet discreetly inside door
 
 - 'TO DO':
-  - (Mechanics) Case - Laser cut
+  - (Mechanics) Case - Design
   - (Mechanics) Arduino - Install
   - (Mechanics) L298 module - Install
   - (Mechanics) Battery charger - Install
@@ -25,9 +28,7 @@
   - (Mechanics) Belt - Stress
 
 - 'DOING':
-  - (Mechanics) Case - Design
-  - (Mechanics) Case - Define how to insert Magnet discreetly inside door
-  - (Software) Spin counter - Contador de numero total de voltas armazenado em EEPROM
+  - (Mechanics) Case - Laser cut
 
 - 'TESTING':
   - (Mechanics) Rotor - Install GT2 60T
