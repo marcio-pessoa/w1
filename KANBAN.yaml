@@ -1,5 +1,14 @@
 ---
 - 'BACKLOG':
+  - (Mechanics) Arduino - Install
+  - (Mechanics) L298 module - Install
+  - (Mechanics) Battery charger - Install
+  - (Mechanics) Battery - Install
+  - (Mechanics) Qi receptor - Install
+  - (Mechanics) Motor - Install
+  - (Mechanics) Rotor - Install
+  - (Mechanics) Belt - Install
+  - (Mechanics) Belt - Stress
   - (Electronics) Arduino - Wiring
   - (Electronics) L298 module - Wiring
   - (Electronics) Battery module - Wiring
@@ -16,27 +25,26 @@
   - (Mechanics) Case - Define how to insert Magnet discreetly inside door
 
 - 'TO DO':
-  - (Mechanics) Case - Design
-  - (Mechanics) Arduino - Install
-  - (Mechanics) L298 module - Install
-  - (Mechanics) Battery charger - Install
-  - (Mechanics) Battery - Install
-  - (Mechanics) Qi receptor - Install
-  - (Mechanics) Motor - Install
-  - (Mechanics) Rotor - Install
-  - (Mechanics) Belt - Install
-  - (Mechanics) Belt - Stress
+  - (Mechanics) Frame - Cut
+  - (Mechanics) Frame - Drill
+  - (Mechanics) Frame - Mount
+  - (Mechanics) Frame - Fix T-slot_90_corner
+  - (Mechanics) Frame - Finish
 
 - 'DOING':
-  - (Mechanics) Case - Laser cut
+  - (Mechanics) Frame - Design
+  - (Mechanics) Case - Design
+  - (Mechanics) Case - Micro USB interface laser cut
 
 - 'TESTING':
+  - (Mechanics) Case - Lazy Suzan laser cut
+
+- 'DONE':
   - (Mechanics) Rotor - Install GT2 60T
   - (Mechanics) Case - Receive
   - (Mechanics) Case - Order
+  - (Electronics) Motor - Fix T-slot_90_corner
   - (Electronics) Motor - Wiring
-
-- 'DONE':
   - (Mechanics) Plastic cup on Lazy Suzan - Install
   - (Mechanics) Plastic cup - Drill
   - (Mechanics) Plastic cup - Finish
