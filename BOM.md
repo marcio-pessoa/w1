@@ -1,6 +1,19 @@
 # BOM
 w1 Mark I - Watch Winder, Bill of materials
 
+## To buy
+| Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
+|-------|--------------------|----------------|------------|------------|------|--------|-------|--------|
+|     1 | Base               | Pending        | Pending    | pending    | each |        |       |        |
+|     1 | Door_glass         | Pending        | Pending    | pending    | each |        |       |        |
+|     1 | Sponge_adhesive    | Pending        | Pending    | pending    | each |        |       |        |
+|     1 | Velvet_feet        | Pending        | Pending    | pending    | each |        |       |        |
+
+## Delivering
+| Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
+|-------|--------------------|----------------|------------|------------|------|--------|-------|--------|
+
+## Purchased
 | Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
 |-------|--------------------|----------------|------------|------------|------|--------|-------|--------|
 |     1 | Arduino_Leonardo   |   282612975059 | 2017-08-21 | 2017-10-dd | each |   6.50 |  0.41 |   6.91 |
@@ -20,10 +33,6 @@ w1 Mark I - Watch Winder, Bill of materials
 |     4 | Silicone_Feet      |   182933353181 | 2017-12-27 | 2018-05-28 | each |   0.04 |  0.01 |   0.05 |
 |     1 | Qi_charger         |   122959306322 | 2018-02-13 | 2018-04-24 | each |   2.83 |  0.17 |   3.00 |
 |     1 | Case               | -              | 2018-04-30 | 2018-04-30 | each |   1.00 |  0.00 |   1.00 |
-|     1 | Base               | Pending        | Pending    | pending    | each |        |       |        |
-|     1 | Door_glass         | Pending        | Pending    | pending    | each |        |       |        |
-|     1 | Sponge_adhesive    | Pending        | Pending    | pending    | each |        |       |        |
-|     1 | Velvet_feet        | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Screw_M5x25mm      |   222714655541 | 2017-12-23 | 2018-04-28 | each |   0.20 |  0.02 |   0.22 |
 |     5 | Nut_M5_nylon       |   222111255325 | 2017-04-25 | 2017-07-dd | each |   0.50 |  0.05 |   0.55 |
 

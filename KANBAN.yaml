@@ -34,9 +34,9 @@
   - (Mechanics) Frame - T-slot_90_corner - insert screws and nuts
   - (Mechanics) Frame - Design
   - (Mechanics) Case - Design
-  - (Mechanics) Case - Design - Fix battery size
-  - (Mechanics) Case - Design - Stand off Arduino
-  - (Mechanics) Case - Design - Stand off L298N
+  - (Mechanics) Frame - Design - Fix battery size
+  - (Mechanics) Frame - Design - Stand off Arduino
+  - (Mechanics) Frame - Design - Stand off L298N
   - (Mechanics) Case - Micro USB interface laser cut
 
 - 'TESTING':
