@@ -20,6 +20,7 @@ $G  ; View G-code parser state
 $$  ; View current settings
 ?  ; View current status
 
+M8  ; Turn on fan
 G90  ; Set absolute distance mode
 G21  ; Set all units in millimeters
 M5  ; Laser off
@@ -123,3 +124,4 @@ M5  ; Laser off
 
 G28  ; Go to home position
 M2  ; Program end
+M9  ; Turn off fan

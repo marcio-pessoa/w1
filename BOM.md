@@ -5,6 +5,7 @@ w1 Mark I - Watch Winder, Bill of materials
 | Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
 |-------|--------------------|----------------|------------|------------|------|--------|-------|--------|
 |     1 | Base               | Pending        | Pending    | pending    | each |        |       |        |
+|     1 | Door               | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Door_glass         | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Sponge_adhesive    | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Velvet_feet        | Pending        | Pending    | pending    | each |        |       |        |
