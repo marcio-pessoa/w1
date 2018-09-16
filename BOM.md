@@ -36,10 +36,11 @@ w1 Mark I - Watch Winder, Bill of materials
 |     1 | Case               | -              | 2018-04-30 | 2018-04-30 | each |   1.00 |  0.00 |   1.00 |
 |     1 | Screw_M5x25mm      |   222714655541 | 2017-12-23 | 2018-04-28 | each |   0.20 |  0.02 |   0.22 |
 |     5 | Nut_M5_nylon       |   222111255325 | 2017-04-25 | 2017-07-dd | each |   0.50 |  0.05 |   0.55 |
+|     4 | T-slot_90_corner   |   131977551173 | 2016-11-04 | 2016-mm-dd | each |   1.00 |  0.06 |   1.06 |
 
 Currency: USD
 
 International IOF: 6.38%
 Domestic IOF: 0.38%
 
-Total cost: $54.56
+Total cost: $55.62

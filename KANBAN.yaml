@@ -1,5 +1,9 @@
 ---
 - 'BACKLOG':
+  - (Mechanics) Frame - Cut
+  - (Mechanics) Frame - Drill
+  - (Mechanics) Frame - Mount
+  - (Mechanics) Frame - Finish
   - (Mechanics) Arduino - Install
   - (Mechanics) L298 module - Install
   - (Mechanics) Battery charger - Install
@@ -19,25 +23,23 @@
   - (Software) CommandG28 (Gracefully stop) - Stop on park position
   - (Software) Standby - De tempos em tempos o dispositivo podera parar o movimento, isso eh util para que o motor e o modulo de potencia possam sofrer menos aquecimento.
   - (Software) Speed sensor - Check minimum revolutions per day
-  - (Software) Speed sensor - Check maximum revolutions per day
+  - (Software) Speed sensor - Check maximum revolutions per0 day
   - (Video) Demonstration
   - (Software) Door sensor - Run CommandG28 when door opens
   - (Mechanics) Case - Define how to insert Magnet discreetly inside door
 
 - 'TO DO':
-  - (Mechanics) Frame - Cut
-  - (Mechanics) Frame - Drill
-  - (Mechanics) Frame - Mount
-  - (Mechanics) Frame - Finish
-
-- 'DOING':
-  - (Mechanics) Frame - T-slot_90_corner - insert screws and nuts
-  - (Mechanics) Frame - Design
-  - (Mechanics) Case - Design
+  - (Mechanics) Case - Micro USB interface laser cut
+  - (Mechanics) Case - Qi interface laser cut
+  - (Mechanics) Frame - Design - Insert T-slot_90_corner screws and nuts
   - (Mechanics) Frame - Design - Fix battery size
   - (Mechanics) Frame - Design - Stand off Arduino
   - (Mechanics) Frame - Design - Stand off L298N
-  - (Mechanics) Case - Micro USB interface laser cut
+  - (Mechanics) Frame - Design
+  - (Mechanics) Case - Cut
+
+- 'DOING':
+  - (Mechanics) Case - Design
 
 - 'TESTING':
   - (Mechanics) Case - Lazy Suzan laser cut
