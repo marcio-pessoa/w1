@@ -29,22 +29,24 @@
   - (Mechanics) Case - Define how to insert Magnet discreetly inside door
 
 - 'TO DO':
-  - (Mechanics) Case - Micro USB interface laser cut
-  - (Mechanics) Case - Qi interface laser cut
-  - (Mechanics) Frame - Design - Insert T-slot_90_corner screws and nuts
   - (Mechanics) Frame - Design - Fix battery size
   - (Mechanics) Frame - Design - Stand off Arduino
   - (Mechanics) Frame - Design - Stand off L298N
   - (Mechanics) Frame - Design
-  - (Mechanics) Case - Cut
+  - (Mechanics) Case - Drill
 
 - 'DOING':
-  - (Mechanics) Case - Design
+  - (Mechanics) Case - Micro USB interface laser cut
+  - (Mechanics) Case - Qi interface laser cut
 
 - 'TESTING':
-  - (Mechanics) Case - Lazy Suzan laser cut
+  - (Mechanics) Case back cover - Design
+  - (Mechanics) Frame - Discover size and add to BOM
+  - (Mechanics) Case - Design
 
 - 'DONE':
+  - (Mechanics) Frame - Design - Insert T-slot_90_corner screws and nuts
+  - (Mechanics) Case - Lazy Suzan laser cut
   - (Mechanics) Rotor - Install GT2 60T
   - (Mechanics) Case - Receive
   - (Mechanics) Case - Order

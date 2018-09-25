@@ -9,6 +9,8 @@ w1 Mark I - Watch Winder, Bill of materials
 |     1 | Door_glass         | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Sponge_adhesive    | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Velvet_feet        | Pending        | Pending    | pending    | each |        |       |        |
+|     1 | Frame_134x114      | Pending        | Pending    | pending    | each |        |       |        |
+|     1 | Frame_125x114      | Pending        | Pending    | pending    | each |        |       |        |
 
 ## Delivering
 | Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
