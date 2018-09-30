@@ -9,12 +9,12 @@ w1 Mark I - Watch Winder, Bill of materials
 |     1 | Door_glass         | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Sponge_adhesive    | Pending        | Pending    | pending    | each |        |       |        |
 |     1 | Velvet_feet        | Pending        | Pending    | pending    | each |        |       |        |
-|     1 | Frame_134x114      | Pending        | Pending    | pending    | each |        |       |        |
-|     1 | Frame_125x114      | Pending        | Pending    | pending    | each |        |       |        |
 
 ## Delivering
 | Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
 |-------|--------------------|----------------|------------|------------|------|--------|-------|--------|
+|    10 | Screw_M3x8mm_flat  |   253637575896 | 2018-09-30 | Pending    | each |   0.99 |       |        |
+|    20 | Screw_M3x10mm_flat |   253637575896 | 2018-09-30 | Pending    | each |   1.07 |       |        |
 
 ## Purchased
 | Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
@@ -39,6 +39,9 @@ w1 Mark I - Watch Winder, Bill of materials
 |     1 | Screw_M5x25mm      |   222714655541 | 2017-12-23 | 2018-04-28 | each |   0.20 |  0.02 |   0.22 |
 |     5 | Nut_M5_nylon       |   222111255325 | 2017-04-25 | 2017-07-dd | each |   0.50 |  0.05 |   0.55 |
 |     4 | T-slot_90_corner   |   131977551173 | 2016-11-04 | 2016-mm-dd | each |   1.00 |  0.06 |   1.06 |
+|     1 | Frame_134x114      | -              | 2018-09-28 | 2018-09-28 | each |   0.99 |  0.00 |   0.99 |
+|     1 | Frame_125x114      | -              | 2018-09-28 | 2018-09-28 | each |   0.99 |  0.00 |   0.99 |
+|     4 | T-slot_90*_joint   |   163151502873 | 2018-08-18 | 2018-09-27 | each |   1.26 |  0.08 |   1.34 |
 
 Currency: USD
 
