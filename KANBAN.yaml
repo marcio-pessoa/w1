@@ -1,5 +1,8 @@
 ---
 - 'BACKLOG':
+  - (Mechanics) Case back cover - Finish
+  - (Mechanics) Case back cover - Mount
+  - (Mechanics) Case - Finish
   - (Mechanics) Frame - Cut
   - (Mechanics) Frame - Drill
   - (Mechanics) Frame - Mount
@@ -29,15 +32,18 @@
   - (Mechanics) Case - Define how to insert Magnet discreetly inside door
 
 - 'TO DO':
+  - (Mechanics) Case - Micro USB interface laser cut
+  - (Mechanics) Case - Qi interface laser cut
   - (Mechanics) Frame - Design - Fix battery size
   - (Mechanics) Frame - Design - Stand off Arduino
   - (Mechanics) Frame - Design - Stand off L298N
   - (Mechanics) Frame - Design
-  - (Mechanics) Case - Drill
 
 - 'DOING':
-  - (Mechanics) Case - Micro USB interface laser cut
-  - (Mechanics) Case - Qi interface laser cut
+  - (Mechanics) Frame T-slot_90*_joint - Fix
+  - (Mechanics) Case - Drill
+  - (Mechanics) Case back cover - Cut
+  - (Mechanics) Case back cover - Drill
 
 - 'TESTING':
   - (Mechanics) Case back cover - Design
@@ -48,7 +54,6 @@
   - (Mechanics) Frame - Design - Insert T-slot_90_corner screws and nuts
   - (Mechanics) Case - Lazy Suzan laser cut
   - (Mechanics) Rotor - Install GT2 60T
-  - (Mechanics) Case - Receive
   - (Mechanics) Case - Order
   - (Electronics) Motor - Fix T-slot_90_corner
   - (Electronics) Motor - Wiring
