@@ -32,7 +32,6 @@
   - (Mechanics) Case - Define how to insert Magnet discreetly inside door
 
 - 'TO DO':
-  - (Mechanics) Frame T-slot_90*_joint - Fix
   - (Mechanics) Case - Drill
   - (Mechanics) Case back cover - Cut
   - (Mechanics) Case back cover - Drill
@@ -44,12 +43,13 @@
   - (Mechanics) Frame - Design
 
 - 'DOING':
-  - (Mechanics) Case Frame support - Fix
-  - (Mechanics) Case Frame support - Drill
-  - (Mechanics) Case Frame support - Glue
   - (Mechanics) Case Frame support - Cut
+  - (Mechanics) Case Frame support - Glue
+  - (Mechanics) Case Frame support - Drill
+  - (Mechanics) Case Frame support - Fix
 
 - 'TESTING':
+  - (Mechanics) Frame T-slot_90*_joint - Fix
   - (Mechanics) Case back cover - Design
   - (Mechanics) Frame - Discover size and add to BOM
   - (Mechanics) Case - Design
