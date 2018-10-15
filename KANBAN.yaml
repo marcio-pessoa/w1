@@ -32,6 +32,10 @@
   - (Mechanics) Case - Define how to insert Magnet discreetly inside door
 
 - 'TO DO':
+  - (Mechanics) Frame T-slot_90*_joint - Fix
+  - (Mechanics) Case - Drill
+  - (Mechanics) Case back cover - Cut
+  - (Mechanics) Case back cover - Drill
   - (Mechanics) Case - Micro USB interface laser cut
   - (Mechanics) Case - Qi interface laser cut
   - (Mechanics) Frame - Design - Fix battery size
@@ -40,10 +44,10 @@
   - (Mechanics) Frame - Design
 
 - 'DOING':
-  - (Mechanics) Frame T-slot_90*_joint - Fix
-  - (Mechanics) Case - Drill
-  - (Mechanics) Case back cover - Cut
-  - (Mechanics) Case back cover - Drill
+  - (Mechanics) Case Frame support - Fix
+  - (Mechanics) Case Frame support - Drill
+  - (Mechanics) Case Frame support - Glue
+  - (Mechanics) Case Frame support - Cut
 
 - 'TESTING':
   - (Mechanics) Case back cover - Design
