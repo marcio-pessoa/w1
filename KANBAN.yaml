@@ -1,12 +1,5 @@
 ---
 - 'BACKLOG':
-  - (Mechanics) Case back cover - Finish
-  - (Mechanics) Case back cover - Mount
-  - (Mechanics) Case - Finish
-  - (Mechanics) Frame - Cut
-  - (Mechanics) Frame - Drill
-  - (Mechanics) Frame - Mount
-  - (Mechanics) Frame - Finish
   - (Mechanics) Arduino - Install
   - (Mechanics) L298 module - Install
   - (Mechanics) Battery charger - Install
@@ -32,29 +25,36 @@
   - (Mechanics) Case - Define how to insert Magnet discreetly inside door
 
 - 'TO DO':
-  - (Mechanics) Case - Drill
   - (Mechanics) Case back cover - Cut
   - (Mechanics) Case back cover - Drill
+  - (Mechanics) Case - Drill
+  - (Mechanics) Case back cover - Install
   - (Mechanics) Case - Micro USB interface laser cut
   - (Mechanics) Case - Qi interface laser cut
   - (Mechanics) Frame - Design - Fix battery size
   - (Mechanics) Frame - Design - Stand off Arduino
   - (Mechanics) Frame - Design - Stand off L298N
   - (Mechanics) Frame - Design
+  - (Mechanics) Case back cover - Finish
+  - (Mechanics) Case - Finish
 
 - 'DOING':
-  - (Mechanics) Case Frame support - Cut
-  - (Mechanics) Case Frame support - Glue
-  - (Mechanics) Case Frame support - Drill
-  - (Mechanics) Case Frame support - Fix
+  - (Mechanics) Frame - Cut
+  - (Mechanics) Frame - Drill
+  - (Mechanics) Frame - Finish
+  - (Mechanics) Frame - Mount
+  - (Mechanics) Frame - Install
 
 - 'TESTING':
+  - (Mechanics) Case Frame support - Install
+  - (Mechanics) Case Frame support - Glue
+  - (Mechanics) Case Frame support - Cut
+
+- 'DONE':
   - (Mechanics) Frame T-slot_90*_joint - Fix
   - (Mechanics) Case back cover - Design
   - (Mechanics) Frame - Discover size and add to BOM
   - (Mechanics) Case - Design
-
-- 'DONE':
   - (Mechanics) Frame - Design - Insert T-slot_90_corner screws and nuts
   - (Mechanics) Case - Lazy Suzan laser cut
   - (Mechanics) Rotor - Install GT2 60T
