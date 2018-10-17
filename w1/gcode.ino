@@ -1,6 +1,6 @@
 /* gcode.ino, w1 Mark I - Watch Winder, G-code parser sketch file
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 

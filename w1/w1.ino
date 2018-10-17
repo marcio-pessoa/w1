@@ -3,19 +3,19 @@
  * This sketch was developed and tested on: Arduino Leonardo
  * To work on other Arduino models, some adaptations may be necessary.
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 
 #include <Arduino.h>         // Arduino - Main library
 #include <EEPROM.h>          // Arduino - EEPROM library
-#include <Project.h>         // Sciemon - Basic project definitions
-#include <Timer.h>           // Sciemon - Timer with nice features
-#include <RGB.h>             // Sciemon - RGB LED controller
-#include <SigGen.h>          // Sciemon - Signal Generator
-#include <Alarm.h>           // Sciemon - Manage alarms
-#include <L298.h>            // Sciemon - L298 DC motor control
-#include "config.h"          // Sciemon - Configuration
+#include <Project.h>         // Marcio Pessoa - Basic project definitions
+#include <Timer.h>           // Marcio Pessoa - Timer with nice features
+#include <RGB.h>             // Marcio Pessoa - RGB LED controller
+#include <SigGen.h>          // Marcio Pessoa - Signal Generator
+#include <Alarm.h>           // Marcio Pessoa - Manage alarms
+#include <L298.h>            // Marcio Pessoa - L298 DC motor control
+#include "config.h"          // Marcio Pessoa - Configuration
 #include <MemoryFree.h>      // 
 
 // Project definitions
@@ -28,7 +28,7 @@ Project w1("w1",  // Platform
            "Copyright (c) 2017-2018 Marcio Pessoa",  // Owner
            "undefined. There is NO WARRANTY.",  // License
            "http://pessoa.eti.br/",  // Website
-           "Marcio Pessoa <marcio.pessoa@sciemon.com>");  // Contact
+           "Marcio Pessoa <marcio.pessoa@gmail.com>");  // Contact
 
 // LEDs
 SigGen wave;

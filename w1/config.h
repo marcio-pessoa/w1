@@ -1,6 +1,6 @@
 /* config.h, w1 Mark I - Watch Winder, Arduino project config file
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 

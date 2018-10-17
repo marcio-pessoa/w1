@@ -1,6 +1,6 @@
 /* auxiliar.ino, w1 Mark I - Watch Winder, Arduino auxiliar sketch file
  * 
- * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
+ * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 
