@@ -15,6 +15,7 @@ w1 Mark I - Watch Winder, Bill of materials
 |-------|--------------------|----------------|------------|------------|------|--------|-------|--------|
 |    10 | Screw_M3x8mm_flat  |   253637575896 | 2018-09-30 | Pending    | each |   0.99 |       |        |
 |    20 | Screw_M3x10mm_flat |   253637575896 | 2018-09-30 | Pending    | each |   1.07 |       |        |
+|    20 | Screw_M5x20mm_But. |   302874264440 | 2018-10-18 | Pending    | each |   2.37 |       |        |
 
 ## Purchased
 | Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
