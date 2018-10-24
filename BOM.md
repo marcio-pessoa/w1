@@ -14,6 +14,7 @@ w1 Mark I - Watch Winder, Bill of materials
 | Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
 |-------|--------------------|----------------|------------|------------|------|--------|-------|--------|
 |    20 | Screw_M5x20mm_But. |   302874264440 | 2018-10-18 | Pending    | each |   2.37 |       |        |
+|     1 | Acrylic_Sheet      |   292062712986 | 2018-10-23 | Pending    | each |   6.28 |       |        |
 
 ## Purchased
 | Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
