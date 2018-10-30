@@ -13,23 +13,23 @@ A winder cannot over wind an automatic watch, since all automatic watches have a
 [Kanban](KANBAN.md)
 
 # Mechanics
-![Mechanical design](Documents/w1.png)
+![Mechanical design](Documents/Pictures/w1.png)
 
 ## Case
-![Case](Documents/Case.png)
+![Case](Documents/Pictures/Case.png)
 
 Technical specifications:
 - Material: Wood
 - Feature: Noise reduction with internal fine spounge
 
 ## Base
-![Base](Documents/Base.png)
+![Base](Documents/Pictures/Base.png)
 
 Technical specifications:
 - Material: Wood
 
 ### Feet
-![Foot](Documents/Foot.png)
+![Foot](Documents/Pictures/Foot.png)
 
 Technical specifications:
 - Material: Silicone
@@ -43,7 +43,7 @@ Technical specifications:
 ### Pulleys
 
 #### Large
-![GT2 60T](Documents/GT2_60T.png)
+![GT2 60T](Documents/Pictures/GT2_60T.png)
 
 Technical specifications:
 - Model: GT2-60T
@@ -54,7 +54,7 @@ Technical specifications:
 - Material: Aluminium
 
 #### Small
-![GT2 16T](Documents/GT2_16T.png)
+![GT2 16T](Documents/Pictures/GT2_16T.png)
 
 Technical specifications:
 - Model: GT2-16T
@@ -80,7 +80,7 @@ So:
 $$ s = 26.7 \% $$
 
 ### Wheelbase
-![Center distance](Documents/PULLEY_BELT.gif)
+![Center distance](Documents/Pictures/PULLEY_BELT.gif)
 
 Use trigonometric functions to calculate distance between points A and B.
 
@@ -92,12 +92,12 @@ Wheelbase data:
 - Center distance: **64.5 mm**
 - Teeth in mesh: **6 T**
 
-![Right triangle](Documents/right_triangle_main.png)
+![Right triangle](Documents/Pictures/right_triangle_main.png)
 
 Reference: https://www.bbman.com/belt-length-calculator/
 
 ### Belt
-![GT2 belt](Documents/gt2tooth.jpg)
+![GT2 belt](Documents/Pictures/gt2tooth.jpg)
 
 Technical specifications:
 - Standard: GT2
@@ -107,7 +107,7 @@ Technical specifications:
 - Teeth: 104 T
 
 ### Lazy Susan
-![Lazy Susan](Documents/Lazy_Susan.png)
+![Lazy Susan](Documents/Pictures/Lazy_Susan.png)
 
 Technical specifications:
 - Material: aluminium
@@ -116,8 +116,8 @@ Technical specifications:
 - Internal diameter: 90 mm
 
 ### Cup
-![Cup](Documents/Corpo_Caixa_Seca.png)
-![Cup](Documents/Corpo_Caixa_Seca_sizes.png)
+![Cup](Documents/Pictures/Corpo_Caixa_Seca.png)
+![Cup](Documents/Pictures/Corpo_Caixa_Seca_sizes.png)
 
 Technical specifications:
 - Material: PVC
@@ -189,7 +189,7 @@ Arduino Leonardo diagram by http://busyducks.com/ascii-art-arduinos
  19 |   5 | analog    | input     | Random number generator Seed
  
 ## Motor
-![Gear motor](Documents/7535673A-56FE7EB81_526F672C_zps33a68bc7.jpg)
+![Gear motor](Documents/Pictures/7535673A-56FE7EB81_526F672C_zps33a68bc7.jpg)
 
 Technical specifications:
 - Model: ZGB37RG
@@ -204,7 +204,7 @@ Technical specifications:
 - Shaft diameter: 6mm
 
 ### Driver
-![L298 motor driver](Documents/pprjWeToHXRVuku3rawL.jpg)
+![L298 motor driver](Documents/Pictures/pprjWeToHXRVuku3rawL.jpg)
 
 > "The L298 is an integrated monolithic circuit in a 15-lead Multiwatt and Power SO20 packages. It is a high voltage, high current dual full-bridge driver designed to accept standard TTL logic levels and drive inductive loads such as relays, solenoids, DC and stepping motors. Two enable inputs are provided to enable or disable the device independently of the input signals. The emitters of the lower transistors of each bridge are connected together and the corresponding external terminal can be used for the connection of an external sensing resistor. Anadditional supply input is provided so that the logic works at a lower voltage."
 >
@@ -224,7 +224,7 @@ L298N absolute maximum ratings:
  Tstg, Tj | Storage and Junction Temperature       | -40 to 150 | °C
 
 ### Speed sensor
-![TCST2103 sensor](Documents/TCST2103.png)
+![TCST2103 sensor](Documents/Pictures/TCST2103.png)
 
 > "The TCST2103 is a transmissive sensor that include an infrared emitter and phototransistor, located face-to-face on the optical axes in a leaded package which blocks visible light."
 >
