@@ -97,7 +97,7 @@ L298N absolute maximum ratings:
  Top      | Junction Operating Temperature         | -25 to 130 | °C
  Tstg, Tj | Storage and Junction Temperature       | -40 to 150 | °C
 
-#### Speed sensor
+#### Revolution sensor
 ![TCST2103 sensor](Pictures/TCST2103.png)
 
 > "The TCST2103 is a transmissive sensor that include an infrared emitter and phototransistor, located face-to-face on the optical axes in a leaded package which blocks visible light."
