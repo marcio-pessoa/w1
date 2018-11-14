@@ -9,6 +9,9 @@ A winder cannot over wind an automatic watch, since all automatic watches have a
 
 ![Mechanical design](Documents/Pictures/w1.png)
 
+## Videos
+Watch this projects videos on [YouTube Playlist].
+
 ## Changes
 All notable changes to this project will be documented in this [Change log](CHANGELOG.md).
 
@@ -35,3 +38,4 @@ If you want to build your own, take a look at [Bill of materials](BOM.md).
 This project is always under enhancements. I use [Kanban](KANBAN.md) to control project evolution.
 
 ---
+[YouTube Playlist]: https://www.youtube.com/watch?v=WERBobZZHRU&list=PLs1JZHyVhlZXI1KqAdF2J8b70U7dsO11w
