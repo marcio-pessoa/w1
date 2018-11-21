@@ -154,7 +154,7 @@ bool CommandM3() {
  *   void
  */
 bool CommandM4() {
-  echo("Total rotor turns: " + String(totalTurnCount()));
+  //echo("Total rotor turns: " + String(totalTurnCount()));
   return false;
 }
 

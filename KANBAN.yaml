@@ -1,18 +1,5 @@
 ---
 - 'BACKLOG':
-  - (Mechanics) Arduino - Install
-  - (Mechanics) L298 module - Install
-  - (Mechanics) Battery charger - Install
-  - (Mechanics) Battery - Install
-  - (Mechanics) Qi receptor - Install
-  - (Mechanics) Motor - Install
-  - (Mechanics) Rotor - Install
-  - (Mechanics) Belt - Install
-  - (Mechanics) Belt - Stress
-  - (Electronics) Arduino - Wiring
-  - (Electronics) L298 module - Wiring
-  - (Electronics) Battery module - Wiring
-  - (Electronics) Qi receptor - Wiring
   - (Software) Spin counter - Odometro de voltas armazenado em EEPROM
   - (Software) CommandG28 (Gracefully stop) - Define park position
   - (Software) CommandG28 (Gracefully stop) - Find park position
@@ -38,20 +25,33 @@
   - (Mechanics) Case - Finish
 
 - 'DOING':
+  - (Mechanics) Arduino - Install
+  - (Mechanics) L298 module - Install
+  - (Mechanics) Battery charger - Install
+  - (Mechanics) Battery - Install
+  - (Mechanics) Qi receptor - Install
+  - (Mechanics) Motor - Install
+  - (Mechanics) Rotor - Install
+  - (Mechanics) Belt - Install
+  - (Mechanics) Belt - Stress
+
+- 'TESTING':
+  - (Electronics) Arduino - Wiring
+  - (Electronics) L298 module - Wiring
+  - (Electronics) Battery module - Wiring
+  - (Electronics) Qi receptor - Wiring
   - (Mechanics) Frame - Cut
   - (Mechanics) Frame - Drill
   - (Mechanics) Frame - Finish
   - (Mechanics) Frame - Mount
   - (Mechanics) Frame - Install
 
-- 'TESTING':
+- 'DONE':
   - (Mechanics) Frame T-slot_90*_joint - Install
   - (Mechanics) Case - Drill
   - (Mechanics) Case Frame support - Install
   - (Mechanics) Case Frame support - Glue
   - (Mechanics) Case Frame support - Cut
-
-- 'DONE':
   - (Mechanics) Frame T-slot_90*_joint - Retrofit
   - (Mechanics) Case back cover - Design
   - (Mechanics) Frame - Discover size and add to BOM

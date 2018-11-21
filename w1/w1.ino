@@ -8,10 +8,10 @@
  */
 
 #include <Arduino.h>         // Arduino - Main library
-#include <EEPROM.h>          // Arduino - EEPROM library
+//#include <EEPROM.h>          // Arduino - EEPROM library
 #include <Project.h>         // Marcio Pessoa - Basic project definitions
 #include <Timer.h>           // Marcio Pessoa - Timer with nice features
-#include <RGB.h>             // Marcio Pessoa - RGB LED controller
+//#include <RGB.h>             // Marcio Pessoa - RGB LED controller
 #include <SigGen.h>          // Marcio Pessoa - Signal Generator
 #include <Alarm.h>           // Marcio Pessoa - Manage alarms
 #include <L298.h>            // Marcio Pessoa - L298 DC motor control
@@ -34,20 +34,20 @@ Project w1("w1",  // Platform
 SigGen wave;
 
 // Check timer
-Timer health_check(health_check_timer * 1000);
+//Timer health_check(health_check_timer * 1000);
 
 // Sensors timer
-Timer sensors_status(sensors_timer * 1000);
+//Timer sensors_status(sensors_timer * 1000);
 
 // Axis
 L298 motor;
 
 // Turn counters
-byte turn_count = 0;
-byte turn_count_1 = 0;
-byte turn_count_2 = 0;
-byte turn_count_3 = 0;
-byte turn_count_4 = 0;
+//byte turn_count = 0;
+//byte turn_count_1 = 0;
+//byte turn_count_2 = 0;
+//byte turn_count_3 = 0;
+//byte turn_count_4 = 0;
 
 void setup() {
   // Serial interface
@@ -58,25 +58,31 @@ void setup() {
   pinMode(led_status_pin, OUTPUT);
   analogWrite(led_status_pin, LOW);
   // Rotor speed sensor
-  pinMode(speed_sensor_pin, INPUT_PULLUP);
-  attachInterrupt(speed_sensor_pin, spinCounter, RISING);
+  //pinMode(speed_sensor_pin, INPUT_PULLUP);
   // Door magnetic sensor
-  pinMode(door_sensor_pin, INPUT_PULLUP);
-  attachInterrupt(door_sensor_pin, parkRotor, RISING);
+  //pinMode(door_sensor_pin, INPUT_PULLUP);
+  //attachInterrupt(door_sensor_pin, parkRotor, RISING);
   // Motor
   motor.attach(in1_pin, in2_pin);
   CommandM1(motor_speed);  // Run motor clockwise at default speed
   // Random number generator seed
-  pinMode(random_Seed_pin, INPUT);
-  randomSeed(analogRead(random_Seed_pin));
+  //pinMode(random_Seed_pin, INPUT);
+  //randomSeed(analogRead(random_Seed_pin));
+  // Spin sensor
+  pinMode(spin_sensor_pin, INPUT_PULLUP);
+  attachInterrupt(spin_sensor_pin, spinCounter, RISING);
+  pinMode(spin_sensor_vcc_pin, OUTPUT);
+  pinMode(spin_sensor_gnd_pin, OUTPUT);
+  digitalWrite(spin_sensor_vcc_pin, HIGH);
+  digitalWrite(spin_sensor_gnd_pin, LOW);
   // Get data from EEPROM addresses
-  turn_count = EEPROM.read(addr_turn_count);
-  turn_count_1 = EEPROM.read(addr_turn_count_1);
-  turn_count_2 = EEPROM.read(addr_turn_count_2);
-  turn_count_3 = EEPROM.read(addr_turn_count_3);
-  turn_count_4 = EEPROM.read(addr_turn_count_4);
+  //turn_count = EEPROM.read(addr_turn_count);
+  //turn_count_1 = EEPROM.read(addr_turn_count_1);
+  //turn_count_2 = EEPROM.read(addr_turn_count_2);
+  //turn_count_3 = EEPROM.read(addr_turn_count_3);
+  //turn_count_4 = EEPROM.read(addr_turn_count_4);
   // Calculate total number of turns
-  float total_turn_count = totalTurnCount();
+  //float total_turn_count = totalTurnCount();
   // G-code ready to receive commands
   GcodeReady();
 }

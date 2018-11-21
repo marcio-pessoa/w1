@@ -43,8 +43,8 @@ Arduino Leonardo diagram by http://busyducks.com/ascii-art-arduinos
 ----|-----|-----------|-----------|--------------------------------------------
   0 |   0 | digital   | input     | Serial communication
   1 |   1 | digital   | output    | Serial communication
-  2 |   0 | interrupt | input     | Speed sensor
-  3 |   1 | interrupt | input     | Door sensor
+  2 |   0 | -         | -         | 
+  3 |   1 | interrupt | input     | Speed sensor
   4 |   - | -         | -         | -
   5 |   5 | PWM       | output    | Motor (speed control)
   6 |   6 | PWM       | output    | Motor (speed control)

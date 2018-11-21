@@ -22,6 +22,24 @@ int buffer_pointer = 0;
  * Returns
  *   void
  */
+void status(bool i) {
+  // Display return status
+  Serial.println(i == false ? F("ok") : F("nok"));
+}
+
+/* 
+ * 
+ * Description
+ *   .
+ * 
+ *   ()
+ * 
+ * Parameters
+ *   none
+ * 
+ * Returns
+ *   void
+ */
 bool echo(String message) {
   Serial.print(String(message));
 }
@@ -79,23 +97,6 @@ void debugln(String message) {
   if (debug_mode) {
     echoln(message);
   }
-}
-
-/* 
- * 
- * Description
- *   .
- * 
- *   ()
- * 
- * Parameters
- *   none
- * 
- * Returns
- *   void
- */
-void status(bool i) {
-  echoln(i == false ? F("ok") : F("nok"));
 }
 
 /* 
@@ -193,6 +194,7 @@ void GCodeParse() {
           break;
         default:
           Command0();
+          skip_status = true;
           break;
       }
       break;
@@ -243,6 +245,7 @@ void GCodeParse() {
       break;
   }
   if (buffer_pointer > 2 and skip_status == false) {
+    printf(buffer_pointer);
     status(retval);
   }
 }
