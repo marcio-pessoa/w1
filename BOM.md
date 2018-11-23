@@ -1,20 +1,6 @@
 # BOM
 w1 Mark I - Watch Winder, Bill of materials
 
-## To buy
-| Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
-|-------|--------------------|----------------|------------|------------|------|--------|-------|--------|
-|     1 | Base               | Pending        | Pending    | pending    | each |        |       |        |
-|     1 | Door               | Pending        | Pending    | pending    | each |        |       |        |
-|     1 | Door_glass         | Pending        | Pending    | pending    | each |        |       |        |
-|     1 | Sponge_adhesive    | Pending        | Pending    | pending    | each |        |       |        |
-|     1 | Velvet_feet        | Pending        | Pending    | pending    | each |        |       |        |
-
-## Delivering
-| Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
-|-------|--------------------|----------------|------------|------------|------|--------|-------|--------|
-|     1 | Acrylic_Sheet      |   292062712986 | 2018-10-23 | Pending    | each |   6.28 |       |        |
-
 ## Purchased
 | Quant | Description        | ID             | Bought     | Delivered  | Unit | Charge | Taxes |   Cost |
 |-------|--------------------|----------------|------------|------------|------|--------|-------|--------|
@@ -44,6 +30,12 @@ w1 Mark I - Watch Winder, Bill of materials
 |    10 | Screw_M3x8mm_flat  |   253637575896 | 2018-09-30 | 2018-10-23 | each |   0.99 |       |        |
 |    20 | Screw_M3x10mm_flat |   253637575896 | 2018-09-30 | 2018-10-23 | each |   1.07 |       |        |
 |    10 | Screw_M5x20mm_But. |   302874264440 | 2018-10-18 | 2018-11-09 | each |   2.37 |       |        |
+|     1 | Acrylic_Sheet      |   292062712986 | 2018-10-23 | 2018-11-19 | each |   6.28 |       |        |
+|     1 | Base               | Pending        | Pending    | pending    | each |        |       |        |
+|     1 | Door               | Pending        | Pending    | pending    | each |        |       |        |
+|     1 | Door_glass         | Pending        | Pending    | pending    | each |        |       |        |
+|     1 | Sponge_adhesive    | Pending        | Pending    | pending    | each |        |       |        |
+|     1 | Velvet_feet        | Pending        | Pending    | pending    | each |        |       |        |
 
 Currency: USD
 

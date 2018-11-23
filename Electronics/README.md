@@ -50,17 +50,17 @@ Arduino Leonardo diagram by http://busyducks.com/ascii-art-arduinos
   6 |   6 | PWM       | output    | Motor (speed control)
   7 |   - | -         | -         | -
   8 |   - | -         | -         | -
-  9 |   9 | PWM       | output    | LED R (red)
- 10 |  10 | PWM       | output    | LED G (green)
- 11 |  11 | PWM       | output    | LED B (blue)
+  9 |   9 | -         | -         | -
+ 10 |  10 | -         | -         | -
+ 11 |  11 | -         | -         | -
  12 |   - | -         | -         | -
  13 |  13 | PWM       | output    | Status LED
- 14 |   0 | analog    | input     | User distance sensor
+ 14 |     | -         | -         | -
  15 |   - | -         | -         | -
  16 |   - | -         | -         | -
  17 |   - | -         | -         | -
  18 |   - | -         | -         | -
- 19 |   5 | analog    | input     | Random number generator Seed
+ 19 |   - | -         | -         | -
  
 ### Motor
 ![Gear motor](Pictures/7535673A-56FE7EB81_526F672C_zps33a68bc7.jpg)

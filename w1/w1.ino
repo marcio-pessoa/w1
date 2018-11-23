@@ -8,10 +8,9 @@
  */
 
 #include <Arduino.h>         // Arduino - Main library
-//#include <EEPROM.h>          // Arduino - EEPROM library
+#include <EEPROM.h>          // Arduino - EEPROM library
 #include <Project.h>         // Marcio Pessoa - Basic project definitions
 #include <Timer.h>           // Marcio Pessoa - Timer with nice features
-//#include <RGB.h>             // Marcio Pessoa - RGB LED controller
 #include <SigGen.h>          // Marcio Pessoa - Signal Generator
 #include <Alarm.h>           // Marcio Pessoa - Manage alarms
 #include <L298.h>            // Marcio Pessoa - L298 DC motor control
@@ -22,8 +21,8 @@
 Project w1("w1",  // Platform
            "I",  // Mark
            "Watch Winder",  // Name
-           "0.1b",  // Version
-           "2017-11-13",  // Version date
+           "0.2b",  // Version
+           "2017-11-23",  // Version date
            "7",  // Serial number
            "Copyright (c) 2017-2018 Marcio Pessoa",  // Owner
            "undefined. There is NO WARRANTY.",  // License
@@ -34,10 +33,10 @@ Project w1("w1",  // Platform
 SigGen wave;
 
 // Check timer
-//Timer health_check(health_check_timer * 1000);
+Timer health_check(health_check_timer * 1000);
 
 // Sensors timer
-//Timer sensors_status(sensors_timer * 1000);
+Timer sensors_status(sensors_timer * 1000);
 
 // Axis
 L298 motor;
@@ -57,17 +56,9 @@ void setup() {
   // Status LED
   pinMode(led_status_pin, OUTPUT);
   analogWrite(led_status_pin, LOW);
-  // Rotor speed sensor
-  //pinMode(speed_sensor_pin, INPUT_PULLUP);
-  // Door magnetic sensor
-  //pinMode(door_sensor_pin, INPUT_PULLUP);
-  //attachInterrupt(door_sensor_pin, parkRotor, RISING);
   // Motor
   motor.attach(in1_pin, in2_pin);
   CommandM1(motor_speed);  // Run motor clockwise at default speed
-  // Random number generator seed
-  //pinMode(random_Seed_pin, INPUT);
-  //randomSeed(analogRead(random_Seed_pin));
   // Spin sensor
   pinMode(spin_sensor_pin, INPUT_PULLUP);
   attachInterrupt(spin_sensor_pin, spinCounter, RISING);

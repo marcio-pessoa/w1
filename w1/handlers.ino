@@ -5,8 +5,6 @@
  */
 
 bool AxesHandler() {
-  //done = true;
-  //status(false);
 }
 
 void DemonstrationHandler() {
