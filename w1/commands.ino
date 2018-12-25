@@ -131,7 +131,7 @@ bool CommandM2(float speed) {
  *   true: Position limit has exceeded
  */
 bool CommandM3() {
-  echo("Rotor direction: ");
+  echo("Rotor direction: " + (motor.directionA() ? "Direct" : "Reverse"));
   echo("Rotor speed: " + String(motor_speed));
   if (debug_mode) {
     echo(" %");
