@@ -23,10 +23,10 @@ bool CommandM100(char letter = 0) {
   if (letter == 'M' or letter == 0) {
     echoln(F("G28\t"));
     echoln(F("M0\tCompulsory stop"));
-    echoln(F("M1\tForward and speed"));
-    echoln(F("M2\tBackward and speed"));
+    echoln(F("M1\tClockwise and speed"));
+    echoln(F("M2\tCounterclockwise and speed"));
     echoln(F("M3\tShow rotor direction and speed"));
-    echoln(F("M4\tShow total rotor turns"));
+    //echoln(F("M4\tShow total rotor turns"));
     echoln(F("M15\tSystem information"));
     echoln(F("M89\tMemory information"));
     echoln(F("M92\tSystem version"));
@@ -90,7 +90,7 @@ bool CommandM1(float speed) {
   if ((speed != FLIMIT) and (speed >= 0 and speed <= 100)) {
     motor_speed = speed;
   }
-  motor.direct(motor_speed);
+  motor.directA(motor_speed);
   return false;
 }
 
@@ -112,7 +112,7 @@ bool CommandM2(float speed) {
   if ((speed != FLIMIT) and (speed >= 0 and speed <= 100)) {
     motor_speed = speed;
   }
-  motor.reverse(motor_speed);
+  motor.reverseA(motor_speed);
   return false;
 }
 
@@ -131,8 +131,8 @@ bool CommandM2(float speed) {
  *   true: Position limit has exceeded
  */
 bool CommandM3() {
-  echo("Rotor direction: " + (motor.directionA() ? "Direct" : "Reverse"));
-  echo("Rotor speed: " + String(motor_speed));
+  echoln("Rotor direction: " + String(motor.getDirectionA() ? "Clockwise" : "Counterclockwise"));
+  echo("Rotor speed: " + String(motor.getSpeedA()) + "%");
   if (debug_mode) {
     echo(" %");
   }

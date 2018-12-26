@@ -8,7 +8,6 @@
  */
 
 #include <Arduino.h>         // Arduino - Main library
-#include <EEPROM.h>          // Arduino - EEPROM library
 #include <Project.h>         // Marcio Pessoa - Basic project definitions
 #include <Timer.h>           // Marcio Pessoa - Timer with nice features
 #include <SigGen.h>          // Marcio Pessoa - Signal Generator
@@ -21,8 +20,8 @@
 Project w1("w1",  // Platform
            "I",  // Mark
            "Watch Winder",  // Name
-           "0.2b",  // Version
-           "2017-11-23",  // Version date
+           "0.3b",  // Version
+           "2018-12-25",  // Version date
            "7",  // Serial number
            "Copyright (c) 2017-2018 Marcio Pessoa",  // Owner
            "undefined. There is NO WARRANTY.",  // License
@@ -40,13 +39,6 @@ Timer sensors_status(sensors_timer * 1000);
 
 // Axis
 L298 motor;
-
-// Turn counters
-//byte turn_count = 0;
-//byte turn_count_1 = 0;
-//byte turn_count_2 = 0;
-//byte turn_count_3 = 0;
-//byte turn_count_4 = 0;
 
 void setup() {
   // Serial interface
@@ -66,14 +58,6 @@ void setup() {
   pinMode(spin_sensor_gnd_pin, OUTPUT);
   digitalWrite(spin_sensor_vcc_pin, HIGH);
   digitalWrite(spin_sensor_gnd_pin, LOW);
-  // Get data from EEPROM addresses
-  //turn_count = EEPROM.read(addr_turn_count);
-  //turn_count_1 = EEPROM.read(addr_turn_count_1);
-  //turn_count_2 = EEPROM.read(addr_turn_count_2);
-  //turn_count_3 = EEPROM.read(addr_turn_count_3);
-  //turn_count_4 = EEPROM.read(addr_turn_count_4);
-  // Calculate total number of turns
-  //float total_turn_count = totalTurnCount();
   // G-code ready to receive commands
   GcodeReady();
 }

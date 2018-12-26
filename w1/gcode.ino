@@ -245,7 +245,6 @@ void GCodeParse() {
       break;
   }
   if (buffer_pointer > 2 and skip_status == false) {
-    printf(buffer_pointer);
     status(retval);
   }
 }
