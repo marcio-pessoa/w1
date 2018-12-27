@@ -68,7 +68,7 @@ bool CommandG28() {
  *   bool
  */
 bool CommandM0() {
-  motor.stop();
+  motor.stopA();
   return false;
 }
 
@@ -87,10 +87,10 @@ bool CommandM0() {
  *   true: Position limit has exceeded
  */
 bool CommandM1(float speed) {
-  if ((speed != FLIMIT) and (speed >= 0 and speed <= 100)) {
-    motor_speed = speed;
+  if (speed < 0 or speed > 100) {
+    return true;
   }
-  motor.directA(motor_speed);
+  motor.directA((float)255 * speed / 100);
   return false;
 }
 
@@ -109,10 +109,10 @@ bool CommandM1(float speed) {
  *   true: Position limit has exceeded
  */
 bool CommandM2(float speed) {
-  if ((speed != FLIMIT) and (speed >= 0 and speed <= 100)) {
-    motor_speed = speed;
+  if (speed < 0 or speed > 100) {
+    return true;
   }
-  motor.reverseA(motor_speed);
+  motor.reverseA((float)255 * speed / 100);
   return false;
 }
 
@@ -131,13 +131,14 @@ bool CommandM2(float speed) {
  *   true: Position limit has exceeded
  */
 bool CommandM3() {
-  echoln("Rotor direction: " + String(motor.getDirectionA() ? "Clockwise" : "Counterclockwise"));
-  echo("Rotor speed: " + String(motor.getSpeedA()) + "%");
+  echoln("Rotor direction: " + 
+    String(motor.getDirectionA() ? "Clockwise" : "Counterclockwise"));
+  echo("Rotor speed: " + String(100 * motor.getDeltaA() / 255) + "%");
   if (debug_mode) {
     echo(" %");
   }
   echoln("");
-  return motor_speed;
+  return false;
 }
 
 /* CommandM4
@@ -294,4 +295,25 @@ bool CommandM111() {
 bool Command0() {
   echoln(F("Unknown command"));
   return true;
+}
+
+/* 
+ * 
+ * Description
+ *   .
+ * 
+ *   ()
+ * 
+ * Parameters
+ *   none
+ * 
+ * Returns
+ *   void
+ */
+bool CommandS(float speed) {
+  if (speed < 0 or speed > 100) {
+    return true;
+  }
+  motor.setDeltaA((float)255 * speed / 100);
+  return false;
 }

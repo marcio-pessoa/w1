@@ -238,6 +238,9 @@ void GCodeParse() {
           break;
       }
       break;
+    case 'S':
+      retval = CommandS(number);
+      break;
     default:
       if (buffer_pointer > 2) {
         Command0();

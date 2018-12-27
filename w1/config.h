@@ -10,7 +10,7 @@ const byte led_status_pin = 13;
 // Motor
 const byte in1_pin = 5;
 const byte in2_pin = 6;
-float motor_speed = 68;  // percent
+byte motor_speed = 75;  // percent
 
 // Timers
 const byte health_check_timer = 2;  // seconds
