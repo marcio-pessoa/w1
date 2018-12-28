@@ -133,7 +133,7 @@ bool CommandM2(float speed) {
 bool CommandM3() {
   echoln("Rotor direction: " + 
     String(motor.getDirectionA() ? "Clockwise" : "Counterclockwise"));
-  echo("Rotor speed: " + String(100 * motor.getDeltaA() / 255) + "%");
+  echo("Rotor speed: " + String((float)100 * motor.getDeltaA() / 255) + "%");
   if (debug_mode) {
     echo(" %");
   }
