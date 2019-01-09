@@ -52,12 +52,12 @@ void setup() {
   motor.attach(in1_pin, in2_pin);
   CommandM1(motor_speed);  // Run motor clockwise at default speed
   // Spin sensor
-  pinMode(spin_sensor_pin, INPUT_PULLUP);
-  attachInterrupt(spin_sensor_pin, spinCounter, RISING);
   pinMode(spin_sensor_vcc_pin, OUTPUT);
   pinMode(spin_sensor_gnd_pin, OUTPUT);
   digitalWrite(spin_sensor_vcc_pin, HIGH);
   digitalWrite(spin_sensor_gnd_pin, LOW);
+  pinMode(spin_sensor_pin, INPUT_PULLUP);
+  attachInterrupt(spin_sensor_pin, spinCounter, RISING);
   // G-code ready to receive commands
   GcodeReady();
 }
