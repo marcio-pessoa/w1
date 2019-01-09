@@ -4,5 +4,9 @@
 ; Contributors: none
 ; 
 ; Change log:
-; 2017-mm-dd
+; 2019-01-08
 ;         * First version.
+;
+; Header
+M111  ; Debug mode
+M15  ; System information
