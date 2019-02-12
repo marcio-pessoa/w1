@@ -21,9 +21,9 @@ Project w1("w1",  // Platform
            "I",  // Mark
            "Watch Winder",  // Name
            "0.4",  // Version
-           "2018-12-26",  // Version date
+           "2019-02-12",  // Version date
            "7",  // Serial number
-           "Copyright (c) 2017-2018 Marcio Pessoa",  // Owner
+           "Copyright (c) 2017-2019 Marcio Pessoa",  // Owner
            "undefined. There is NO WARRANTY.",  // License
            "http://pessoa.eti.br/",  // Website
            "Marcio Pessoa <marcio.pessoa@gmail.com>");  // Contact

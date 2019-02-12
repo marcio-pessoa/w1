@@ -2,6 +2,10 @@
 w1 Mark I - Watch Winder, Change log
 
 ## [0.4] - 2017-12-26
+### Added
+- S command to set rotor speed.
+
+## [0.4] - 2017-12-26
 ### Fixed
 - Minor updates.
 

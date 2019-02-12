@@ -1,21 +1,21 @@
 /* commands.ino, w1 Mark I - Watch Winder, Arduino commands sketch file
- * 
+ *
  * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
 
 /* CommandM100
- * 
+ *
  * Description
  *   Shows help messages.
- * 
+ *
  *   CommandM100()
- * 
+ *
  * Parameters
  *   letter: The command initial letter. It's used to display a specific help
  *           about a letter.
  *           If letter equals to zero, all help messages will be shown.
- * 
+ *
  * Returns
  *   void
  */
@@ -33,20 +33,21 @@ bool CommandM100(char letter = 0) {
     echoln(F("M99\tReset system"));
     echoln(F("M100\tThis help message"));
     echoln(F("M111\tDebug mode"));
+    echoln(F("S\tSet speed"));
   }
   return false;
 }
 
 /* CommandG28
- * 
+ *
  * Description
  *   Gracefully stop.
- * 
+ *
  *   CommandG28()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   bool
  */
@@ -55,15 +56,15 @@ bool CommandG28() {
 }
 
 /* CommandM0
- * 
+ *
  * Description
  *   Compulsory stop.
- * 
+ *
  *   CommandM0()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   bool
  */
@@ -73,20 +74,25 @@ bool CommandM0() {
 }
 
 /* CommandM1
- * 
+ *
  * Description
  *   Forward and speed.
- * 
+ *
  *   CommandM1(100)
- * 
+ *
  * Parameters
  *   speed: axis speed.
- * 
+ *
  * Returns
  *   false: OK
  *   true: Position limit has exceeded
  */
 bool CommandM1(float speed) {
+  // When speed is omitted, only set direction
+  if (speed == FLIMIT) {
+    speed = round(100 * motor.getDeltaA() / 255);
+  }
+  // Check user defined speed
   if (speed < 0 or speed > 100) {
     return true;
   }
@@ -95,20 +101,25 @@ bool CommandM1(float speed) {
 }
 
 /* CommandM2
- * 
+ *
  * Description
  *   Backward and speed.
- * 
+ *
  *   CommandM2(100)
- * 
+ *
  * Parameters
  *   speed: axis speed.
- * 
+ *
  * Returns
  *   false: OK
  *   true: Position limit has exceeded
  */
 bool CommandM2(float speed) {
+  // When speed is omitted, only set direction
+  if (speed == FLIMIT) {
+    speed = round(100 * motor.getDeltaA() / 255);
+  }
+  // Check user defined speed
   if (speed < 0 or speed > 100) {
     return true;
   }
@@ -117,23 +128,23 @@ bool CommandM2(float speed) {
 }
 
 /* CommandM3
- * 
+ *
  * Description
  *   Show motor direction and speed.
- * 
+ *
  *   CommandM3()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   false: OK
  *   true: Position limit has exceeded
  */
 bool CommandM3() {
-  echoln("Rotor direction: " + 
+  echoln("Rotor direction: " +
     String(motor.getDirectionA() ? "Clockwise" : "Counterclockwise"));
-  echo("Rotor speed: " + String((float)100 * motor.getDeltaA() / 255) + "%");
+  echo("Rotor speed: " + String(round(100 * motor.getDeltaA() / 255)) + "%");
   if (debug_mode) {
     echo(" %");
   }
@@ -142,15 +153,15 @@ bool CommandM3() {
 }
 
 /* CommandM4
- * 
+ *
  * Description
  *   Show total rotor turns.
- * 
+ *
  *   CommandM4()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -159,16 +170,16 @@ bool CommandM4() {
   return false;
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -180,15 +191,15 @@ bool CommandM99() {
 }
 
 /* CommandM89
- * 
+ *
  * Description
  *   Memory information.
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -197,13 +208,13 @@ bool CommandM89() {
   int free = freeMemory();
   int used = total - free;
   int percent = (float)used * 100 / total;
-  // 
+  //
   Alarm memory(75, 85);
   memory.nameWrite("Memory");
   memory.unitWrite("%");
   memory.check(percent);
-  // 
-  echoln(memory.nameRead() + " (" + memory.status_name() + "): " + 
+  //
+  echoln(memory.nameRead() + " (" + memory.status_name() + "): " +
          percent + memory.unitRead() + " used");
   if (debug_mode) {
     echoln("  SRAM:\t" + String(total) + " B\n" +
@@ -214,16 +225,16 @@ bool CommandM89() {
   }
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -235,16 +246,16 @@ bool CommandM15() {
   return false;
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   System information.
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -261,15 +272,15 @@ bool CommandM92() {
 }
 
 /* CommandM111
- * 
+ *
  * Description
  *   Changes debug mode on or off.
- * 
+ *
  *   CommandM111()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -279,16 +290,16 @@ bool CommandM111() {
   return false;
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
@@ -297,16 +308,16 @@ bool Command0() {
   return true;
 }
 
-/* 
- * 
+/*
+ *
  * Description
  *   .
- * 
+ *
  *   ()
- * 
+ *
  * Parameters
  *   none
- * 
+ *
  * Returns
  *   void
  */
