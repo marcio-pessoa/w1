@@ -6,44 +6,44 @@
 
 ### Arduino
 Technical specifications:
-- Model: [Arduino Leonardo] 
+- Model: [Arduino Leonardo]
 
 #### Diagram
-                                 .-----.                     
-    .----[PWR]-------------------| USB |--.                  
-    |                            '-----'  |                  
-    |                                     |                  
-    |                           A5/SCL[ ] |   C5             
-    |                           A4/SDA[ ] |   C4             
-    |                             AREF[ ] |                  
-    |                              GND[ ] |                  
-    | [ ]NC                     SCK/13[ ]~|   B5             
-    | [ ]v.ref                 MISO/12[ ] |   .              
-    | [ ]RST                   MOSI/11[ ]~|   .              
-    | [ ]3V3   +-----+              10[ ]~|   .              
-    | [ ]5v    |     |               9[ ]~|   .              
-    | [ ]GND   | MCU |               8[ ] |   B0             
-    | [ ]GND   |     |                    |                  
-    | [ ]Vin   +-----+               7[ ] |   D7             
-    |                                6[ ]~|   .              
-    | [ ]A0                          5[ ]~|   .              
-    | [ ]A1                          4[ ] |   .              
-    | [ ]A2                     INT1/3[ ]~|   .              
-    | [ ]A3                     INT0/2[ ] |   .              
-    | [ ]A4/SDA  RST SCK MISO     TX>1[ ] |   .              
-    | [ ]A5/SCL  [ ] [ ] [ ]      RX<0[ ] |   D0             
-    |            [ ] [ ] [ ]              |                  
-    '--.                         .--------'                  
-       \_______________________/                            
+                                 .-----.
+    .----[PWR]-------------------| USB |--.
+    |                            '-----'  |
+    |                                     |
+    |                           A5/SCL[ ] |   C5
+    |                           A4/SDA[ ] |   C4
+    |                             AREF[ ] |
+    |                              GND[ ] |
+    | [ ]NC                     SCK/13[ ]~|   B5
+    | [ ]v.ref                 MISO/12[ ] |   .
+    | [ ]RST                   MOSI/11[ ]~|   .
+    | [ ]3V3   +-----+              10[ ]~|   .
+    | [ ]5v    |     |               9[ ]~|   .
+    | [ ]GND   | MCU |               8[ ] |   B0
+    | [ ]GND   |     |                    |
+    | [ ]Vin   +-----+               7[ ] |   D7
+    |                                6[ ]~|   .
+    | [ ]A0                          5[ ]~|   .
+    | [ ]A1                          4[ ] |   .
+    | [ ]A2                     INT1/3[ ]~|   .
+    | [ ]A3                     INT0/2[ ] |   .
+    | [ ]A4/SDA  RST SCK MISO     TX>1[ ] |   .
+    | [ ]A5/SCL  [ ] [ ] [ ]      RX<0[ ] |   D0
+    |            [ ] [ ] [ ]              |
+    '--.                         .--------'
+       \_______________________/
 
 Arduino Leonardo diagram by http://busyducks.com/ascii-art-arduinos
 
 #### Pin designation
- id | pin |   type    | direction |               description                
+ id | pin |   type    | direction |               description
 ----|-----|-----------|-----------|--------------------------------------------
   0 |   0 | digital   | input     | Serial communication
   1 |   1 | digital   | output    | Serial communication
-  2 |   0 | -         | -         | 
+  2 |   0 | -         | -         |
   3 |   1 | interrupt | input     | Speed sensor
   4 |   - | -         | -         | -
   5 |   5 | PWM       | output    | Motor (speed control)
@@ -61,9 +61,11 @@ Arduino Leonardo diagram by http://busyducks.com/ascii-art-arduinos
  17 |   - | -         | -         | -
  18 |   - | -         | -         | -
  19 |   - | -         | -         | -
- 
+
 ### Motor
 ![Gear motor](Pictures/7535673A-56FE7EB81_526F672C_zps33a68bc7.jpg)
+
+Reversible 37mm 12V DC 100RPM Gear-Box Speed controlled.
 
 Technical specifications:
 - Model: ZGB37RG

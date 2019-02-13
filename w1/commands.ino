@@ -76,7 +76,7 @@ bool CommandM0() {
 /* CommandM1
  *
  * Description
- *   Forward and speed.
+ *   Clockwise and speed.
  *
  *   CommandM1(100)
  *
@@ -103,7 +103,7 @@ bool CommandM1(float speed) {
 /* CommandM2
  *
  * Description
- *   Backward and speed.
+ *   Counterclockwise and speed.
  *
  *   CommandM2(100)
  *

@@ -1,8 +1,8 @@
 /* w1.ino, w1 Mark I - Watch Winder, Arduino main sketch file
- * 
+ *
  * This sketch was developed and tested on: Arduino Leonardo
  * To work on other Arduino models, some adaptations may be necessary.
- * 
+ *
  * Author: Márcio Pessoa <marcio.pessoa@gmail.com>
  * Contributors: none
  */
@@ -14,7 +14,7 @@
 #include <Alarm.h>           // Marcio Pessoa - Manage alarms
 #include <L298.h>            // Marcio Pessoa - L298 DC motor control
 #include "config.h"          // Marcio Pessoa - Configuration
-#include <MemoryFree.h>      // 
+#include <MemoryFree.h>      //
 
 // Project definitions
 Project w1("w1",  // Platform
@@ -50,7 +50,7 @@ void setup() {
   analogWrite(led_status_pin, LOW);
   // Motor
   motor.attach(in1_pin, in2_pin);
-  CommandM1(motor_speed);  // Run motor clockwise at default speed
+  CommandM2(motor_speed);  // Run rotor counterclockwise at default speed
   // Spin sensor
   pinMode(spin_sensor_vcc_pin, OUTPUT);
   pinMode(spin_sensor_gnd_pin, OUTPUT);
