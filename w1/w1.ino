@@ -25,7 +25,7 @@ Project w1("w1",  // Platform
            "7",  // Serial number
            "Copyright (c) 2017-2019 Marcio Pessoa",  // Owner
            "undefined. There is NO WARRANTY.",  // License
-           "http://pessoa.eti.br/",  // Website
+           "https://github.com/marcio-pessoa/w1",  // Website
            "Marcio Pessoa <marcio.pessoa@gmail.com>");  // Contact
 
 // LEDs
